@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#FAFAF7" />
+<title>Ремонт квартир под ключ в Москве — по договору, фиксированная смета | РемПрофи</title>
+<meta name="description" content="Ремонт квартир под ключ в Москве и области: косметический, капитальный, дизайнерский. Фиксированная смета и график в договоре, один прораб на объекте, гарантия 3 года на работы. Бесплатный замер." />
+<meta property="og:title" content="Ремонт квартир под ключ в Москве — РемПрофи" />
+<meta property="og:description" content="Капитальный и дизайнерский ремонт квартир в Москве. Фиксированная смета, договор, график с контрольными точками." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#1F2937',
+        'ink-2': '#111827',
+        accent: '#C2410C',
+        'accent-2': '#9A3412',
+        bg: '#FAFAF7',
+        soft: '#F0EDE7',
+        card: '#FFFFFF',
+        border: '#E5E2DC',
+        muted: '#6B6F76',
+        success: '#15803D',
+      },
+      fontFamily: {
+        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        card: '0 2px 8px rgba(31,41,55,.04), 0 1px 2px rgba(31,41,55,.04)',
+        lift: '0 8px 24px rgba(31,41,55,.08)',
+      },
+      maxWidth: { container: '1280px' },
+    }
+  }
+}
+</script>
+<style>
+  :root { color-scheme: light; }
+  html { scroll-behavior: smooth; background: #FAFAF7; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1F2937;
+    background: #FAFAF7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .display { font-family: 'Bricolage Grotesque', system-ui, sans-serif; letter-spacing: -0.02em; }
+  .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+  .ring-inset-1 { box-shadow: inset 0 0 0 1px #E5E2DC; }
+  .hairline { border-top: 1px solid #E5E2DC; }
+
+  /* Section anchor offset under sticky header */
+  section[id] { scroll-margin-top: 88px; }
+
+  /* Mobile sticky bottom CTA shouldn't overlap last content */
+  @media (max-width: 1023px) {
+    body { padding-bottom: 88px; }
+  }
+
+  /* Native details toggle icon */
+  details[open] summary .chev { transform: rotate(45deg); }
+
+  /* Photo placeholder fallback look — graphite/terracotta tones */
+  .ph {
+    background: linear-gradient(135deg, #1F2937 0%, #374151 50%, #C2410C 130%);
+    position: relative; overflow: hidden;
+  }
+  .ph::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 14px 14px;
+  }
+  .ph-light {
+    background: linear-gradient(135deg, #F0EDE7 0%, #E5E2DC 100%);
+    position: relative; overflow: hidden;
+  }
+  .ph-label {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 6px;
+    color: rgba(255,255,255,0.85); text-align: center; padding: 16px;
+    font-size: 13px; font-weight: 500;
+  }
+  .ph-light .ph-label { color: #6B6F76; }
+  .ph-label .ic {
+    width: 36px; height: 36px; border-radius: 999px;
+    background: rgba(255,255,255,0.15);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .ph-light .ph-label .ic { background: rgba(31,41,55,0.08); }
+</style>
+</head>
+<body class="bg-bg text-ink">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-border">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-ink text-white">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/>
+        </svg>
+      </span>
+      <span class="display text-xl font-semibold tracking-tight">РемПрофи</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-muted">
+      <a href="#pricing" class="hover:text-ink">Пакеты</a>
+      <a href="#calc" class="hover:text-ink">Калькулятор</a>
+      <a href="#cases" class="hover:text-ink">Кейсы</a>
+      <a href="#process" class="hover:text-ink">Этапы</a>
+      <a href="#team" class="hover:text-ink">Команда</a>
+      <a href="#faq" class="hover:text-ink">Вопросы</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:+74950000000" class="hidden md:inline text-sm font-semibold num tracking-tight">+7 495 000-00-00</a>
+      <a href="#cta" class="inline-flex items-center h-10 md:h-11 px-4 md:px-5 rounded-xl bg-ink text-white text-sm font-semibold hover:bg-ink-2 transition">Рассчитать смету</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 pt-10 md:pt-16 pb-14 md:pb-20">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+      <div class="lg:col-span-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white ring-inset-1 text-xs font-medium text-muted">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+          Ремонт в Москве и области · принимаем заявки сегодня
+        </div>
+
+        <h1 class="display mt-6 text-[40px] leading-[1.05] sm:text-5xl lg:text-[64px] font-semibold">
+          Ремонт квартир<br/>
+          под ключ<br class="hidden sm:block"/>
+          <span class="text-accent">— по договору</span>,<br class="hidden sm:block"/>
+          <span class="font-medium text-muted">без сюрпризов в смете</span>
+        </h1>
+
+        <p class="mt-6 text-base md:text-lg text-muted max-w-xl leading-relaxed">
+          Капитальный, косметический и дизайнерский ремонт квартир в новостройках и на вторичке. Фиксируем смету и график в договоре, ведём один прораб на объекте. Стандартный срок ремонта двухкомнатной квартиры — 50–70 дней.
+        </p>
+
+        <ul class="mt-7 grid sm:grid-cols-2 gap-3 max-w-xl text-sm">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-md bg-accent/10 text-accent items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Фиксированная смета — закрепляем в договоре
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-md bg-accent/10 text-accent items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            График с контрольными точками
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-md bg-accent/10 text-accent items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Один прораб ведёт объект целиком
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-md bg-accent/10 text-accent items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Гарантия на работы — 3 года
+          </li>
+        </ul>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#calc" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">
+            Рассчитать стоимость ремонта
+          </a>
+          <a href="#cases" class="inline-flex items-center h-12 px-1 font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:decoration-ink">
+            Посмотреть кейсы →
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-5">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">
+            <span>★★★★★</span>
+            <span class="text-ink font-semibold ml-1 num">4.8</span>
+          </div>
+          <div class="text-sm text-muted">600+ сданных квартир в Москве и МО</div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="relative">
+          <!-- TODO: replace placeholder with /images/remont/hero-interior.jpg, recommended 1400x1000 -->
+          <div class="ph aspect-[4/3] rounded-2xl overflow-hidden shadow-lift">
+            <img src="/images/remont/hero-interior.jpg" alt="Современная гостиная после капитального ремонта квартиры в Москве" class="w-full h-full object-cover" loading="eager" />
+            <div class="ph-label">
+              <span class="ic">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+              </span>
+              Фото готового объекта<br/>
+              <span class="text-xs opacity-70">/images/remont/hero-interior.jpg</span>
+            </div>
+          </div>
+
+          <!-- floating compact form card -->
+          <div class="mt-6 lg:mt-0 lg:absolute lg:-bottom-8 lg:-left-6 lg:w-[340px] bg-white rounded-2xl shadow-lift p-5 ring-inset-1">
+            <div class="flex items-center justify-between mb-1">
+              <div class="text-xs font-semibold uppercase tracking-widest text-accent">Бесплатно</div>
+              <div class="text-xs text-muted">≈ 1 минута</div>
+            </div>
+            <h3 class="display text-lg font-semibold">Получить ориентировочную смету</h3>
+            <form class="mt-4 space-y-2.5">
+              <input type="text" placeholder="Ваше имя" class="w-full h-11 px-4 rounded-lg bg-soft border border-transparent focus:border-ink focus:bg-white outline-none transition text-sm" />
+              <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full h-11 px-4 rounded-lg bg-soft border border-transparent focus:border-ink focus:bg-white outline-none transition text-sm num" />
+              <input type="number" placeholder="Площадь, м² (опционально)" class="w-full h-11 px-4 rounded-lg bg-soft border border-transparent focus:border-ink focus:bg-white outline-none transition text-sm num" />
+              <button type="button" class="w-full h-11 rounded-lg bg-accent text-white font-semibold hover:bg-accent-2 transition text-sm">
+                Получить смету →
+              </button>
+              <p class="text-[11px] text-muted leading-relaxed">
+                Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline">политикой обработки персональных данных</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="bg-soft border-y border-border">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-10">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-y-6 gap-x-4">
+      <div>
+        <div class="display text-3xl md:text-4xl font-semibold num">14<span class="text-accent">+</span></div>
+        <div class="text-xs text-muted mt-1">лет на рынке ремонта в Москве</div>
+      </div>
+      <div>
+        <div class="display text-3xl md:text-4xl font-semibold num">600<span class="text-accent">+</span></div>
+        <div class="text-xs text-muted mt-1">сданных квартир под ключ</div>
+      </div>
+      <div>
+        <div class="display text-3xl md:text-4xl font-semibold num">95 000</div>
+        <div class="text-xs text-muted mt-1">м² выполненного ремонта</div>
+      </div>
+      <div>
+        <div class="display text-3xl md:text-4xl font-semibold num">8</div>
+        <div class="text-xs text-muted mt-1">штатных бригад, без субподряда</div>
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <div class="display text-3xl md:text-4xl font-semibold num">4.8 ★</div>
+        <div class="text-xs text-muted mt-1">Яндекс, Авито Услуги, Профи.ру</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAINS -->
+<section class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Знакомо?</div>
+      <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+        Почему ремонт квартир<br class="hidden md:block"/>
+        часто превращается в проблему
+      </h2>
+    </div>
+
+    <div class="mt-10 md:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="p-6 rounded-2xl bg-card ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-lg bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Сроки сорваны</h3>
+        <p class="text-sm text-muted mt-1.5">Обещали 3 месяца, идёт девятый. Прораб ушёл, бригада сменилась, никто не отвечает за просрочку.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-lg bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Цена выросла в полтора-два раза</h3>
+        <p class="text-sm text-muted mt-1.5">Изначальная смета — «приманка». По факту доплаты появляются на каждом этапе работ.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-lg bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Бригада исчезла</h3>
+        <p class="text-sm text-muted mt-1.5">Получили предоплату — и пропали. Объект брошен, по телефону никто не отвечает, договор «с физлицом».</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-lg bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Скрытый брак вылез через год</h3>
+        <p class="text-sm text-muted mt-1.5">Трещины на стенах, отошла плитка, течёт стояк. Гарантии нет — бригаду не найти.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-lg bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="7" r="3"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Никто не главный на объекте</h3>
+        <p class="text-sm text-muted mt-1.5">Сантехники, электрики, отделочники — у каждых свой «координатор». Стрелки переводят друг на друга.</p>
+      </div>
+
+      <a href="#cta" class="p-6 rounded-2xl bg-ink text-white relative overflow-hidden group">
+        <div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-accent/20 blur-2xl"></div>
+        <h3 class="font-semibold text-lg">Узнаёте знакомую ситуацию?</h3>
+        <p class="text-sm text-white/70 mt-1.5">Мы строим работу так, чтобы вам не пришлось переживать ни одну из этих историй.</p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-accent group-hover:text-white transition">
+          Записаться на бесплатный замер →
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+      <div class="lg:col-span-5">
+        <div class="text-xs font-semibold tracking-widest text-accent uppercase">Как мы работаем</div>
+        <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+          Три принципа,<br/>
+          которые делают ремонт<br/>
+          <span class="text-muted">предсказуемым</span>
+        </h2>
+
+        <!-- TODO: replace placeholder with /images/remont/principles-foreman.jpg, recommended 1000x1200 -->
+        <div class="ph mt-8 aspect-[5/6] rounded-2xl overflow-hidden shadow-lift">
+          <img src="/images/remont/principles-foreman.jpg" alt="Прораб с планшетом на ремонтной площадке" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label">
+            <span class="ic">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/></svg>
+            </span>
+            Фото прораба на объекте<br/>
+            <span class="text-xs opacity-70">/images/remont/principles-foreman.jpg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-4">
+        <div class="p-6 md:p-7 rounded-2xl bg-card ring-inset-1">
+          <div class="flex items-start gap-5">
+            <div class="display text-4xl text-accent font-semibold shrink-0 num">01</div>
+            <div>
+              <h3 class="display text-xl font-semibold">Фиксированная смета в договоре</h3>
+              <p class="text-muted mt-2 leading-relaxed">После замера составляем подробную смету по позициям и закрепляем итоговую сумму в договоре. Изменение возможно только по письменному запросу клиента — например, при добавлении новых работ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 md:p-7 rounded-2xl bg-card ring-inset-1">
+          <div class="flex items-start gap-5">
+            <div class="display text-4xl text-accent font-semibold shrink-0 num">02</div>
+            <div>
+              <h3 class="display text-xl font-semibold">График работ с контрольными точками</h3>
+              <p class="text-muted mt-2 leading-relaxed">В договоре прописываем 5 контрольных точек: демонтаж, инженерные сети, черновая, чистовая, сдача. Каждую неделю присылаем фотоотчёт с объекта.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 md:p-7 rounded-2xl bg-card ring-inset-1">
+          <div class="flex items-start gap-5">
+            <div class="display text-4xl text-accent font-semibold shrink-0 num">03</div>
+            <div>
+              <h3 class="display text-xl font-semibold">Один прораб ведёт объект целиком</h3>
+              <p class="text-muted mt-2 leading-relaxed">Не «общий координатор» и не «менеджер из офиса». Конкретный человек — ваш главный контакт. Он на объекте ежедневно, знает каждую розетку и отвечает за результат.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div class="max-w-2xl">
+        <div class="text-xs font-semibold tracking-widest text-accent uppercase">Цены на ремонт</div>
+        <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+          Сколько стоит ремонт квартиры в Москве
+        </h2>
+      </div>
+      <p class="text-muted max-w-sm text-sm">
+        Цены — только за работы, для квартир от 50 м². Материалы рассчитываем отдельно после замера. Точную смету фиксируем в договоре.
+      </p>
+    </div>
+
+    <!-- Materials note plate -->
+    <div class="p-5 rounded-xl bg-soft border border-border mb-8 flex items-start gap-3 text-sm">
+      <span class="mt-0.5 inline-flex w-6 h-6 rounded-full bg-accent/10 text-accent items-center justify-center shrink-0">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      </span>
+      <div>
+        <span class="font-semibold">Как считаем:</span>
+        <span class="text-muted"> цена ниже включает работы по этапу — демонтаж, черновую, инженерные сети, чистовую отделку. Материалы — по факту, со скидкой 10–15% у наших поставщиков. Можем закупать сами или передать список клиенту.</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <!-- Tariff 1 — Cosmetic -->
+      <div class="relative rounded-2xl bg-card ring-inset-1 overflow-hidden hover:shadow-card transition">
+        <!-- TODO: /images/remont/pkg-cosmetic.jpg, 600x400 -->
+        <div class="ph aspect-[3/2] relative">
+          <img src="/images/remont/pkg-cosmetic.jpg" alt="Косметический ремонт квартиры — обои и покраска" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label">
+            <span class="text-xs opacity-70">/images/remont/pkg-cosmetic.jpg</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-xs font-semibold uppercase tracking-widest text-muted">Косметический</div>
+          <h3 class="display text-2xl font-semibold mt-2">Косметический ремонт</h3>
+
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="display text-4xl font-semibold num">от 6 500</span>
+            <span class="text-muted text-sm">₽/м² работа</span>
+          </div>
+          <p class="text-xs text-muted mt-1">Срок: от 25 дней на 50 м²</p>
+
+          <ul class="mt-5 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="text-accent">✓</span> Замена обоев, покраска стен и потолков</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Замена напольных покрытий и плинтусов</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Замена межкомнатных дверей</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Без штробления и переноса коммуникаций</li>
+          </ul>
+          <p class="text-xs text-muted mt-4">Подходит для вторички в жилом состоянии и обновления под аренду.</p>
+          <a href="#cta" class="mt-6 block text-center h-11 leading-[2.75rem] rounded-lg border border-ink text-ink font-semibold hover:bg-ink hover:text-white transition text-sm">Заказать замер</a>
+        </div>
+      </div>
+
+      <!-- Tariff 2 — Capital (highlighted) -->
+      <div class="relative rounded-2xl bg-card overflow-hidden shadow-lift" style="box-shadow: inset 0 0 0 2px #1F2937;">
+        <div class="absolute top-4 right-4 px-2.5 py-1 rounded-md bg-accent text-white text-[11px] font-bold uppercase tracking-wider z-10">Хит</div>
+        <!-- TODO: /images/remont/pkg-capital.jpg -->
+        <div class="ph aspect-[3/2] relative">
+          <img src="/images/remont/pkg-capital.jpg" alt="Капитальный ремонт квартиры под ключ — новая кухня" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label">
+            <span class="text-xs opacity-70">/images/remont/pkg-capital.jpg</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-xs font-semibold uppercase tracking-widest text-accent">Капитальный</div>
+          <h3 class="display text-2xl font-semibold mt-2">Ремонт под ключ</h3>
+
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="display text-4xl font-semibold num">от 12 500</span>
+            <span class="text-muted text-sm">₽/м² работа</span>
+          </div>
+          <p class="text-xs text-muted mt-1">Срок: от 50 дней на 50 м²</p>
+
+          <ul class="mt-5 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="text-accent">✓</span> Демонтаж и черновая отделка</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Замена электрики и сантехники</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Стяжка пола, штукатурка по маякам</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Чистовая отделка, монтаж дверей</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Установка сантехники и светильников</li>
+          </ul>
+          <p class="text-xs text-muted mt-4">Подходит для новостройки под чистовую и вторички под полный ремонт.</p>
+          <a href="#cta" class="mt-6 block text-center h-11 leading-[2.75rem] rounded-lg bg-ink text-white font-semibold hover:bg-ink-2 transition text-sm">Получить расчёт</a>
+        </div>
+      </div>
+
+      <!-- Tariff 3 — Designer -->
+      <div class="relative rounded-2xl bg-card ring-inset-1 overflow-hidden hover:shadow-card transition">
+        <!-- TODO: /images/remont/pkg-design.jpg -->
+        <div class="ph aspect-[3/2] relative">
+          <img src="/images/remont/pkg-design.jpg" alt="Дизайнерский ремонт квартиры с авторским надзором" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label">
+            <span class="text-xs opacity-70">/images/remont/pkg-design.jpg</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-xs font-semibold uppercase tracking-widest text-muted">Дизайнерский</div>
+          <h3 class="display text-2xl font-semibold mt-2">Дизайнерский ремонт</h3>
+
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="display text-4xl font-semibold num">от 19 500</span>
+            <span class="text-muted text-sm">₽/м² работа</span>
+          </div>
+          <p class="text-xs text-muted mt-1">Срок: от 75 дней на 50 м²</p>
+
+          <ul class="mt-5 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="text-accent">✓</span> Капитальный ремонт + работа дизайнера</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Авторский надзор на каждом этапе</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Сложные узлы, нестандартные конструкции</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Скрытое освещение, акустика</li>
+          </ul>
+          <p class="text-xs text-muted mt-4">Подходит для квартир под индивидуальный проект.</p>
+          <a href="#cta" class="mt-6 block text-center h-11 leading-[2.75rem] rounded-lg border border-ink text-ink font-semibold hover:bg-ink hover:text-white transition text-sm">Заказать замер</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-5 rounded-xl bg-soft">
+      <p class="text-sm text-muted max-w-2xl">
+        <span class="font-semibold text-ink">Материалы не входят в стоимость работ.</span> Ориентировочный бюджет на материалы для капитального ремонта — от 7 000 ₽/м². Список и сметы согласовываем перед закупкой.
+      </p>
+      <a href="#" class="text-sm font-semibold underline decoration-accent decoration-2 underline-offset-4">Скачать прайс PDF →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR (static prototype) -->
+<section id="calc" class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-10">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Калькулятор</div>
+      <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+        Узнайте ориентировочную стоимость<br class="hidden md:block"/>
+        ремонта вашей квартиры
+      </h2>
+      <p class="text-muted mt-4">Заполните 4 поля — покажем диапазон по работам. Точную смету подготовим после бесплатного замера.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-7 p-6 md:p-8 rounded-2xl bg-card ring-inset-1">
+        <div class="grid sm:grid-cols-2 gap-5">
+
+          <div>
+            <label class="text-xs font-semibold uppercase tracking-widest text-muted">Тип объекта</label>
+            <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
+              <button type="button" class="h-11 rounded-lg bg-ink text-white font-semibold">Новостройка</button>
+              <button type="button" class="h-11 rounded-lg bg-soft ring-inset-1 hover:bg-white transition">Вторичка</button>
+              <button type="button" class="h-11 rounded-lg bg-soft ring-inset-1 hover:bg-white transition">Коммерция</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-semibold uppercase tracking-widest text-muted">Площадь, м²</label>
+            <input type="number" value="65" class="mt-2 w-full h-11 px-4 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition num" />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="text-xs font-semibold uppercase tracking-widest text-muted">Пакет ремонта</label>
+            <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
+              <button type="button" class="h-11 rounded-lg bg-soft ring-inset-1 hover:bg-white transition">Косметический</button>
+              <button type="button" class="h-11 rounded-lg bg-ink text-white font-semibold">Капитальный</button>
+              <button type="button" class="h-11 rounded-lg bg-soft ring-inset-1 hover:bg-white transition">Дизайнерский</button>
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="text-xs font-semibold uppercase tracking-widest text-muted">Состояние</label>
+            <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
+              <button type="button" class="h-11 rounded-lg bg-soft ring-inset-1 hover:bg-white transition">Под чистовую</button>
+              <button type="button" class="h-11 rounded-lg bg-ink text-white font-semibold">Под черновую</button>
+              <button type="button" class="h-11 rounded-lg bg-soft ring-inset-1 hover:bg-white transition">Жилое</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 p-6 md:p-8 rounded-2xl bg-ink text-white">
+        <div class="text-xs font-semibold uppercase tracking-widest text-accent">Ориентировочно</div>
+        <div class="mt-3 display text-4xl md:text-5xl font-semibold num">
+          812 500 — 975 000 <span class="text-2xl text-white/60">₽</span>
+        </div>
+        <p class="text-sm text-white/70 mt-3">Капитальный ремонт квартиры 65 м² под чистовую отделку, только работа. Материалы рассчитаем отдельно после согласования.</p>
+
+        <div class="hairline border-white/10 mt-6 pt-5 space-y-2 text-sm">
+          <div class="flex justify-between">
+            <span class="text-white/60">Работы</span>
+            <span class="num">~ 12 500 ₽/м²</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-white/60">Материалы (ориентир)</span>
+            <span class="num">от 7 000 ₽/м²</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-white/60">Срок</span>
+            <span class="num">50–70 дней</span>
+          </div>
+        </div>
+
+        <a href="#cta" class="mt-6 block text-center h-12 leading-[3rem] rounded-lg bg-accent text-white font-semibold hover:bg-accent-2 transition">
+          Получить точную смету
+        </a>
+        <p class="text-xs text-white/50 mt-3">Расчёт — ориентир. Окончательная стоимость фиксируется в договоре после замера.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT INCLUDED -->
+<section class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-10">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Состав работ</div>
+      <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+        Что входит в капитальный ремонт под ключ
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+
+      <details class="group p-5 md:p-6 rounded-2xl bg-card ring-inset-1" open>
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <div class="flex items-center gap-4">
+            <span class="display text-xl font-semibold text-accent num shrink-0">01</span>
+            <h3 class="font-semibold text-base md:text-lg">Демонтаж и подготовка</h3>
+          </div>
+          <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-muted pl-0 sm:pl-10">
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Демонтаж старой отделки и перегородок</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Демонтаж сантехники и старых коммуникаций</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Вынос строительного мусора</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Защита окон, дверных проёмов, входной зоны</li>
+        </ul>
+      </details>
+
+      <details class="group p-5 md:p-6 rounded-2xl bg-card ring-inset-1">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <div class="flex items-center gap-4">
+            <span class="display text-xl font-semibold text-accent num shrink-0">02</span>
+            <h3 class="font-semibold text-base md:text-lg">Черновые работы</h3>
+          </div>
+          <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-muted pl-0 sm:pl-10">
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Возведение перегородок (ГКЛ, пеноблок)</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Штукатурка стен по маякам</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Выравнивание потолков</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Стяжка пола с гидроизоляцией мокрых зон</li>
+        </ul>
+      </details>
+
+      <details class="group p-5 md:p-6 rounded-2xl bg-card ring-inset-1">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <div class="flex items-center gap-4">
+            <span class="display text-xl font-semibold text-accent num shrink-0">03</span>
+            <h3 class="font-semibold text-base md:text-lg">Инженерные сети</h3>
+          </div>
+          <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-muted pl-0 sm:pl-10">
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Замена электропроводки с проектом</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Замена труб водоснабжения и канализации</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Монтаж тёплых полов</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Подготовка под кондиционеры и вентиляцию</li>
+        </ul>
+      </details>
+
+      <details class="group p-5 md:p-6 rounded-2xl bg-card ring-inset-1">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <div class="flex items-center gap-4">
+            <span class="display text-xl font-semibold text-accent num shrink-0">04</span>
+            <h3 class="font-semibold text-base md:text-lg">Чистовая отделка</h3>
+          </div>
+          <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-muted pl-0 sm:pl-10">
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Поклейка обоев, покраска стен и потолков</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Декоративные покрытия по проекту</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Укладка плитки, ламината, паркета</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Монтаж дверей, плинтусов, наличников</li>
+        </ul>
+      </details>
+
+      <details class="group p-5 md:p-6 rounded-2xl bg-card ring-inset-1">
+        <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+          <div class="flex items-center gap-4">
+            <span class="display text-xl font-semibold text-accent num shrink-0">05</span>
+            <h3 class="font-semibold text-base md:text-lg">Финальные работы и сдача</h3>
+          </div>
+          <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-muted pl-0 sm:pl-10">
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Установка сантехники, смесителей, душевых</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Монтаж розеток, выключателей, светильников</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Профессиональная клининговая уборка</li>
+          <li class="flex gap-2"><span class="text-accent mt-1">•</span> Сдача объекта по чек-листу, подписание акта</li>
+        </ul>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases" class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div class="max-w-2xl">
+        <div class="text-xs font-semibold tracking-widest text-accent uppercase">Реализованные объекты</div>
+        <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">Ремонт квартир в Москве: наши работы</h2>
+        <p class="text-muted mt-4">Более 600 сданных объектов с 2011 года. Реальные квартиры, реальные клиенты. Фото публикуем с письменного согласия.</p>
+      </div>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-4 h-10 inline-flex items-center rounded-full bg-ink text-white font-semibold">Все</span>
+        <span class="px-4 h-10 inline-flex items-center rounded-full bg-card ring-inset-1 text-muted">Новостройки</span>
+        <span class="px-4 h-10 inline-flex items-center rounded-full bg-card ring-inset-1 text-muted">Вторичка</span>
+        <span class="px-4 h-10 inline-flex items-center rounded-full bg-card ring-inset-1 text-muted">Дизайнерский</span>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: /images/remont/case-1.jpg -->
+        <div class="ph aspect-[4/3] relative">
+          <img src="/images/remont/case-1.jpg" alt="Капитальный ремонт квартиры 72 м² в ЖК «Прайм Парк»" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/case-1.jpg</span></div>
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 text-[11px] font-bold uppercase tracking-wider">Капитальный</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">ЖК «Прайм Парк», 72 м²</h3>
+          <p class="text-sm text-muted mt-1.5">Капитальный ремонт под ключ в новостройке.</p>
+          <div class="mt-4 hairline pt-3 grid grid-cols-3 gap-3 text-xs">
+            <div><div class="text-muted">Площадь</div><div class="font-semibold num">72 м²</div></div>
+            <div><div class="text-muted">Срок</div><div class="font-semibold num">64 дня</div></div>
+            <div><div class="text-muted">Работы</div><div class="font-semibold num">1,4 млн</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: /images/remont/case-2.jpg -->
+        <div class="ph aspect-[4/3] relative">
+          <img src="/images/remont/case-2.jpg" alt="Косметический ремонт квартиры 56 м² в Пресненском районе" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/case-2.jpg</span></div>
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 text-[11px] font-bold uppercase tracking-wider">Косметический</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Пресненский район, 56 м²</h3>
+          <p class="text-sm text-muted mt-1.5">Обновление квартиры на вторичке перед заездом.</p>
+          <div class="mt-4 hairline pt-3 grid grid-cols-3 gap-3 text-xs">
+            <div><div class="text-muted">Площадь</div><div class="font-semibold num">56 м²</div></div>
+            <div><div class="text-muted">Срок</div><div class="font-semibold num">28 дней</div></div>
+            <div><div class="text-muted">Работы</div><div class="font-semibold num">410 тыс.</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: /images/remont/case-3.jpg -->
+        <div class="ph aspect-[4/3] relative">
+          <img src="/images/remont/case-3.jpg" alt="Дизайнерский ремонт квартиры 110 м² в ЖК «Бадаевский»" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/case-3.jpg</span></div>
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 text-[11px] font-bold uppercase tracking-wider">Дизайнерский</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">ЖК «Бадаевский», 110 м²</h3>
+          <p class="text-sm text-muted mt-1.5">Дизайнерский ремонт с авторским надзором.</p>
+          <div class="mt-4 hairline pt-3 grid grid-cols-3 gap-3 text-xs">
+            <div><div class="text-muted">Площадь</div><div class="font-semibold num">110 м²</div></div>
+            <div><div class="text-muted">Срок</div><div class="font-semibold num">92 дня</div></div>
+            <div><div class="text-muted">Работы</div><div class="font-semibold num">3,1 млн</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: /images/remont/case-4.jpg -->
+        <div class="ph aspect-[4/3] relative">
+          <img src="/images/remont/case-4.jpg" alt="Капитальный ремонт с перепланировкой 88 м² в Хамовниках" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/case-4.jpg</span></div>
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 text-[11px] font-bold uppercase tracking-wider">Капитальный</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Хамовники, 88 м²</h3>
+          <p class="text-sm text-muted mt-1.5">Капитальный ремонт с перепланировкой и согласованием.</p>
+          <div class="mt-4 hairline pt-3 grid grid-cols-3 gap-3 text-xs">
+            <div><div class="text-muted">Площадь</div><div class="font-semibold num">88 м²</div></div>
+            <div><div class="text-muted">Срок</div><div class="font-semibold num">78 дней</div></div>
+            <div><div class="text-muted">Работы</div><div class="font-semibold num">1,9 млн</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: /images/remont/case-5.jpg -->
+        <div class="ph aspect-[4/3] relative">
+          <img src="/images/remont/case-5.jpg" alt="Ремонт под аренду 45 м² в ЖК «Серебряный фонтан»" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/case-5.jpg</span></div>
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 text-[11px] font-bold uppercase tracking-wider">Капитальный</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">ЖК «Серебряный фонтан», 45 м²</h3>
+          <p class="text-sm text-muted mt-1.5">Ремонт квартиры под сдачу в аренду.</p>
+          <div class="mt-4 hairline pt-3 grid grid-cols-3 gap-3 text-xs">
+            <div><div class="text-muted">Площадь</div><div class="font-semibold num">45 м²</div></div>
+            <div><div class="text-muted">Срок</div><div class="font-semibold num">45 дней</div></div>
+            <div><div class="text-muted">Работы</div><div class="font-semibold num">620 тыс.</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: /images/remont/case-6.jpg -->
+        <div class="ph aspect-[4/3] relative">
+          <img src="/images/remont/case-6.jpg" alt="Дизайнерский ремонт видовой квартиры 140 м² в Москва-Сити" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/case-6.jpg</span></div>
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 text-[11px] font-bold uppercase tracking-wider">Дизайнерский</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Москва-Сити, 140 м²</h3>
+          <p class="text-sm text-muted mt-1.5">Дизайнерский ремонт видовой квартиры.</p>
+          <div class="mt-4 hairline pt-3 grid grid-cols-3 gap-3 text-xs">
+            <div><div class="text-muted">Площадь</div><div class="font-semibold num">140 м²</div></div>
+            <div><div class="text-muted">Срок</div><div class="font-semibold num">120 дней</div></div>
+            <div><div class="text-muted">Работы</div><div class="font-semibold num">5,8 млн</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="#" class="inline-flex items-center h-12 px-6 rounded-xl bg-card ring-inset-1 font-semibold hover:bg-ink hover:text-white transition">
+        Смотреть все объекты →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-12">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Как идёт работа</div>
+      <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+        7 этапов от первого звонка до сдачи квартиры
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">01</span>
+          <span class="text-xs uppercase tracking-widest text-muted">1–2 дня</span>
+        </div>
+        <h3 class="font-semibold mt-4">Звонок и бесплатный замер</h3>
+        <p class="text-sm text-muted mt-2">Приезжаем на объект, замеряем, обсуждаем задачи и пожелания.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">02</span>
+          <span class="text-xs uppercase tracking-widest text-muted">2–3 дня</span>
+        </div>
+        <h3 class="font-semibold mt-4">Смета и договор</h3>
+        <p class="text-sm text-muted mt-2">Составляем подробную смету по позициям, фиксируем в договоре.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">03</span>
+          <span class="text-xs uppercase tracking-widest text-muted">7–14 дней</span>
+        </div>
+        <h3 class="font-semibold mt-4">Дизайн и закупка</h3>
+        <p class="text-sm text-muted mt-2">Готовим проект, согласуем материалы, начинаем закупку.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">04</span>
+          <span class="text-xs uppercase tracking-widest text-muted">20–30 дней</span>
+        </div>
+        <h3 class="font-semibold mt-4">Демонтаж и черновая</h3>
+        <p class="text-sm text-muted mt-2">Демонтаж, перегородки, штукатурка по маякам, стяжка пола.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">05</span>
+          <span class="text-xs uppercase tracking-widest text-muted">10–15 дней</span>
+        </div>
+        <h3 class="font-semibold mt-4">Инженерные сети</h3>
+        <p class="text-sm text-muted mt-2">Электрика, сантехника, вентиляция, тёплый пол.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">06</span>
+          <span class="text-xs uppercase tracking-widest text-muted">15–25 дней</span>
+        </div>
+        <h3 class="font-semibold mt-4">Чистовая отделка</h3>
+        <p class="text-sm text-muted mt-2">Обои, плитка, покраска, монтаж дверей и плинтусов.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="flex items-center justify-between">
+          <span class="display text-3xl font-semibold text-accent num">07</span>
+          <span class="text-xs uppercase tracking-widest text-muted">2–3 дня</span>
+        </div>
+        <h3 class="font-semibold mt-4">Уборка и сдача</h3>
+        <p class="text-sm text-muted mt-2">Профессиональный клининг, сдача по чек-листу, подписание акта.</p>
+      </div>
+
+      <a href="#cta" class="p-6 rounded-2xl bg-accent text-white relative overflow-hidden hover:bg-accent-2 transition">
+        <h3 class="display font-semibold text-lg">Готовы начать?</h3>
+        <p class="text-sm text-white/80 mt-2">Записывайтесь на бесплатный замер — это первый шаг.</p>
+        <span class="mt-4 inline-block text-sm font-semibold">Записаться →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM + GUARANTEES -->
+<section id="team" class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+
+    <div class="max-w-2xl mb-10">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Команда</div>
+      <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">
+        Штатная команда — работаем<br class="hidden md:block"/>
+        без субподряда
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1">
+        <div class="ph aspect-[4/5] relative">
+          <img src="/images/remont/team-foreman.jpg" alt="Прораб Андрей Зотов, 12 лет опыта" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/team-foreman.jpg</span></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Андрей Зотов</h3>
+          <p class="text-sm text-muted mt-1">Прораб, ведущий специалист</p>
+          <p class="text-xs text-muted mt-3 num">12 лет опыта · 180+ объектов</p>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1">
+        <div class="ph aspect-[4/5] relative">
+          <img src="/images/remont/team-designer.jpg" alt="Дизайнер интерьеров Ольга Громова" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/team-designer.jpg</span></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Ольга Громова</h3>
+          <p class="text-sm text-muted mt-1">Дизайнер интерьеров</p>
+          <p class="text-xs text-muted mt-3 num">9 лет опыта · проекты 50–300 м²</p>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1">
+        <div class="ph aspect-[4/5] relative">
+          <img src="/images/remont/team-engineer.jpg" alt="Инженер-сметчик Михаил Орлов" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/team-engineer.jpg</span></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Михаил Орлов</h3>
+          <p class="text-sm text-muted mt-1">Инженер-сметчик</p>
+          <p class="text-xs text-muted mt-3 num">9 лет · проектирование сетей</p>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden bg-card ring-inset-1">
+        <div class="ph aspect-[4/5] relative">
+          <img src="/images/remont/team-master.jpg" alt="Бригадир-отделочник Сергей Гайдук" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label"><span class="text-xs opacity-70">/images/remont/team-master.jpg</span></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Сергей Гайдук</h3>
+          <p class="text-sm text-muted mt-1">Бригадир-отделочник</p>
+          <p class="text-xs text-muted mt-3 num">15 лет · бригада из 4 мастеров</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Guarantees -->
+    <div class="max-w-2xl mb-8">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Гарантии</div>
+      <h2 class="display text-3xl md:text-4xl font-semibold mt-3 leading-tight">
+        Что мы фиксируем в договоре
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="font-semibold">Фиксированная смета</h3>
+        <p class="text-sm text-muted mt-2">Стоимость закрепляется в договоре после замера. Изменения — только по письменному запросу клиента.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3 class="font-semibold">График с контрольными точками</h3>
+        <p class="text-sm text-muted mt-2">5 контрольных точек в договоре, фотоотчёт раз в неделю, акт приёмки на каждом этапе.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+        </div>
+        <h3 class="font-semibold">3 года гарантии на работы</h3>
+        <p class="text-sm text-muted mt-2">Скрытые и чистовые работы — 3 года, сантехника и электрика — 2 года. Обращения принимаем в течение 7 дней.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-card ring-inset-1">
+        <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="font-semibold">Штраф за просрочку</h3>
+        <p class="text-sm text-muted mt-2">При нарушении сроков по нашей вине — компенсация 0,3% от стоимости работ за каждый день. По договору.</p>
+      </div>
+    </div>
+
+    <!-- Documents row -->
+    <div class="mt-8">
+      <div class="text-xs font-semibold uppercase tracking-widest text-muted mb-4">Документы клиники</div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <div class="ph-light aspect-[3/4] rounded-xl ring-inset-1 relative">
+          <div class="ph-label"><span class="text-xs">Лицензия СРО</span></div>
+        </div>
+        <div class="ph-light aspect-[3/4] rounded-xl ring-inset-1 relative">
+          <div class="ph-label"><span class="text-xs">Страховой полис</span></div>
+        </div>
+        <div class="ph-light aspect-[3/4] rounded-xl ring-inset-1 relative">
+          <div class="ph-label"><span class="text-xs">Договор-образец</span></div>
+        </div>
+        <div class="ph-light aspect-[3/4] rounded-xl ring-inset-1 relative">
+          <div class="ph-label"><span class="text-xs">Паспорт качества</span></div>
+        </div>
+        <div class="ph-light aspect-[3/4] rounded-xl ring-inset-1 relative">
+          <div class="ph-label"><span class="text-xs">Сертификаты материалов</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div class="max-w-2xl">
+        <div class="text-xs font-semibold tracking-widest text-accent uppercase">Отзывы клиентов</div>
+        <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">Что говорят о нашем ремонте</h2>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <div class="flex items-center gap-2"><span class="font-bold num">4.9</span><span class="text-amber-500">★★★★★</span><span class="text-muted">Яндекс</span></div>
+        <div class="flex items-center gap-2"><span class="font-bold num">4.8</span><span class="text-amber-500">★★★★★</span><span class="text-muted">Авито Услуги</span></div>
+        <div class="flex items-center gap-2"><span class="font-bold num">4.8</span><span class="text-amber-500">★★★★★</span><span class="text-muted">Профи.ру</span></div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-5">
+
+      <article class="relative aspect-[4/5] rounded-2xl overflow-hidden group cursor-pointer">
+        <!-- TODO: /images/remont/review-video.jpg -->
+        <div class="ph w-full h-full">
+          <img src="/images/remont/review-video.jpg" alt="Видео-отзыв клиента о ремонте квартиры" class="w-full h-full object-cover" loading="lazy" />
+          <div class="ph-label">
+            <span class="ic">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/></svg>
+            </span>
+            Превью видео-отзыва<br/>
+            <span class="text-xs opacity-70">/images/remont/review-video.jpg</span>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-16 h-16 rounded-full bg-white/95 flex items-center justify-center group-hover:scale-110 transition shadow-lift">
+            <svg class="w-6 h-6 text-ink ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+          </div>
+        </div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <div class="flex items-center gap-1 text-amber-300 text-sm">★★★★★</div>
+          <h3 class="font-semibold text-lg mt-2">Анна, ЖК «Прайм Парк»</h3>
+          <p class="text-sm text-white/80 mt-1">«Смета не сдвинулась ни на рубль за 64 дня»</p>
+          <span class="text-xs text-white/60 mt-2 inline-block">2:18 · видео-отзыв</span>
+        </div>
+      </article>
+
+      <article class="p-7 rounded-2xl bg-soft flex flex-col">
+        <svg class="w-9 h-9 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4H7zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1H5V11h4zm6-4h4v4h-4zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1h-2V11h4z"/></svg>
+        <p class="display text-lg leading-snug mt-4 flex-1 font-medium">
+          Брали капитальный ремонт под ключ. Главное — смета не сдвинулась, и сдали на 4 дня раньше графика. Прораб Андрей был на связи. Через год — ноль проблем, всё держится.
+        </p>
+        <div class="mt-6 hairline pt-5 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full ph"><img src="/images/remont/review-1.jpg" alt="Игорь, Таганка" class="w-full h-full object-cover rounded-full" loading="lazy"></div>
+          <div>
+            <div class="font-semibold text-sm">Игорь, 47 лет</div>
+            <div class="text-xs text-muted">Капитальный ремонт · Таганка, 88 м² · 2024</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="p-7 rounded-2xl bg-soft flex flex-col">
+        <svg class="w-9 h-9 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4H7zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1H5V11h4zm6-4h4v4h-4zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1h-2V11h4z"/></svg>
+        <p class="display text-lg leading-snug mt-4 flex-1 font-medium">
+          Сдавали квартиру в аренду, нужно было быстро и качественно. Уложились в 45 дней, арендатор заехал через неделю после сдачи. Договор и фиксированная цена — без сюрпризов.
+        </p>
+        <div class="mt-6 hairline pt-5 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full ph"><img src="/images/remont/review-2.jpg" alt="Екатерина, Серебряный фонтан" class="w-full h-full object-cover rounded-full" loading="lazy"></div>
+          <div>
+            <div class="font-semibold text-sm">Екатерина, 39 лет</div>
+            <div class="text-xs text-muted">Ремонт под аренду · «Серебряный фонтан» · 2024</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="mt-8">
+      <a href="#" class="text-sm font-semibold underline decoration-accent decoration-2 underline-offset-4">Все отзывы на Яндекс.Картах →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+
+      <div class="lg:col-span-4">
+        <div class="text-xs font-semibold tracking-widest text-accent uppercase">Вопросы и ответы</div>
+        <h2 class="display text-3xl md:text-5xl font-semibold mt-3 leading-tight">Частые вопросы о ремонте</h2>
+        <p class="text-muted mt-5">Не нашли ответ? Позвоните или закажите бесплатный замер — на месте всё обсудим подробно.</p>
+        <a href="tel:+74950000000" class="display text-2xl font-semibold text-ink mt-6 inline-block num hover:text-accent transition">+7 495 000-00-00</a>
+      </div>
+
+      <div class="lg:col-span-8 space-y-3">
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1" open>
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Сколько стоит ремонт квартиры под ключ в Москве?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            Ориентировочные цены за работы: косметический ремонт — от 6 500 ₽/м², капитальный — от 12 500 ₽/м², дизайнерский — от 19 500 ₽/м². Материалы рассчитываются отдельно после замера и согласования. Точную смету фиксируем в договоре.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Что входит в фиксированную смету?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            В смету включены все работы по этапам — демонтаж, черновая отделка, инженерные сети, чистовая отделка, финальная уборка и сдача. Материалы согласовываются отдельно, можно закупать самостоятельно или через нас со скидкой 10–15%.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Что если в процессе я захочу поменять решение?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            Любые изменения оформляются дополнительным соглашением. Прораб сразу пересчитает влияние на смету и сроки, согласует с вами и только после письменного подтверждения переходит к новым работам.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Как работает штраф за просрочку?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            В договоре прописан штраф 0,3% от стоимости работ за каждый день просрочки по нашей вине. Сумма вычитается из финального платежа. Просрочка по вине клиента (задержка с согласованиями, оплатой материалов) не учитывается.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Кто закупает материалы — вы или клиент?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            На ваш выбор. Можем закупать всё сами с отчётом по чекам и скидкой у наших поставщиков. Или передаём подробный список материалов с артикулами — закупаете самостоятельно. Большинство клиентов выбирают комбинированный вариант.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Делаете ремонт в новостройках под чистовую отделку?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            Да, это основной формат. Принимаем квартиры в новостройках с предчистовой («белый ключ») и черновой отделкой. Работаем в большинстве ЖК Москвы и ближнего Подмосковья, согласуем доступ с управляющей компанией.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-card ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+            <span class="font-semibold text-base md:text-lg pr-6">Работаете в Московской области?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            Да, выезжаем в города ближнего Подмосковья: Красногорск, Химки, Мытищи, Балашиха, Одинцово, Реутов, Люберцы, Видное. Для объектов в области уточните стоимость выезда у менеджера.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA — ЕДИНСТВЕННАЯ ТЁМНАЯ СЕКЦИЯ -->
+<section id="cta" class="py-16 md:py-24 bg-ink text-white relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-32 right-0 w-[500px] h-[500px] rounded-full bg-accent/15 blur-3xl"></div>
+    <div class="absolute -bottom-32 left-0 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl"></div>
+  </div>
+
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+          Бесплатный замер · приём заявок сегодня
+        </div>
+
+        <h2 class="display text-4xl md:text-5xl lg:text-6xl font-semibold mt-6 leading-[1.05]">
+          Бесплатный замер<br/>
+          и точная смета<br/>
+          <span class="text-accent">за 1–2 рабочих дня</span>
+        </h2>
+
+        <p class="text-white/70 mt-6 max-w-lg text-base md:text-lg leading-relaxed">
+          Приедем на объект, замерим, обсудим задачи и подготовим подробную смету. Без обязательств и без навязывания дополнительных решений.
+        </p>
+
+        <div class="mt-8 grid grid-cols-3 gap-4 max-w-md">
+          <div>
+            <div class="display text-3xl font-semibold num">0 ₽</div>
+            <div class="text-xs text-white/60 mt-1">выезд замерщика</div>
+          </div>
+          <div>
+            <div class="display text-3xl font-semibold num">1–2</div>
+            <div class="text-xs text-white/60 mt-1">дня на смету</div>
+          </div>
+          <div>
+            <div class="display text-3xl font-semibold num">5+</div>
+            <div class="text-xs text-white/60 mt-1">лет работы с клиентом после сдачи</div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex items-center gap-3 text-sm text-white/60">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <a href="tel:+74950000000" class="text-white num font-semibold hover:text-accent transition">+7 495 000-00-00</a>
+          <span class="text-white/40">·</span>
+          <span>Пн–Сб 9:00–21:00</span>
+        </div>
+      </div>
+
+      <div class="bg-white text-ink rounded-2xl p-7 md:p-9 shadow-lift">
+        <h3 class="display text-2xl font-semibold">Записаться на бесплатный замер</h3>
+        <p class="text-sm text-muted mt-2">Перезвоним в течение 15 минут и согласуем удобное время выезда.</p>
+
+        <form class="mt-6 space-y-3">
+          <label class="block">
+            <span class="text-xs font-semibold text-muted uppercase tracking-widest">Имя</span>
+            <input type="text" placeholder="Иван" class="mt-1.5 w-full h-12 px-4 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition" />
+          </label>
+
+          <label class="block">
+            <span class="text-xs font-semibold text-muted uppercase tracking-widest">Телефон</span>
+            <input type="tel" placeholder="+7 (___) ___-__-__" class="mt-1.5 w-full h-12 px-4 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition num" />
+          </label>
+
+          <div class="grid grid-cols-2 gap-3">
+            <label class="block">
+              <span class="text-xs font-semibold text-muted uppercase tracking-widest">Тип объекта</span>
+              <select class="mt-1.5 w-full h-12 px-4 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition">
+                <option>Новостройка</option>
+                <option>Вторичка</option>
+                <option>Коммерческое помещение</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-xs font-semibold text-muted uppercase tracking-widest">Площадь, м²</span>
+              <input type="number" placeholder="65" class="mt-1.5 w-full h-12 px-4 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition num" />
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="text-xs font-semibold text-muted uppercase tracking-widest">Удобное время выезда</span>
+            <select class="mt-1.5 w-full h-12 px-4 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition">
+              <option>Утро (9–12)</option>
+              <option>День (12–17)</option>
+              <option>Вечер (17–21)</option>
+              <option>По согласованию</option>
+            </select>
+          </label>
+
+          <label class="block">
+            <span class="text-xs font-semibold text-muted uppercase tracking-widest">Комментарий</span>
+            <textarea rows="2" placeholder="Опционально — расскажите задачу" class="mt-1.5 w-full px-4 py-3 rounded-lg bg-soft border border-transparent focus:bg-white focus:border-ink outline-none transition resize-none"></textarea>
+          </label>
+
+          <button type="button" class="w-full h-12 rounded-lg bg-ink text-white font-semibold hover:bg-ink-2 transition">
+            Записаться на бесплатный замер →
+          </button>
+          <p class="text-[11px] text-muted leading-relaxed">
+            Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline">политикой обработки персональных данных</a>.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (with local SEO inside) -->
+<footer class="bg-bg border-t border-border">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 py-14">
+
+    <div class="grid lg:grid-cols-12 gap-10">
+
+      <div class="lg:col-span-5">
+        <a href="#" class="flex items-center gap-2.5">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-ink text-white">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+          </span>
+          <span class="display text-xl font-semibold">РемПрофи</span>
+        </a>
+        <p class="text-sm text-muted mt-4 max-w-md">
+          Ремонт квартир под ключ в Москве и области с 2011 года. Капитальный, косметический и дизайнерский ремонт по договору, с фиксированной сметой и графиком работ.
+        </p>
+
+        <div class="mt-6 text-sm space-y-2">
+          <div class="flex items-start gap-3">
+            <span class="text-muted w-20 shrink-0">Адрес</span>
+            <span>г. Москва, Бизнес-центр «Поларис», 5 этаж</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-muted w-20 shrink-0">Телефон</span>
+            <a href="tel:+74950000000" class="num font-semibold hover:text-accent">+7 495 000-00-00</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-muted w-20 shrink-0">Email</span>
+            <a href="mailto:info@remprofi.ru" class="hover:text-accent">info@remprofi.ru</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-muted w-20 shrink-0">Режим</span>
+            <span>Пн–Сб 9:00–21:00 · Вс 10:00–19:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4">
+        <div class="text-xs font-semibold uppercase tracking-widest text-muted mb-4">Где работаем</div>
+        <p class="text-sm text-muted leading-relaxed">
+          Делаем ремонт квартир в Москве — во всех округах ЦАО, САО, СВАО, ВАО, ЮВАО, ЮАО, ЮЗАО, ЗАО, СЗАО, в новостройках Новой Москвы и во вторичном жилом фонде. Выезжаем в города Подмосковья:
+        </p>
+        <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+          <span class="px-2.5 py-1 rounded-md bg-soft">Красногорск</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Химки</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Мытищи</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Балашиха</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Одинцово</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Реутов</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Люберцы</span>
+          <span class="px-2.5 py-1 rounded-md bg-soft">Видное</span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3">
+        <div class="text-xs font-semibold uppercase tracking-widest text-muted mb-4">Услуги</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-accent">Капитальный ремонт квартир</a></li>
+          <li><a href="#" class="hover:text-accent">Косметический ремонт</a></li>
+          <li><a href="#" class="hover:text-accent">Дизайнерский ремонт</a></li>
+          <li><a href="#" class="hover:text-accent">Ремонт в новостройках</a></li>
+          <li><a href="#" class="hover:text-accent">Ремонт вторички</a></li>
+          <li><a href="#" class="hover:text-accent">Перепланировка</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="hairline mt-12 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-muted">
+      <div>© 2011–2026 «РемПрофи». ИНН 7700000000. Член СРО «СтройРемонт».</div>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-accent">Политика конфиденциальности</a>
+        <a href="#" class="hover:text-accent">Договор оферты</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-bg/95 backdrop-blur border-t border-border">
+  <div class="flex gap-2">
+    <a href="tel:+74950000000" class="flex-1 h-12 rounded-lg ring-inset-1 flex items-center justify-center font-semibold text-sm bg-white">
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      Позвонить
+    </a>
+    <a href="#cta" class="flex-1 h-12 rounded-lg bg-ink text-white flex items-center justify-center font-semibold text-sm">
+      Замер
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
