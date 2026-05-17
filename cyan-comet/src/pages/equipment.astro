@@ -1,0 +1,1265 @@
+---
+import '../styles/global.css';
+const title = "Аренда спецтехники в Москве и МО — экскаваторы, манипуляторы, автокраны";
+const description = "Аренда спецтехники с оператором в Москве и Московской области: экскаваторы, манипуляторы, автокраны, самосвалы и погрузчики. Подача от 2 часов, фиксированная ставка, расчёт за 15 минут.";
+---
+
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#0C1220" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --c-dark:    #0C1220;
+      --c-panel:   #1A2436;
+      --c-line:    #2A3548;
+      --c-amber:   #F59E0B;
+      --c-amber2:  #D97706;
+      --c-bg:      #F7F8FA;
+      --c-soft:    #EEF1F5;
+      --c-ink:     #1E293B;
+      --c-ink2:    #0F172A;
+      --c-muted:   #64748B;
+      --c-border:  #E2E8F0;
+      --c-success: #16A34A;
+      --c-card:    #FFFFFF;
+    }
+    html { scroll-behavior: smooth; background: var(--c-bg); }
+    body { font-family: 'Inter', system-ui, sans-serif; color: var(--c-ink); background: var(--c-bg); -webkit-font-smoothing: antialiased; margin: 0; }
+    .display { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.035em; }
+    .mono    { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
+    section[id] { scroll-margin-top: 80px; }
+    @media (max-width: 1023px) { body { padding-bottom: 76px; } }
+
+    /* grid lines overlay */
+    .grid-lines {
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* image placeholder */
+    .ph {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 70% 20%, rgba(245,158,11,.18), transparent 42%),
+                  linear-gradient(135deg, #182235, #334155);
+    }
+    .ph::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+    .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+    .ph .img-show { opacity: 1; }
+    .ph-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px;
+      text-align: center;
+      color: rgba(255,255,255,.78);
+      font-size: 11px;
+      line-height: 1.45;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .ph-label .mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(245,158,11,.45);
+      background: rgba(245,158,11,.14);
+      color: var(--c-amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* catalog grid cell */
+    .tech-cell {
+      border-right: 1px solid var(--c-border);
+      border-bottom: 1px solid var(--c-border);
+    }
+
+    /* documents */
+    .doc-paper {
+      aspect-ratio: 3 / 4;
+      background: #fff;
+      border: 1px solid var(--c-border);
+      position: relative;
+      overflow: hidden;
+    }
+    .doc-line { height: 4px; background: #CBD5E1; border-radius: 99px; opacity: .75; }
+    .stamp {
+      border: 1px solid rgba(245,158,11,.75);
+      color: var(--c-amber2);
+      border-radius: 999px;
+      width: 54px; height: 54px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-size: 9px; line-height: 1.05;
+      transform: rotate(-12deg);
+    }
+
+    /* faq */
+    .equipment-faq-item {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      transition: border-color 220ms ease;
+    }
+    .equipment-faq-item.is-open {
+      border-color: var(--c-amber2);
+    }
+    .equipment-faq-trigger {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--c-ink2);
+      text-align: left;
+    }
+    .equipment-faq-trigger:focus-visible {
+      outline: 2px solid rgba(245, 158, 11, 0.7);
+      outline-offset: 4px;
+    }
+    .equipment-faq-panel {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 280ms ease, opacity 220ms ease;
+      will-change: max-height;
+    }
+    .equipment-faq-item.is-open .equipment-faq-panel {
+      opacity: 1;
+    }
+    .equipment-faq-answer {
+      padding-top: 12px;
+      color: var(--c-muted);
+      font-size: 0.875rem;
+    }
+    .equipment-faq-icon {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      color: var(--c-amber2);
+      flex-shrink: 0;
+    }
+    .equipment-faq-icon span {
+      position: absolute;
+      background: currentColor;
+      width: 24px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 220ms ease;
+    }
+    .equipment-faq-icon span:last-child {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    .equipment-faq-item.is-open .equipment-faq-icon span:last-child {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .equipment-faq-panel,
+      .equipment-faq-icon span {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="sticky top-0 z-40 backdrop-blur" style="background: rgba(12,18,32,.96); border-bottom: 1px solid var(--c-line);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between" style="height: 64px;">
+
+    <a href="#" class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10" style="background: var(--c-amber);">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#0C1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 18h18M5 18v-4l3-6h6l3 4v6"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/>
+        </svg>
+      </span>
+      <span class="display text-xl font-extrabold text-white">ТехПарк <span style="color: var(--c-amber);">24</span></span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7 text-sm" style="color: rgba(255,255,255,.6);">
+      <a href="#catalog"   class="hover:text-white transition-colors">Каталог</a>
+      <a href="#tariffs"   class="hover:text-white transition-colors">Тарифы</a>
+      <a href="#why"       class="hover:text-white transition-colors">Гарантии</a>
+      <a href="#area"      class="hover:text-white transition-colors">Зоны работы</a>
+      <a href="#docs"      class="hover:text-white transition-colors">Документы</a>
+      <a href="#faq"       class="hover:text-white transition-colors">Вопросы</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="tel:+74950000024" class="hidden md:inline mono text-sm font-bold text-white">+7 495 000-00-24</a>
+      <a href="#cta" class="inline-flex items-center px-5 mono text-sm font-extrabold transition-colors" style="height: 42px; background: var(--c-amber); color: var(--c-dark);">
+        ЗАКАЗАТЬ
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="relative overflow-hidden" style="background: var(--c-dark); color: #fff;">
+
+  <!-- Gradient overlay -->
+  <div class="absolute inset-0" style="background: linear-gradient(to right, #0C1220 0%, rgba(12,18,32,.9) 55%, rgba(12,18,32,.45) 100%); z-index: 1;"></div>
+  <!-- Grid lines -->
+  <div class="grid-lines absolute inset-0" style="opacity: .65; z-index: 1;"></div>
+  <!-- Hero photo placeholder -->
+  <div class="ph absolute inset-0" style="z-index: 0;">
+    <img src="/images/equipment/hero-equipment.jpg" alt="Аренда спецтехники в Москве — техника на стройплощадке" loading="eager" class="img-show" />
+  </div>
+
+  <div class="relative max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 pt-12 md:pt-20 pb-0" style="z-index: 2;">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start" style="min-height: 680px;">
+
+      <!-- Left: content -->
+      <div class="lg:col-span-7 pt-4 pb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-2 mono text-xs font-bold uppercase tracking-wider" style="border: 1px solid rgba(245,158,11,.45); background: rgba(245,158,11,.1); color: var(--c-amber);">
+          <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: var(--c-amber);"></span>
+          Москва и МО · диспетчерская 24/7
+        </div>
+
+        <h1 class="display mt-7 font-extrabold leading-none" style="font-size: clamp(2.4rem, 6vw, 4.75rem);">
+          Аренда спецтехники<br/>
+          <span style="color: var(--c-amber);">с оператором</span><br/>
+          в Москве и МО
+        </h1>
+
+        <p class="mt-6 text-base md:text-lg leading-relaxed max-w-2xl" style="color: rgba(255,255,255,.68);">
+          Экскаваторы, манипуляторы, автокраны, самосвалы и погрузчики для стройки, демонтажа и земляных работ. Подача от 2 часов после заявки. Фиксированная ставка в договоре.
+        </p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-3 max-w-2xl text-sm">
+          {[
+            ["01", "Подача техники на объект от 2 часов"],
+            ["02", "Фиксированная ставка — никаких доплат"],
+            ["03", "Осмотр машины перед каждым выездом"],
+            ["04", "Замена техники при поломке за 4 часа"],
+          ].map(([n, text]) => (
+            <div class="flex gap-3 p-3" style="border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.05);">
+              <span class="mono shrink-0" style="color: var(--c-amber);">{n}</span>
+              <span style="color: rgba(255,255,255,.85);">{text}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#cta" class="inline-flex items-center mono text-sm font-extrabold transition-colors" style="height: 50px; padding: 0 28px; background: var(--c-amber); color: var(--c-dark);">
+            ЗАКАЗАТЬ ТЕХНИКУ →
+          </a>
+          <a href="#catalog" class="inline-flex items-center mono text-sm font-bold text-white" style="height: 50px; text-decoration: underline; text-decoration-color: var(--c-amber); text-underline-offset: 4px; text-decoration-thickness: 2px;">
+            СМОТРЕТЬ КАТАЛОГ
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: dispatcher panel -->
+      <div class="lg:col-span-5 lg:pt-12 pb-10">
+        <div class="p-5 md:p-6 shadow-xl" style="border: 1px solid rgba(245,158,11,.6); background: rgba(26,36,54,.94);">
+          <div class="flex items-start justify-between pb-4" style="border-bottom: 1px solid rgba(255,255,255,.1);">
+            <div>
+              <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">Диспетчерская</div>
+              <h3 class="display text-2xl font-extrabold mt-1 text-white">Заявка в работу</h3>
+            </div>
+            <div class="mono text-xs" style="color: rgba(255,255,255,.4);">REQ-NEW</div>
+          </div>
+
+          <form class="mt-5 flex flex-col gap-3">
+            <label>
+              <span class="mono text-xs uppercase block mb-1" style="color: rgba(255,255,255,.4);">Тип техники</span>
+              <select class="w-full h-12 px-3 mono text-sm text-white" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;">
+                <option>Экскаватор</option>
+                <option>Манипулятор</option>
+                <option>Автокран</option>
+                <option>Самосвал</option>
+                <option>Фронтальный погрузчик</option>
+                <option>Мини-экскаватор</option>
+                <option>Автовышка</option>
+              </select>
+            </label>
+            <label>
+              <span class="mono text-xs uppercase block mb-1" style="color: rgba(255,255,255,.4);">Срок аренды</span>
+              <select class="w-full h-12 px-3 mono text-sm text-white" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;">
+                <option>Смена — 8 часов</option>
+                <option>4 часа</option>
+                <option>Сутки</option>
+                <option>Неделя</option>
+                <option>Месяц</option>
+              </select>
+            </label>
+            <label>
+              <span class="mono text-xs uppercase block mb-1" style="color: rgba(255,255,255,.4);">Телефон</span>
+              <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full h-12 px-3 mono text-sm text-white" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;" />
+            </label>
+            <button type="button" class="w-full h-12 mono text-sm font-extrabold transition-colors" style="background: var(--c-amber); color: var(--c-dark);">
+              ПОЛУЧИТЬ РАСЧЁТ ЗА 15 МИН →
+            </button>
+            <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,.38);">
+              Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.
+            </p>
+          </form>
+
+          <div class="mt-5 pt-4 flex items-center justify-between mono text-xs" style="border-top: 1px solid rgba(255,255,255,.1);">
+            <span style="color: rgba(255,255,255,.5);">
+              <span class="inline-block w-2 h-2 rounded-full mr-1.5 animate-pulse" style="background: var(--c-success);"></span>
+              На линии: 2 диспетчера
+            </span>
+            <span style="color: var(--c-amber);">Ответ: 15 мин</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Status ticker -->
+    <div style="border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); background: rgba(12,18,32,.8);">
+      <div class="grid md:grid-cols-4 mono text-xs divide-y md:divide-y-0 md:divide-x" style="color: rgba(255,255,255,.65); --tw-divide-color: var(--c-line);">
+        <div class="p-3"><span style="color: var(--c-amber);">EX-01</span> · ЭКСКАВАТОР · ЦАО · СМЕНА · В РАБОТЕ</div>
+        <div class="p-3"><span style="color: var(--c-amber);">MA-03</span> · МАНИПУЛЯТОР · ХИМКИ · 4 ЧАСА · ПОДАЧА</div>
+        <div class="p-3"><span style="color: var(--c-amber);">CR-05</span> · АВТОКРАН · ПОДОЛЬСК · 2 СМЕНЫ · ПОДТВЕРЖДЕНО</div>
+        <div class="p-3"><span style="color: var(--c-amber);">DU-06</span> · САМОСВАЛ · БАЛАШИХА · СМЕНА</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OPERATIONAL PANEL ══════════ -->
+<section style="background: var(--c-dark); color: #fff; border-top: 1px solid var(--c-line);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-6">
+    <div class="grid grid-cols-2 lg:grid-cols-6" style="border: 1px solid var(--c-line);">
+
+      <div class="p-5" style="border-right: 1px solid var(--c-line);">
+        <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">LIVE / YEARS</div>
+        <div class="display mono text-4xl font-extrabold mt-2">09</div>
+        <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">лет на рынке</div>
+      </div>
+
+      <div class="p-5" style="border-right: 1px solid var(--c-line);">
+        <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">FLEET</div>
+        <div class="display mono text-4xl font-extrabold mt-2">80+</div>
+        <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">единиц техники</div>
+      </div>
+
+      <div class="p-5" style="border-right: 1px solid var(--c-line);">
+        <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">MONTH</div>
+        <div class="display mono text-4xl font-extrabold mt-2">1200+</div>
+        <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">выездов в месяц</div>
+      </div>
+
+      <div class="p-5" style="border-right: 1px solid var(--c-line);">
+        <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">OPS</div>
+        <div class="display mono text-4xl font-extrabold mt-2">45</div>
+        <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">операторов</div>
+      </div>
+
+      <div class="p-5" style="border-right: 1px solid var(--c-line);">
+        <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">RATE</div>
+        <div class="display mono text-4xl font-extrabold mt-2">4.8★</div>
+        <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">отзывы клиентов</div>
+      </div>
+
+      <div class="p-5 col-span-2 lg:col-span-1">
+        <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber);">LOAD</div>
+        <div class="mt-3 h-2" style="background: rgba(255,255,255,.1);">
+          <div class="h-full" style="width: 67%; background: var(--c-amber);"></div>
+        </div>
+        <div class="mono text-xs mt-3" style="color: rgba(255,255,255,.55);">Загрузка парка: 67%</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CATALOG ══════════ -->
+<section id="catalog" class="py-14 md:py-20" style="background: var(--c-bg);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+      <div>
+        <div class="mono text-xs font-bold uppercase tracking-widest" style="color: var(--c-amber2);">Парк техники</div>
+        <h2 class="display text-3xl md:text-5xl font-extrabold mt-3" style="color: var(--c-ink2);">Аренда строительной техники: 8 категорий</h2>
+        <p class="mt-4 max-w-2xl" style="color: var(--c-muted);">
+          Своя техника — более 80 единиц в парке. Все машины проходят осмотр перед выездом, операторы со стажем от 5 лет. Подача по Москве и МО.
+        </p>
+      </div>
+      <div id="catalog-filters" class="flex flex-wrap gap-2 mono text-xs shrink-0">
+        <button type="button" data-filter="all"      aria-pressed="true"  class="catalog-filter px-3 py-2 font-bold" style="background: var(--c-ink); color: #fff;">ВСЕ</button>
+        <button type="button" data-filter="earth"    aria-pressed="false" class="catalog-filter px-3 py-2" style="border: 1px solid var(--c-border); background: var(--c-card); color: var(--c-ink);">ЗЕМЛЯНЫЕ</button>
+        <button type="button" data-filter="lifting"  aria-pressed="false" class="catalog-filter px-3 py-2" style="border: 1px solid var(--c-border); background: var(--c-card); color: var(--c-ink);">МОНТАЖ</button>
+        <button type="button" data-filter="loading"  aria-pressed="false" class="catalog-filter px-3 py-2" style="border: 1px solid var(--c-border); background: var(--c-card); color: var(--c-ink);">ПОГРУЗКА</button>
+        <button type="button" data-filter="transport" aria-pressed="false" class="catalog-filter px-3 py-2" style="border: 1px solid var(--c-border); background: var(--c-card); color: var(--c-ink);">ПЕРЕВОЗКА</button>
+        <button type="button" data-filter="height"   aria-pressed="false" class="catalog-filter px-3 py-2" style="border: 1px solid var(--c-border); background: var(--c-card); color: var(--c-ink);">ВЫСОТНЫЕ</button>
+      </div>
+    </div>
+
+    <!-- Engineering grid -->
+    <div id="catalog-grid" class="grid sm:grid-cols-2 lg:grid-cols-4" style="border-top: 1px solid var(--c-border); border-left: 1px solid var(--c-border); background: var(--c-card);">
+
+      {[
+        { id:"EX-01", mark:"EX", name:"Экскаваторы",          cat:"earth",             specs:[["КОВШ","0.5–1.5 м³"],["ВЕС","до 22 т"],["РАБОТЫ","котлован"]], rate:"2 800 ₽/ч", shift:"22 000 ₽/смена", img:"/images/equipment/cat-excavator.jpg",      alt:"Аренда экскаватора в Москве",              hasImg:true  },
+        { id:"MX-02", mark:"MX", name:"Мини-экскаваторы",     cat:"earth",             specs:[["ШИРИНА","от 1 м"],  ["ВЕС","до 5 т"],  ["ОБЪЕКТ","двор/участок"]], rate:"1 800 ₽/ч", shift:"14 000 ₽/смена", img:"/images/equipment/cat-mini-excavator.jpg",  alt:"Аренда мини-экскаватора в Москве",         hasImg:true  },
+        { id:"BK-03", mark:"BH", name:"Экскав.-погрузчики",   cat:"earth loading",     specs:[["ТИП","JCB / CAT"], ["КОВШ","0.3–1 м³"],["РАБОТЫ","коммуникации"]], rate:"2 200 ₽/ч", shift:"18 000 ₽/смена", img:"/images/equipment/cat-backhoe.jpg",       alt:"Аренда экскаватора-погрузчика в Москве",   hasImg:true  },
+        { id:"CR-04", mark:"CR", name:"Автокраны",             cat:"lifting",           specs:[["Г/П","16–50 т"],   ["СТРЕЛА","до 35 м"],["РАБОТЫ","монтаж"]], rate:"3 500 ₽/ч", shift:"28 000 ₽/смена", img:"/images/equipment/cat-crane.jpg",       alt:"Аренда автокрана в Москве",                hasImg:true  },
+        { id:"MA-05", mark:"MA", name:"Манипуляторы",          cat:"transport lifting", specs:[["БОРТ","до 10 т"],  ["КМУ","3–7 т"],   ["РАБОТЫ","доставка"]], rate:"2 400 ₽/ч", shift:"19 000 ₽/смена", img:"/images/equipment/cat-manipulator.jpg", alt:"Аренда манипулятора с КМУ в Москве",       hasImg:true  },
+        { id:"DU-06", mark:"DT", name:"Самосвалы",             cat:"transport",         specs:[["КУЗОВ","10–25 м³"],["ГРУЗ","грунт/мусор"],["ЗАДАЧА","вывоз"]], rate:"1 600 ₽/ч", shift:"12 000 ₽/смена", img:"/images/equipment/cat-dump-truck.jpg",  alt:"Аренда самосвала в Москве",                hasImg:true  },
+        { id:"LO-07", mark:"LD", name:"Фронт. погрузчики",    cat:"loading",           specs:[["КОВШ","1.5–3 м³"], ["РАБОТЫ","погрузка"],["ОБЪЕКТ","площадка"]], rate:"2 200 ₽/ч", shift:"17 500 ₽/смена", img:"/images/equipment/cat-loader.jpg",      alt:"Аренда фронтального погрузчика в Москве",  hasImg:true  },
+        { id:"LF-08", mark:"LF", name:"Автовышки",             cat:"height",            specs:[["ВЫСОТА","18–28 м"],["РАБОТЫ","фасад"], ["СМЕНА","8 часов"]], rate:"1 800 ₽/ч", shift:"14 500 ₽/смена", img:"/images/equipment/cat-lift.jpg",        alt:"Аренда автовышки в Москве",                hasImg:true  },
+      ].map((item) => (
+        <article class="tech-cell" data-category={item.cat}>
+          <div class="ph" style="aspect-ratio: 4/3;">
+            <img src={item.img} alt={item.alt} loading="lazy" class={item.hasImg ? "img-show" : ""} />
+            {!item.hasImg && (
+              <div class="ph-label">
+                <span class="mark">{item.mark}</span>
+                <span style="color: rgba(255,255,255,.55);">{item.img}</span>
+              </div>
+            )}
+          </div>
+          <div class="p-5">
+            <div class="mono text-xs font-bold" style="color: var(--c-amber2);">{item.id}</div>
+            <h3 class="display text-xl font-extrabold mt-1" style="color: var(--c-ink2);">{item.name}</h3>
+            <dl class="mt-4 flex flex-col gap-1 mono text-xs">
+              {item.specs.map(([dt, dd]) => (
+                <div class="flex justify-between">
+                  <dt style="color: var(--c-muted);">{dt}</dt>
+                  <dd class="font-medium">{dd}</dd>
+                </div>
+              ))}
+            </dl>
+            <div class="mt-5 mono font-extrabold text-sm" style="color: var(--c-amber2);">
+              {item.rate} · {item.shift}
+            </div>
+            <a href="#cta" class="mt-4 inline-flex items-center h-10 px-4 mono text-xs font-bold text-white transition-colors" style="background: var(--c-ink);">
+              ЗАКАЗАТЬ →
+            </a>
+          </div>
+        </article>
+      ))}
+
+    </div>
+
+    <!-- Footer note -->
+    <div class="mono text-xs flex flex-col md:flex-row md:items-center justify-between gap-3 p-4" style="border: 1px solid var(--c-border); border-top: none; background: var(--c-card);">
+      <span><b>ДОП. ПАРК:</b> трал / бульдозер / каток — уточняйте у диспетчера</span>
+      <span>
+        <a href="#" class="underline decoration-2" style="text-decoration-color: var(--c-amber); text-underline-offset: 3px;">PDF полного парка →</a>
+        &nbsp;·&nbsp;
+        <a href="tel:+74950000024" class="font-bold">+7 495 000-00-24</a>
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ TARIFFS ══════════ -->
+<section id="tariffs" class="py-14 md:py-20 grid-lines" style="background: var(--c-dark); color: #fff;">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+
+    <div class="max-w-3xl mb-8">
+      <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber);">Цены на аренду</div>
+      <h2 class="display text-3xl md:text-5xl font-extrabold mt-3">Ставки на аренду спецтехники</h2>
+      <p class="mt-4" style="color: rgba(255,255,255,.65);">Минимальный заказ — смена 8 часов или 4 часа для коротких работ в пределах МКАД. Точная ставка фиксируется в договоре или счёте до выезда.</p>
+    </div>
+
+    <div class="overflow-x-auto" style="border: 1px solid var(--c-line); background: rgba(26,36,54,.7);">
+      <table class="w-full min-w-[720px] text-left">
+        <thead style="border-bottom: 1px solid var(--c-line);">
+          <tr class="mono text-xs uppercase" style="color: var(--c-amber);">
+            <th class="p-4">Формат</th>
+            <th class="p-4">Условия</th>
+            <th class="p-4 text-right">Ставка</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm" style="--div-c: var(--c-line);">
+          {[
+            { key:"4h",     fmt:"4 часа",             cond:"Короткие работы в пределах МКАД",                                    rate:"от 9 000 ₽",   comment:"Подходит для разгрузки, небольшого демонтажа, кратких земляных работ.",                    featured:false },
+            { key:"shift8", fmt:"Смена · 8 часов",    cond:"Стандартный формат аренды",                                          rate:"от 12 000 ₽",  comment:"Базовый вариант для большинства задач на стройке.",                                        featured:true  },
+            { key:"day12",  fmt:"Сутки · 12 часов",   cond:"Удлинённая смена с переработкой",                                    rate:"от 17 500 ₽",  comment:"Для объектов с плотным графиком и непрерывными работами.",                                featured:false },
+            { key:"week",   fmt:"Неделя",              cond:"От 5 смен подряд",                                                   rate:"от 55 000 ₽",  comment:"Выгодно для этапов земляных работ, благоустройства и монтажа.",                           featured:false },
+            { key:"month",  fmt:"Месяц",               cond:"От 20 смен",                                                         rate:"от 195 000 ₽", comment:"Индивидуальный договор для подрядчиков и строительных компаний.",                          featured:false },
+          ].map((row) => (
+            <tr role="button" class="cursor-pointer" data-tariff={row.key} data-fmt={row.fmt} data-cond={row.cond} data-rate={row.rate} data-comment={row.comment} data-featured={row.featured ? 'true' : 'false'} style="border-top: 1px solid var(--c-line);">
+              <td class="p-4 mono font-extrabold">
+                {row.fmt}
+                {row.featured && <span class="text-xs ml-2 px-2 py-1" style="border: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.7);">БАЗОВЫЙ</span>}
+              </td>
+              <td class="p-4" style="color: rgba(255,255,255,.7);">{row.cond}</td>
+              <td class="p-4 text-right mono font-extrabold">{row.rate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tariff-detail" class="mt-4 p-5 mono text-sm" style="border: 1px solid var(--c-line); background: rgba(26,36,54,.85); color: #fff;">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <div class="text-xs uppercase font-bold mb-1" style="color: var(--c-amber);">Выбранный формат</div>
+          <div id="td-fmt" class="display text-2xl font-extrabold">Смена · 8 часов</div>
+          <div id="td-cond" class="text-xs mt-1" style="color: rgba(255,255,255,.55);">Стандартный формат аренды</div>
+        </div>
+        <div class="display text-3xl font-extrabold" style="color: var(--c-amber);" id="td-rate">от 12 000 ₽</div>
+      </div>
+      <p id="td-comment" class="mt-4 text-sm" style="color: rgba(255,255,255,.7);">Базовый вариант для большинства задач на стройке.</p>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6 p-5 text-sm" style="border: 1px solid var(--c-line); background: rgba(26,36,54,.6);">
+      <div>
+        <div class="mono text-xs font-bold uppercase mb-3" style="color: var(--c-success);">ВКЛЮЧЕНО В СТАВКУ</div>
+        <p style="color: rgba(255,255,255,.7);">Оператор техники, ГСМ техники, подача в пределах МКАД, путевой лист, договор, счёт и закрывающие документы.</p>
+      </div>
+      <div>
+        <div class="mono text-xs font-bold uppercase mb-3" style="color: var(--c-amber);">СЧИТАЕТСЯ ОТДЕЛЬНО</div>
+        <p style="color: rgba(255,255,255,.7);">Перегон за МКАД, переработка сверх формата, ночные смены, выходные, простой по вине заказчика.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ GUARANTEES ══════════ -->
+<section id="why" class="py-14 md:py-20" style="background: var(--c-bg);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-8">
+      <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber2);">Гарантии работы</div>
+      <h2 class="display text-3xl md:text-5xl font-extrabold mt-3" style="color: var(--c-ink2);">Что фиксируем в каждом заказе</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 bg-white" style="border-top: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+      {[
+        { code:"OPS-01", title:"Подача от 2 часов",       body:"В пределах МКАД при наличии свободной техники. По МО — по согласованию с диспетчером." },
+        { code:"OPS-02", title:"Фиксированная ставка",    body:"Цена указана в договоре или счёте до подачи техники. Доплаты — только за согласованные работы." },
+        { code:"OPS-03", title:"Осмотр перед выездом",    body:"ТО, заправка, проверка узлов и фиксация состояния в путевом листе." },
+        { code:"OPS-04", title:"Замена при поломке",      body:"Если машина встала по нашей вине — присылаем замену в кратчайший срок по договору." },
+      ].map((g) => (
+        <div class="tech-cell p-6">
+          <div class="mono font-bold" style="color: var(--c-amber2);">{g.code}</div>
+          <h3 class="display text-xl font-extrabold mt-3" style="color: var(--c-ink2);">{g.title}</h3>
+          <p class="text-sm mt-2" style="color: var(--c-muted);">{g.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-6 overflow-hidden" style="aspect-ratio: 16/5; position: relative;">
+      <div class="ph" style="height: 100%;">
+        <img src="/images/equipment/why-operators.jpg" alt="Операторы спецтехники ТехПарк 24 — профессионалы с опытом от 5 лет" loading="lazy" class="img-show" />
+      </div>
+      <div class="absolute inset-0 flex items-end p-5" style="background: linear-gradient(to top, rgba(12,18,32,.65), transparent);">
+        <p class="mono text-xs font-bold text-white">ОПЕРАТОРЫ СО СТАЖЕМ ОТ 5 ЛЕТ · ОСМОТР ПЕРЕД КАЖДЫМ ВЫЕЗДОМ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROCESS ══════════ -->
+<section class="py-14 md:py-20" style="background: var(--c-soft);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-8">
+      <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber2);">Как заказать</div>
+      <h2 class="display text-3xl md:text-5xl font-extrabold mt-3" style="color: var(--c-ink2);">5 шагов от заявки до работы на объекте</h2>
+    </div>
+
+    <div class="grid md:grid-cols-5 bg-white" style="border-top: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+      {[
+        { n:"01", title:"Заявка",   body:"Телефон, форма или мессенджер.",                          featured:false },
+        { n:"02", title:"Расчёт",   body:"Диспетчер подбирает технику и называет ставку.",           featured:false },
+        { n:"03", title:"Договор",  body:"Счёт, договор, условия подачи.",                           featured:false },
+        { n:"04", title:"Подача",   body:"Техника едет на объект по путевому листу.",                featured:false },
+        { n:"05", title:"Работа",   body:"Оператор выполняет задачу, документы закрываем.",          featured:true  },
+      ].map((s) => (
+        <div class="tech-cell p-5" style={s.featured ? "background: var(--c-amber);" : ""}>
+          <div class="mono text-3xl font-bold" style={s.featured ? "color: var(--c-dark);" : "color: var(--c-amber2);"}>
+            {s.n}
+          </div>
+          <h3 class="font-extrabold mt-4" style={s.featured ? "color: var(--c-dark);" : "color: var(--c-ink2);"}>
+            {s.title}
+          </h3>
+          <p class="text-sm mt-2" style={s.featured ? "color: rgba(12,18,32,.75);" : "color: var(--c-muted);"}>
+            {s.body}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AREA ══════════ -->
+<section id="area" class="py-14 md:py-20" style="background: var(--c-bg);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+
+    <!-- Two-column: left = text, right = SVG scheme -->
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+
+      <!-- LEFT COLUMN -->
+      <div class="lg:col-span-5">
+        <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber2);">Где работаем</div>
+        <h2 class="display text-3xl md:text-4xl font-extrabold mt-3" style="color: var(--c-ink2);">
+          Аренда спецтехники по Москве и Московской области
+        </h2>
+        <p class="mt-4 text-sm leading-relaxed" style="color: var(--c-muted);">
+          Подаём технику во все округа Москвы: ЦАО, САО, СВАО, ВАО, ЮВАО, ЮАО, ЮЗАО, ЗАО, СЗАО, ЗелАО и ТиНАО. Работаем по Новой Москве и ближнему Подмосковью.
+        </p>
+
+        <!-- Info chip -->
+        <div class="mt-5 p-4 mono text-xs" style="border: 1px solid var(--c-border); background: #fff;">
+          Подача внутри МКАД — по базовой ставке.&nbsp; За МКАД — от 50 ₽/км в одну сторону.
+        </div>
+
+        <!-- Zone legend cards -->
+        <div class="mt-5 flex flex-col gap-2">
+          {[
+            { code:"ЗОНА-01", label:"МКАД",        detail:"Базовая ставка без доплаты за перегон",      color:"var(--c-ink)" },
+            { code:"ЗОНА-02", label:"до 30 км",    detail:"от 50 ₽/км в одну сторону",                 color:"var(--c-amber2)" },
+            { code:"ЗОНА-03", label:"до 60 км",    detail:"Индивидуальный расчёт с диспетчером",        color:"var(--c-amber)" },
+          ].map((z) => (
+            <div class="flex items-center gap-4 p-3" style="border: 1px solid var(--c-border); background: #fff;">
+              <span class="mono text-xs font-bold shrink-0" style="color: var(--c-muted);">{z.code}</span>
+              <span class="mono text-sm font-extrabold shrink-0" style={`color: ${z.color};`}>{z.label}</span>
+              <span class="text-xs" style="color: var(--c-muted);">{z.detail}</span>
+            </div>
+          ))}
+        </div>
+
+        <!-- City chips -->
+        <div class="mt-6 flex flex-wrap gap-2 text-xs">
+          {["Красногорск","Химки","Мытищи","Балашиха","Одинцово","Подольск","Люберцы","Видное","Реутов","Долгопрудный","Королёв","Щёлково","Домодедово","Раменское","Лобня"].map((city) => (
+            <span class="px-3 py-1.5" style="border: 1px solid var(--c-border); background: #fff; color: var(--c-ink);">{city}</span>
+          ))}
+        </div>
+
+        <!-- CTA link -->
+        <div class="mt-7">
+          <a href="#cta" class="inline-flex items-center mono text-sm font-extrabold transition-colors" style="height: 44px; padding: 0 20px; background: var(--c-amber); color: var(--c-dark);">
+            Проверить подачу по адресу →
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: SVG zone scheme -->
+      <div class="lg:col-span-7">
+        <!-- Label above SVG -->
+        <div class="mb-3">
+          <div class="mono text-xs font-bold uppercase" style="color: var(--c-amber2);">Схема зон подачи техники</div>
+          <p class="text-xs mt-1" style="color: var(--c-muted);">
+            Ориентировочная схема. Точный расчёт перегона диспетчер назовёт после адреса объекта.
+          </p>
+        </div>
+
+        <!-- SVG scheme -->
+        <div style="border: 1px solid var(--c-border); background: #fff; overflow: hidden;">
+          <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" aria-label="Ориентировочная схема зон подачи спецтехники">
+            <!-- Background -->
+            <rect width="560" height="420" fill="#F0F4F8"/>
+
+            <!-- Grid pattern -->
+            <defs>
+              <pattern id="area-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#CBD5E1" stroke-width="0.6"/>
+              </pattern>
+            </defs>
+            <rect width="560" height="420" fill="url(#area-grid)"/>
+
+            <!-- Zone 3: до 60 км (outermost) -->
+            <ellipse cx="270" cy="208" rx="240" ry="188" fill="rgba(245,158,11,.08)" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="8 5"/>
+            <text x="500" y="75" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#D97706">до 60 км</text>
+
+            <!-- Zone 2: до 30 км (middle) -->
+            <ellipse cx="270" cy="208" rx="158" ry="124" fill="rgba(245,158,11,.12)" stroke="#D97706" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="405" y="105" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#D97706">до 30 км</text>
+
+            <!-- Zone 1: МКАД (inner) -->
+            <ellipse cx="270" cy="208" rx="76" ry="60" fill="rgba(30,41,59,.18)" stroke="#1E293B" stroke-width="2.5"/>
+            <text x="270" y="204" text-anchor="middle" dominant-baseline="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#0F172A">МКАД</text>
+            <text x="270" y="218" text-anchor="middle" dominant-baseline="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#1E293B" opacity="0.7">база</text>
+
+            <!-- City dots with labels -->
+            <!-- Химки N -->
+            <circle cx="252" cy="68" r="5" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="261" y="72" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#0F172A" font-weight="600">Химки</text>
+
+            <!-- Долгопрудный NW -->
+            <circle cx="200" cy="75" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="132" y="72" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Долгопрудный</text>
+
+            <!-- Красногорск W -->
+            <circle cx="128" cy="155" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="20" y="152" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Красно-</text>
+            <text x="20" y="163" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">горск</text>
+
+            <!-- Одинцово SW -->
+            <circle cx="130" cy="255" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="20" y="258" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Одинцово</text>
+
+            <!-- Мытищи NE -->
+            <circle cx="345" cy="80" r="5" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="354" y="84" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#0F172A" font-weight="600">Мытищи</text>
+
+            <!-- Королёв NE far -->
+            <circle cx="390" cy="68" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="397" y="72" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Королёв</text>
+
+            <!-- Балашиха E -->
+            <circle cx="415" cy="190" r="5" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="423" y="194" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#0F172A" font-weight="600">Балашиха</text>
+
+            <!-- Реутов E close -->
+            <circle cx="378" cy="218" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="386" y="222" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Реутов</text>
+
+            <!-- Люберцы SE -->
+            <circle cx="370" cy="285" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="378" y="289" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Люберцы</text>
+
+            <!-- Подольск S -->
+            <circle cx="262" cy="345" r="5" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="271" y="349" font-family="JetBrains Mono,monospace" font-size="8.5" fill="#0F172A" font-weight="600">Подольск</text>
+
+            <!-- Домодедово S far -->
+            <circle cx="315" cy="382" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="323" y="386" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Домодедово</text>
+
+            <!-- Видное SE -->
+            <circle cx="330" cy="320" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="338" y="324" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Видное</text>
+
+            <!-- Щёлково NE far -->
+            <circle cx="450" cy="130" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="458" y="134" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Щёлково</text>
+
+            <!-- Раменское SE far -->
+            <circle cx="460" cy="330" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="440" y="344" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Раменское</text>
+
+            <!-- Лобня N far -->
+            <circle cx="285" cy="32" r="4" fill="#D97706" stroke="#fff" stroke-width="1.5"/>
+            <text x="293" y="36" font-family="JetBrains Mono,monospace" font-size="8" fill="#64748B">Лобня</text>
+
+            <!-- North arrow indicator -->
+            <text x="530" y="405" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="8" fill="#94A3B8">СХЕМА / НЕ КАРТА</text>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DOCUMENTS ══════════ -->
+<section id="docs" class="py-14 md:py-20" style="background: var(--c-soft);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+
+    <div class="max-w-2xl mb-8">
+      <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber2);">Документы для юрлиц</div>
+      <h2 class="display text-3xl md:text-5xl font-extrabold mt-3" style="color: var(--c-ink2);">Пакет закрывающих документов</h2>
+      <p class="mt-4" style="color: var(--c-muted);">Работаем с ИП и юрлицами по безналу. Закрываем заказ полным комплектом документов в течение 3 рабочих дней.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      {[
+        { code:"DOC-01", name:"ДОГОВОР АРЕНДЫ №" },
+        { code:"DOC-02", name:"СЧЁТ НА ОПЛАТУ"   },
+        { code:"DOC-03", name:"АКТ РАБОТ"        },
+        { code:"DOC-04", name:"УПД"               },
+        { code:"DOC-05", name:"ПУТЕВОЙ ЛИСТ"      },
+        { code:"DOC-06", name:"РЕКВИЗИТЫ"         },
+      ].map((doc) => (
+        <div class="doc-paper p-4">
+          <div class="mono text-xs font-bold" style="color: var(--c-amber2);">{doc.code}</div>
+          <h3 class="mono text-xs font-bold mt-4">{doc.name}</h3>
+          <div class="mt-5 flex flex-col gap-2">
+            <div class="doc-line"></div>
+            <div class="doc-line" style="width: 75%;"></div>
+            <div class="doc-line" style="width: 85%;"></div>
+          </div>
+          <div class="stamp absolute right-3 bottom-3 mono">PDF<br/>ОБРАЗЕЦ</div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ REVIEWS ══════════ -->
+<section class="py-14 md:py-20" style="background: var(--c-bg);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber2);">Отчёты клиентов</div>
+        <h2 class="display text-3xl md:text-5xl font-extrabold mt-3" style="color: var(--c-ink2);">Что говорят о работе с ТехПарк 24</h2>
+      </div>
+      <div class="mono text-xs" style="color: var(--c-muted);">4.8★ · Яндекс / Авито / Профи</div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 bg-white" style="border-top: 1px solid var(--c-border); border-left: 1px solid var(--c-border);">
+      {[
+        { id:"#2024-1845", date:"12.03.2026", job:"АВТОКРАН 25Т · 2 СМЕНЫ",  place:"ПОДОЛЬСК, СКЛАДСКОЙ КОМПЛЕКС",  text:"Кран подали по времени, закрывающие получили в тот же день. Простая коммуникация с диспетчером.", author:"ООО «СтройКомплект», прораб А.К." },
+        { id:"#2024-1882", date:"21.03.2026", job:"МАНИПУЛЯТОР · 1 СМЕНА",   place:"БАЛАШИХА, МЕТАЛЛОБАЗА",         text:"Водитель аккуратно разгрузил металл, никаких неожиданностей по ставке. Документы без задержек.", author:"ИП Михайлов С.В." },
+        { id:"#2024-1920", date:"04.04.2026", job:"ЭКСКАВАТОР · 5 СМЕН",     place:"НОВАЯ МОСКВА, КОТЛОВАН",        text:"Техника отработала неделю без простоя. По факту ставку не меняли, счёт совпал с расчётом.", author:"ГК «Монолит», начальник участка" },
+      ].map((r) => (
+        <article class="tech-cell p-6">
+          <div class="mono text-xs font-bold" style="color: var(--c-amber2);">{r.id} · {r.date}</div>
+          <h3 class="display text-xl font-extrabold mt-3" style="color: var(--c-ink2);">{r.job}</h3>
+          <p class="mono text-xs mt-2" style="color: var(--c-muted);">ОБЪЕКТ: {r.place}</p>
+          <p class="text-sm mt-5" style="color: var(--c-muted);">"{r.text}"</p>
+          <div class="mt-5 text-sm font-bold" style="color: var(--c-ink);">{r.author}</div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" class="py-14 md:py-20" style="background: var(--c-soft);">
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-8">
+
+      <div class="lg:col-span-4">
+        <div class="mono text-xs font-bold tracking-widest uppercase" style="color: var(--c-amber2);">FAQ</div>
+        <h2 class="display text-3xl md:text-5xl font-extrabold mt-3" style="color: var(--c-ink2);">Вопросы перед заказом</h2>
+      </div>
+
+      <div class="lg:col-span-8 flex flex-col gap-3">
+        {[
+          { q:"Сколько стоит аренда экскаватора?",                  a:"Ориентир — от 2 800 ₽/час или от 22 000 ₽/смена. Точная ставка зависит от модели, смены, района и задачи." },
+          { q:"Что входит в стоимость аренды техники с оператором?", a:"Оператор, ГСМ техники, работа в согласованной смене, путевой лист и документы для юрлиц." },
+          { q:"Можно ли заказать спецтехнику срочно?",              a:"Да, при наличии свободной техники подача в пределах МКАД возможна от 2 часов после подтверждения заявки." },
+          { q:"Работаете ли с юридическими лицами?",               a:"Да. Предоставляем договор, счёт, акт, УПД, путевой лист и реквизиты компании." },
+        ].map((item, i) => (
+          <div class={`equipment-faq-item${i === 0 ? ' is-open' : ''}`}>
+            <button
+              type="button"
+              class="equipment-faq-trigger p-5"
+              aria-expanded={i === 0 ? 'true' : 'false'}
+              aria-controls={`faq-panel-${i}`}
+              id={`faq-trigger-${i}`}
+            >
+              <span>{item.q}</span>
+              <span class="equipment-faq-icon ml-4" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+            <div
+              id={`faq-panel-${i}`}
+              class="equipment-faq-panel"
+              role="region"
+              aria-labelledby={`faq-trigger-${i}`}
+            >
+              <div class="equipment-faq-answer px-5 pb-5">
+                {item.a}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section id="cta" class="relative overflow-hidden py-16 md:py-24 grid-lines" style="background: var(--c-dark); color: #fff;">
+  <div class="absolute inset-0 ph" style="opacity: .35; z-index: 0;"></div>
+  <div class="absolute inset-0" style="background: rgba(12,18,32,.88); z-index: 0;"></div>
+
+  <div class="relative max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8" style="z-index: 1;">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <div class="mono font-bold text-white pointer-events-none select-none absolute left-1/2 -translate-x-1/2" style="font-size: clamp(6rem, 18vw, 12rem); line-height: 1; top: -1.5rem; opacity: .05;">24/7</div>
+
+      <div class="relative">
+        <div class="mono text-xs font-bold uppercase tracking-widest" style="color: var(--c-amber);">Заявки принимаем круглосуточно</div>
+        <h2 class="display text-4xl md:text-6xl font-extrabold mt-4">Диспетчерская принимает заявки</h2>
+        <p class="mt-5 max-w-2xl mx-auto" style="color: rgba(255,255,255,.65);">
+          Оставьте заявку — диспетчер уточнит задачу, подберёт технику и назовёт точную ставку. При срочной заявке подаём машину на объект от 2 часов в пределах МКАД при наличии техники.
+        </p>
+
+        <div class="mt-8 grid sm:grid-cols-3 gap-3 mono text-xs">
+          {["ОТВЕТ ЗА 15 МИН","ПОДАЧА ОТ 2 Ч В МКАД","ДОГОВОР + СЧЁТ"].map((t) => (
+            <div class="p-3" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.05);">{t}</div>
+          ))}
+        </div>
+
+        <a href="tel:+74950000024" class="mt-9 inline-flex justify-center items-center mono font-extrabold transition-colors" style="width: 100%; max-width: 360px; height: 56px; background: var(--c-amber); color: var(--c-dark);">
+          ПОЗВОНИТЬ ДИСПЕТЧЕРУ →
+        </a>
+        <div class="display mono font-bold mt-5" style="font-size: clamp(2rem, 6vw, 3.25rem); color: var(--c-amber);">+7 495 000-00-24</div>
+      </div>
+
+      <form class="mt-10 p-5 md:p-6 grid md:grid-cols-3 gap-3 text-left" style="border: 1px solid var(--c-line); background: rgba(26,36,54,.9);">
+        <input class="h-12 px-3 mono text-sm text-white" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;" placeholder="Имя" />
+        <input type="tel" class="h-12 px-3 mono text-sm text-white" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;" placeholder="Телефон" />
+        <select class="h-12 px-3 mono text-sm text-white" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;">
+          <option>Тип техники</option>
+          <option>Экскаватор</option>
+          <option>Манипулятор</option>
+          <option>Автокран</option>
+          <option>Самосвал</option>
+        </select>
+        <input class="h-12 px-3 mono text-sm text-white md:col-span-2" style="background: var(--c-dark); border: 1px solid var(--c-line); outline: none;" placeholder="Адрес объекта или район" />
+        <button type="button" class="h-12 mono text-sm font-extrabold transition-colors" style="background: var(--c-amber); color: var(--c-dark);">
+          ПОЛУЧИТЬ РАСЧЁТ
+        </button>
+        <p class="text-xs md:col-span-3" style="color: rgba(255,255,255,.4);">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer style="background: var(--c-dark); color: #fff; border-top: 3px solid var(--c-amber);">
+
+  <!-- TOP BAND: brand + status row -->
+  <div style="border-bottom: 1px solid var(--c-line);">
+    <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+      <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+
+        <!-- Brand block -->
+        <div class="lg:w-72 shrink-0">
+          <div class="display text-2xl font-extrabold">
+            ТехПарк <span style="color: var(--c-amber);">24</span>
+          </div>
+          <p class="text-sm mt-3 leading-relaxed" style="color: rgba(255,255,255,.55);">
+            Аренда строительной спецтехники с оператором по Москве и Московской области. Подача от 2 часов, фиксированная ставка, документы для юрлиц.
+          </p>
+        </div>
+
+        <!-- Status mini-grid -->
+        <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="p-3" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.04);">
+            <div class="display mono text-2xl font-extrabold" style="color: var(--c-amber);">24/7</div>
+            <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">Диспетчерская</div>
+          </div>
+          <div class="p-3" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.04);">
+            <div class="display mono text-2xl font-extrabold" style="color: var(--c-amber);">80+</div>
+            <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">Единиц техники</div>
+          </div>
+          <div class="p-3" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.04);">
+            <div class="display mono text-2xl font-extrabold" style="color: var(--c-amber);">2 ч</div>
+            <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">Подача в МКАД</div>
+          </div>
+          <div class="p-3" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.04);">
+            <div class="display mono text-2xl font-extrabold" style="color: var(--c-amber);">ЮР</div>
+            <div class="text-xs mt-1" style="color: rgba(255,255,255,.5);">Безнал / договор / закрывающие</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN COLUMNS -->
+  <div style="border-bottom: 1px solid var(--c-line);">
+    <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+        <!-- Col 1: Catalog -->
+        <div>
+          <div class="mono text-xs font-bold uppercase mb-4" style="color: var(--c-amber);">Каталог техники</div>
+          <ul class="flex flex-col gap-2 text-sm" style="color: rgba(255,255,255,.65);">
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда экскаватора</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда мини-экскаватора</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда экскаватора-погрузчика</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда автокрана</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда манипулятора</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда самосвала</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда фронтального погрузчика</a></li>
+            <li><a href="#catalog" class="hover:text-white transition-colors">Аренда автовышки</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Work types -->
+        <div>
+          <div class="mono text-xs font-bold uppercase mb-4" style="color: var(--c-amber);">Для каких работ</div>
+          <ul class="flex flex-col gap-2 text-sm" style="color: rgba(255,255,255,.65);">
+            <li>Земляные работы</li>
+            <li>Разработка котлована</li>
+            <li>Демонтаж</li>
+            <li>Погрузка грунта</li>
+            <li>Вывоз строительного мусора</li>
+            <li>Разгрузка материалов</li>
+            <li>Монтаж конструкций</li>
+            <li>Фасадные работы</li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Zones -->
+        <div>
+          <div class="mono text-xs font-bold uppercase mb-4" style="color: var(--c-amber);">Зоны работы</div>
+          <ul class="flex flex-col gap-2 text-sm" style="color: rgba(255,255,255,.65);">
+            <li>Москва</li>
+            <li>Новая Москва</li>
+            <li>Московская область</li>
+            <li>Красногорск</li>
+            <li>Химки</li>
+            <li>Мытищи</li>
+            <li>Балашиха</li>
+            <li>Одинцово</li>
+            <li>Подольск</li>
+            <li>Люберцы</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Docs -->
+        <div>
+          <div class="mono text-xs font-bold uppercase mb-4" style="color: var(--c-amber);">Документы</div>
+          <ul class="flex flex-col gap-2 text-sm" style="color: rgba(255,255,255,.65);">
+            <li>Договор аренды спецтехники</li>
+            <li>Счёт на оплату</li>
+            <li>Акт выполненных работ</li>
+            <li>УПД</li>
+            <li>Путевой лист</li>
+            <li>Реквизиты компании</li>
+            <li>Политика обработки данных</li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Contacts + Requisites -->
+        <div class="flex flex-col gap-5">
+
+          <!-- Contacts panel -->
+          <div class="p-4" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.04);">
+            <div class="mono text-xs font-bold uppercase mb-3" style="color: var(--c-amber);">Контакты</div>
+            <ul class="flex flex-col gap-2">
+              <li class="mono text-base font-extrabold text-white">+7 495 000-00-24</li>
+              <li class="text-sm" style="color: rgba(255,255,255,.6);">disp@techpark24.ru</li>
+              <li class="text-sm" style="color: rgba(255,255,255,.6);">Москва, промзона «Север»</li>
+              <li class="mono text-xs mt-1" style="color: var(--c-success);">
+                <span class="inline-block w-2 h-2 rounded-full mr-1.5 animate-pulse" style="background: var(--c-success);"></span>
+                Диспетчерская 24/7
+              </li>
+            </ul>
+            <a href="#cta" class="mt-4 inline-flex items-center justify-center w-full h-10 mono text-xs font-extrabold transition-colors" style="background: var(--c-amber); color: var(--c-dark);">
+              ЗАКАЗАТЬ ТЕХНИКУ →
+            </a>
+          </div>
+
+          <!-- Requisites panel -->
+          <div class="p-4" style="border: 1px solid var(--c-line); background: rgba(255,255,255,.03);">
+            <div class="mono text-xs font-bold uppercase mb-3" style="color: var(--c-amber);">Реквизиты</div>
+            <dl class="grid mono text-xs gap-y-1.5" style="grid-template-columns: 44px 1fr; color: rgba(255,255,255,.55);">
+              <dt>ИНН</dt>   <dd class="text-white font-bold">7700000024</dd>
+              <dt>КПП</dt>   <dd class="text-white font-bold">770001001</dd>
+              <dt>ОГРН</dt>  <dd class="text-white font-bold">1247700000240</dd>
+              <dt>Р/с</dt>   <dd style="color: rgba(255,255,255,.7);">40702810000000000024</dd>
+              <dt>Банк</dt>  <dd style="color: rgba(255,255,255,.7);">АО «Банк»</dd>
+              <dt>БИК</dt>   <dd style="color: rgba(255,255,255,.7);">044525000</dd>
+            </dl>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO TEXT BAND -->
+  <div style="border-bottom: 1px solid var(--c-line);">
+    <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-5">
+      <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,.35);">
+        Работаем с подрядчиками, строительными компаниями, прорабами и частными заказчиками. Предоставляем спецтехнику с оператором для земляных работ, монтажа, демонтажа, погрузки, перевозки и благоустройства. Подаём технику по Москве, Новой Москве и Московской области.
+      </p>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-5">
+    <div class="flex flex-col md:flex-row justify-between gap-3 text-xs" style="color: rgba(255,255,255,.35);">
+      <span>© 2026 ТехПарк 24</span>
+      <span class="flex flex-wrap gap-3">
+        <a href="#" class="hover:text-white transition-colors">Политика обработки данных</a>
+        <a href="#" class="hover:text-white transition-colors">Договор оферты</a>
+      </span>
+      <span class="md:max-w-sm md:text-right">Цены на сайте ориентировочные. Точная ставка фиксируется после подтверждения заявки диспетчером.</span>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ══════════ MOBILE CTA BAR ══════════ -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3" style="background: rgba(12,18,32,.96); border-top: 1px solid var(--c-line);">
+  <div class="flex gap-2">
+    <a href="tel:+74950000024" class="flex-1 h-12 flex items-center justify-center mono text-sm font-bold" style="background: var(--c-card); color: var(--c-dark);">ПОЗВОНИТЬ</a>
+    <a href="#cta" class="flex-1 h-12 flex items-center justify-center mono text-sm font-bold" style="background: var(--c-amber); color: var(--c-dark);">ЗАЯВКА</a>
+  </div>
+</div>
+
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', function() {
+  // ── FAQ accordion ──
+  (function() {
+    var items = document.querySelectorAll('#faq .equipment-faq-item');
+    if (!items.length) return;
+
+    function openItem(item) {
+      var trigger = item.querySelector('.equipment-faq-trigger');
+      var panel = item.querySelector('.equipment-faq-panel');
+      if (!trigger || !panel) return;
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+
+    function closeItem(item) {
+      var trigger = item.querySelector('.equipment-faq-trigger');
+      var panel = item.querySelector('.equipment-faq-panel');
+      if (!trigger || !panel) return;
+      item.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+      panel.style.maxHeight = '0px';
+    }
+
+    items.forEach(function(item) {
+      var trigger = item.querySelector('.equipment-faq-trigger');
+      var panel = item.querySelector('.equipment-faq-panel');
+      if (!trigger || !panel) return;
+
+      // Initialize already-open item
+      if (item.classList.contains('is-open')) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+
+      trigger.addEventListener('click', function() {
+        var isOpen = item.classList.contains('is-open');
+        // Close all others (single-open accordion)
+        items.forEach(function(other) {
+          if (other !== item) closeItem(other);
+        });
+        if (isOpen) {
+          closeItem(item);
+        } else {
+          openItem(item);
+        }
+      });
+    });
+
+    // Recalculate maxHeight on resize for open items
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        items.forEach(function(item) {
+          if (item.classList.contains('is-open')) {
+            var panel = item.querySelector('.equipment-faq-panel');
+            if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      }, 150);
+    });
+  })();
+
+  // ── Catalog filters ──
+  (function() {
+    var filters = document.querySelectorAll('.catalog-filter');
+    if (!filters.length) return;
+    filters.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var f = btn.dataset.filter;
+        filters.forEach(function(b) {
+          var active = b === btn;
+          b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          if (active) {
+            b.style.background = 'var(--c-ink)';
+            b.style.color = '#fff';
+            b.style.border = 'none';
+          } else {
+            b.style.background = 'var(--c-card)';
+            b.style.color = 'var(--c-ink)';
+            b.style.border = '1px solid var(--c-border)';
+          }
+        });
+        var cards = document.querySelectorAll('#catalog-grid article');
+        cards.forEach(function(card) {
+          if (f === 'all') {
+            card.style.display = '';
+          } else {
+            var cats = (card.dataset.category || '').split(' ');
+            card.style.display = cats.indexOf(f) !== -1 ? '' : 'none';
+          }
+        });
+      });
+    });
+  })();
+
+  // ── Tariff row switching ──
+  (function() {
+    var rows = document.querySelectorAll('[data-tariff]');
+    if (!rows.length) return;
+    var tdFmt     = document.getElementById('td-fmt');
+    var tdCond    = document.getElementById('td-cond');
+    var tdRate    = document.getElementById('td-rate');
+    var tdComment = document.getElementById('td-comment');
+
+    function setInactive(row) {
+      row.style.background = '';
+      row.style.color = '';
+      row.style.outline = '';
+      row.style.outlineOffset = '';
+      row.setAttribute('aria-selected', 'false');
+      var cells = row.querySelectorAll('td');
+      cells.forEach(function(td) { td.style.color = ''; });
+    }
+
+    function setActive(row) {
+      row.style.background = 'var(--c-amber)';
+      row.style.color = 'var(--c-dark)';
+      row.style.outline = '';
+      row.style.outlineOffset = '';
+      row.setAttribute('aria-selected', 'true');
+      var cells = row.querySelectorAll('td');
+      cells.forEach(function(td) { td.style.color = 'var(--c-dark)'; });
+      if (tdFmt)     tdFmt.textContent     = row.dataset.fmt     || '';
+      if (tdCond)    tdCond.textContent    = row.dataset.cond    || '';
+      if (tdRate)    tdRate.textContent    = row.dataset.rate    || '';
+      if (tdComment) tdComment.textContent = row.dataset.comment || '';
+    }
+
+    rows.forEach(function(row) {
+      row.addEventListener('click', function() {
+        rows.forEach(setInactive);
+        setActive(row);
+      });
+    });
+
+    var def = document.querySelector('[data-tariff="shift8"]');
+    if (def) {
+      rows.forEach(setInactive);
+      setActive(def);
+    }
+  })();
+});
+</script>
+
+</body>
+</html>
