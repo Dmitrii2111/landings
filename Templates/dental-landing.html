@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0A1426" media="(prefers-color-scheme: dark)" />
+<title>Имплантация зубов под ключ в Москве — цена от 45 000 ₽ | Имплант.Центр</title>
+<meta name="description" content="Имплантация зубов в Москве под ключ: Straumann, Nobel Biocare, All-on-4 и All-on-6. Бесплатная консультация и КТ, рассрочка 0% до 24 мес., фиксированная цена в договоре. 17 лет опыта, 4 800+ установленных имплантов Straumann и Nobel." />
+<meta property="og:title" content="Имплантация зубов под ключ в Москве — Имплант.Центр" />
+<meta property="og:description" content="Имплантация All-on-4, All-on-6, имплантация одного зуба. Бесплатная КТ, рассрочка 0%, фиксированная цена в договоре." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<script>
+  // Set theme BEFORE first paint to avoid FOUC
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: ['selector', '[data-theme="dark"]'],
+  theme: {
+    extend: {
+      colors: {
+        ink: 'rgb(var(--c-ink) / <alpha-value>)',
+        'ink-2': 'rgb(var(--c-ink-2) / <alpha-value>)',
+        'on-ink': 'rgb(var(--c-on-ink) / <alpha-value>)',
+        bg: 'rgb(var(--c-bg) / <alpha-value>)',
+        soft: 'rgb(var(--c-soft) / <alpha-value>)',
+        card: 'rgb(var(--c-card) / <alpha-value>)',
+        border: 'rgb(var(--c-border) / <alpha-value>)',
+        muted: 'rgb(var(--c-muted) / <alpha-value>)',
+        text: 'rgb(var(--c-text) / <alpha-value>)',
+        accent: '#2DD4BF',
+        'accent-2': '#0EA5A0',
+      },
+      fontFamily: {
+        display: ['Fraunces', 'serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        card: '0 1px 2px rgba(10,31,54,.04), 0 8px 24px rgba(10,31,54,.06)',
+        lift: '0 10px 30px rgba(10,31,54,.10)',
+      },
+      maxWidth: { container: '1280px' },
+    }
+  }
+}
+</script>
+<style>
+  /* ============================================================
+     COLOR ARCHITECTURE
+     - Brand colors (ink, accent) keep their visual identity across themes.
+     - Surfaces (bg, soft, card) and text roles (text, muted) flip.
+     ============================================================ */
+
+  /* Light theme (default) */
+  :root,
+  [data-theme="light"] {
+    --c-bg: 255 255 255;
+    --c-soft: 244 247 251;
+    --c-card: 255 255 255;
+    --c-border: 229 234 240;
+    --c-ring: 229 234 240;
+    --c-hairline: 229 234 240;
+
+    --c-ink: 10 31 54;          /* navy — stays navy (brand) */
+    --c-ink-2: 16 53 94;
+    --c-on-ink: 255 255 255;    /* text on ink surfaces */
+
+    --c-text: 10 31 54;         /* main text */
+    --c-muted: 91 107 130;      /* secondary text */
+
+    --c-grain: 10 31 54;
+    --c-ba-handle-bg: 255 255 255;
+    color-scheme: light;
+  }
+
+  /* Dark theme */
+  [data-theme="dark"] {
+    --c-bg: 10 20 38;           /* page background */
+    --c-soft: 17 30 53;         /* secondary surface */
+    --c-card: 22 38 64;         /* elevated card surface */
+    --c-border: 36 56 86;
+    --c-ring: 36 56 86;
+    --c-hairline: 36 56 86;
+
+    --c-ink: 6 14 28;           /* even darker than bg — for premium "hit" cards & dark sections */
+    --c-ink-2: 12 24 44;
+    --c-on-ink: 255 255 255;    /* always white on ink */
+
+    --c-text: 240 245 252;      /* main text — light */
+    --c-muted: 158 178 204;     /* secondary text */
+
+    --c-grain: 255 255 255;
+    --c-ba-handle-bg: 240 245 252;
+    color-scheme: dark;
+  }
+
+  html { scroll-behavior: smooth; background: rgb(var(--c-bg)); }
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: rgb(var(--c-text));
+    background: rgb(var(--c-bg));
+    -webkit-font-smoothing: antialiased;
+    transition: background-color .25s ease, color .25s ease;
+  }
+  .display { font-family: 'Fraunces', serif; font-optical-sizing: auto; letter-spacing: -0.02em; }
+  .num { font-feature-settings: "tnum" 1, "ss01" 1; }
+  .grain { background-image: radial-gradient(rgb(var(--c-grain) / 0.035) 1px, transparent 1px); background-size: 3px 3px; }
+  details[open] summary .chev { transform: rotate(45deg); }
+  .ba { position: relative; overflow: hidden; }
+  .ba .after { position: absolute; inset: 0; clip-path: inset(0 0 0 50%); }
+  .ba .handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgb(var(--c-ba-handle-bg)); box-shadow: 0 0 0 1px rgba(10,31,54,.4); }
+  .ba .handle::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 36px; height: 36px; border-radius: 999px; background: rgb(var(--c-ba-handle-bg)); box-shadow: 0 4px 12px rgba(10,31,54,.25); }
+  .ba .handle::before { content: "⇄"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 2; color: #0A1F36; font-size: 14px; font-weight: 700; }
+  .tag-dot::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 999px; background: #2DD4BF; margin-right: 8px; vertical-align: middle; }
+  .hairline { border-top: 1px solid rgb(var(--c-hairline)); }
+  .ring-inset-1 { box-shadow: inset 0 0 0 1px rgb(var(--c-ring)); }
+
+  /* Map hardcoded utility classes from the original markup to themed surfaces */
+  [data-theme="dark"] .bg-white { background-color: rgb(var(--c-card)) !important; }
+  [data-theme="dark"] .bg-white\/85 { background-color: rgb(var(--c-bg) / 0.85) !important; }
+  [data-theme="dark"] .bg-white\/90 { background-color: rgb(var(--c-card) / 0.9) !important; }
+  [data-theme="dark"] .bg-white\/95 { background-color: rgb(var(--c-card) / 0.95) !important; }
+  [data-theme="dark"] .border-border { border-color: rgb(var(--c-border)) !important; }
+
+  /* In dark theme, `text-ink` used as main text on light surfaces should become readable.
+     Exception: text-ink on top of ink/dark surfaces (handled via context selectors below). */
+  [data-theme="dark"] .text-ink { color: rgb(var(--c-text)) !important; }
+  [data-theme="dark"] .hover\:text-ink:hover { color: rgb(var(--c-text)) !important; }
+  /* Buttons / labels sitting on accent (teal) backgrounds should keep dark text */
+  [data-theme="dark"] .bg-accent .text-ink,
+  [data-theme="dark"] a.bg-accent.text-ink,
+  [data-theme="dark"] button.bg-accent.text-ink { color: #0A1F36 !important; }
+
+  /* Dark mode ink sections sit slightly darker than card surface for hierarchy */
+  [data-theme="dark"] section.bg-ink,
+  [data-theme="dark"] footer.bg-ink { background-color: rgb(var(--c-ink)) !important; }
+
+  /* Filter buttons & secondary borders */
+  [data-theme="dark"] .border-ink { border-color: rgb(var(--c-text)) !important; }
+
+  /* Theme switch button visual */
+  .theme-toggle {
+    width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 10px;
+    background: rgb(var(--c-soft));
+    color: rgb(var(--c-text));
+    box-shadow: inset 0 0 0 1px rgb(var(--c-ring));
+    transition: background-color .2s ease, transform .15s ease;
+    cursor: pointer;
+  }
+  .theme-toggle:hover { transform: translateY(-1px); }
+  .theme-toggle .ic-sun, .theme-toggle .ic-moon { width: 18px; height: 18px; }
+  [data-theme="light"] .theme-toggle .ic-moon { display: none; }
+  [data-theme="dark"]  .theme-toggle .ic-sun  { display: none; }
+</style>
+</head>
+<body class="bg-bg text-text">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-border">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-ink text-white">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3c2.5 0 4 1.2 4 3 0 1.4-.6 2.4-1 4.5-.4 2-.5 6-1.5 9-.6 1.7-2.2 1.7-2.8 0-1-3-1.1-7-1.5-9-.4-2.1-1-3.1-1-4.5 0-1.8 1.5-3 4-3Z"/>
+        </svg>
+      </span>
+      <span class="display text-xl tracking-tight">Имплант<span class="text-accent-2">.</span>Центр</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-muted">
+      <a href="#solutions" class="hover:text-ink">Методы</a>
+      <a href="#pricing" class="hover:text-ink">Цены</a>
+      <a href="#cases" class="hover:text-ink">Кейсы</a>
+      <a href="#doctors" class="hover:text-ink">Врачи</a>
+      <a href="#guarantee" class="hover:text-ink">Гарантии</a>
+      <a href="#faq" class="hover:text-ink">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Переключить тему" title="Переключить тему">
+        <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+        </svg>
+      </button>
+      <a href="tel:+74950000000" class="hidden md:inline text-sm font-semibold tracking-tight num">+7 495 000-00-00</a>
+      <a href="#cta" class="inline-flex items-center h-10 md:h-11 px-4 md:px-5 rounded-xl bg-ink text-white text-sm font-semibold hover:bg-ink-2 transition">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-soft via-bg to-bg"></div>
+    <div class="absolute inset-0 grain opacity-60"></div>
+    <div class="absolute -top-32 -right-40 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl"></div>
+  </div>
+
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 pt-12 md:pt-20 pb-16 md:pb-24">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <!-- LEFT: offer + benefits + CTA -->
+      <div class="lg:col-span-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white ring-inset-1 text-xs font-medium text-muted">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+          Имплантация в Москве · приём в день обращения · свободно 4 окна
+        </div>
+        <h1 class="display mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-[72px] font-medium">
+          Имплантация зубов<br/>
+          <span class="italic font-light text-ink-2">в Москве</span> —<br/>
+          <span class="relative inline-block">
+            под ключ от 45 000 ₽
+            <svg class="absolute -bottom-2 left-0 w-full" height="14" viewBox="0 0 400 14" fill="none" preserveAspectRatio="none">
+              <path d="M2 8 Q 100 2 200 7 T 398 6" stroke="#2DD4BF" stroke-width="4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </span>
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-muted max-w-xl">
+          Имплантация одного зуба, All-on-4 и All-on-6 в Москве. Полный цикл от диагностики и компьютерной томографии до установки постоянных коронок. Системы Straumann и Nobel Biocare. Принимаем сложные случаи после отказов в других клиниках.
+        </p>
+
+        <ul class="mt-7 grid sm:grid-cols-2 gap-3 max-w-xl text-sm">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Бесплатная КТ-диагностика и план лечения
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Рассрочка 0% от банков-партнёров до 24 мес.
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Имплантация под седацией — без боли и страха
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+            </span>
+            Фиксированная цена имплантации в договоре
+          </li>
+        </ul>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#cta" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition shadow-card">
+            Записаться на консультацию имплантолога
+          </a>
+          <a href="#pricing" class="inline-flex items-center h-12 px-1 text-ink font-semibold underline decoration-accent decoration-2 underline-offset-4 hover:decoration-ink-2">
+            Узнать цену имплантации →
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-5">
+          <div class="flex -space-x-3">
+            <div class="w-10 h-10 rounded-full ring-2 ring-white bg-gradient-to-br from-orange-200 to-rose-300"></div>
+            <div class="w-10 h-10 rounded-full ring-2 ring-white bg-gradient-to-br from-sky-200 to-indigo-300"></div>
+            <div class="w-10 h-10 rounded-full ring-2 ring-white bg-gradient-to-br from-emerald-200 to-teal-400"></div>
+            <div class="w-10 h-10 rounded-full ring-2 ring-white bg-gradient-to-br from-amber-200 to-pink-300"></div>
+          </div>
+          <div class="text-sm">
+            <div class="flex items-center gap-1 text-amber-500">
+              <span>★★★★★</span>
+              <span class="text-ink font-semibold ml-1 num">4.9</span>
+            </div>
+            <div class="text-muted">2 100+ отзывов · Яндекс, ПроДокторов</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: photo of doctor with patient + compact floating form card -->
+      <div class="lg:col-span-6">
+        <div class="relative lg:pb-12">
+          <!-- decorative shapes -->
+          <div class="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-accent/20 -z-10"></div>
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-ink/5 -z-10"></div>
+
+          <!-- Main hero photo: doctor consulting a patient in modern clinic -->
+          <!-- TODO: replace placeholder with real photo at /images/dental/hero-consultation.jpg (recommended 1200×1400, doctor + patient, soft daylight, white/teal interior) -->
+          <div class="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-lift bg-soft">
+            <img
+              src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%201500%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2310355E%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%221500%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%221200%22%20height%3D%221500%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28600%2C750%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22600%22%20y%3D%22830%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%A4%D0%BE%D1%82%D0%BE%3A%20%D0%B2%D1%80%D0%B0%D1%87%20%2B%20%D0%BF%D0%B0%D1%86%D0%B8%D0%B5%D0%BD%D1%82%3C/text%3E%3Ctext%20x%3D%22600%22%20y%3D%22860%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0%2C%20%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D0%BE%D0%B9%20%D1%81%D0%B2%D0%B5%D1%82%3C/text%3E%3C/svg%3E"
+              alt="Врач-имплантолог консультирует пациента в современной клинике"
+              class="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
+            <!-- subtle bottom gradient for legibility -->
+            <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink/30 to-transparent pointer-events-none"></div>
+
+            <!-- Doctor on duty caption -->
+            <div class="absolute top-5 left-5 inline-flex items-center gap-2.5 px-3 py-2 rounded-xl bg-white/95 backdrop-blur shadow-card">
+              <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+              <span class="text-xs font-medium">На приёме · Иванов А.С.</span>
+            </div>
+
+            <!-- floating mini-stat -->
+            <div class="hidden sm:block absolute bottom-5 left-5 p-4 rounded-2xl bg-white/95 backdrop-blur shadow-card max-w-[220px]">
+              <div class="flex items-baseline gap-2">
+                <span class="display text-3xl num">4 800<span class="text-accent-2">+</span></span>
+              </div>
+              <div class="text-xs text-muted mt-1">установленных имплантов за 17 лет работы</div>
+            </div>
+          </div>
+
+          <!-- Compact form card, overlapping photo on the right bottom -->
+          <div class="mt-6 lg:mt-0 lg:absolute lg:-bottom-4 lg:-right-4 lg:w-[340px] xl:w-[360px] bg-white rounded-3xl shadow-lift p-5 md:p-6 ring-inset-1">
+            <div class="flex items-center justify-between mb-1">
+              <div class="text-xs font-semibold uppercase tracking-widest text-accent-2">Бесплатно</div>
+              <div class="text-xs text-muted">≈ 2 минуты</div>
+            </div>
+            <h3 class="display text-xl md:text-2xl leading-tight">
+              Запись на консультацию
+            </h3>
+            <p class="text-sm text-muted mt-1.5">Перезвоним в течение 15 минут.</p>
+
+            <form class="mt-4 space-y-2.5">
+              <label class="block">
+                <span class="sr-only">Имя</span>
+                <input type="text" placeholder="Ваше имя" class="w-full h-11 px-4 rounded-xl bg-soft border border-transparent focus:border-ink focus:bg-white outline-none transition text-sm" />
+              </label>
+              <label class="block">
+                <span class="sr-only">Телефон</span>
+                <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full h-11 px-4 rounded-xl bg-soft border border-transparent focus:border-ink focus:bg-white outline-none transition num text-sm" />
+              </label>
+              <button type="button" class="w-full h-11 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition text-sm">
+                Записаться →
+              </button>
+              <p class="text-[11px] text-muted leading-relaxed">
+                Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline">политикой обработки персональных данных</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="bg-ink text-white">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 py-6 md:py-7">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-y-5 gap-x-4 items-center">
+      <div>
+        <div class="display text-2xl md:text-3xl num">17<span class="text-accent">+</span></div>
+        <div class="text-xs text-white/60">лет имплантации в Москве</div>
+      </div>
+      <div>
+        <div class="display text-2xl md:text-3xl num">4 800<span class="text-accent">+</span></div>
+        <div class="text-xs text-white/60">установленных имплантов</div>
+      </div>
+      <div>
+        <div class="display text-2xl md:text-3xl num">12</div>
+        <div class="text-xs text-white/60">врачей-имплантологов в штате</div>
+      </div>
+      <div>
+        <div class="display text-2xl md:text-3xl num">4.9 ★</div>
+        <div class="text-xs text-white/60">рейтинг на Яндекс и ПроДокторов</div>
+      </div>
+      <div class="col-span-2 md:col-span-1">
+        <div class="text-xs text-white/60">Лицензия</div>
+        <div class="text-sm font-medium num">ЛО-77-01-123456</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAINS -->
+<section class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl">
+      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Кому нужна имплантация</div>
+      <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
+        Если откладывать лечение зубов,<br class="hidden md:block"/>
+        <span class="italic font-light text-muted">имплантация становится сложнее и дороже</span>
+      </h2>
+    </div>
+
+    <div class="mt-10 md:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- pain card -->
+      <div class="group p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M12 3a9 9 0 1 0 9 9"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Не хватает передних зубов</h3>
+        <p class="text-sm text-muted mt-1.5">Стесняюсь улыбаться, закрываю рот рукой на фотографиях, избегаю встреч и публичных мест.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 6v12"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Съёмный протез доставляет дискомфорт</h3>
+        <p class="text-sm text-muted mt-1.5">Натирает дёсны, выпадает во время еды, мешает чётко говорить. Хочу заменить на несъёмный протез на имплантах.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Боюсь имплантации и боли</h3>
+        <p class="text-sm text-muted mt-1.5">Слышал, что установка имплантов — это долго и больно. Хочу пройти лечение под седацией, без стресса.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M3 7h18M5 7v12h14V7M9 11h6"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Атрофия кости — отказали в других клиниках</h3>
+        <p class="text-sm text-muted mt-1.5">В двух клиниках сказали, что без костной пластики имплантация невозможна. Ищу клинику, которая берётся за сложные случаи.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Не понимаю итоговую цену имплантации</h3>
+        <p class="text-sm text-muted mt-1.5">Везде «от» — реальная стоимость имплантации зуба всплывает только после диагностики и осмотра.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-ink text-white relative overflow-hidden">
+        <div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-accent/20 blur-2xl"></div>
+        <h3 class="font-semibold text-lg">Узнаёте себя хотя бы в одном пункте?</h3>
+        <p class="text-sm text-white/70 mt-1.5">Запишитесь на бесплатную консультацию имплантолога с КТ-диагностикой — подберём подходящее решение.</p>
+        <a href="#cta" class="mt-4 inline-flex items-center text-sm font-semibold text-accent hover:text-white transition">
+          Записаться →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solutions" class="bg-soft py-16 md:py-24 relative">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6">
+        <!-- TODO: replace placeholder with real photo at /images/dental/clinic-room.jpg (recommended 1000x1250, operating room or modern dental treatment room, soft daylight) -->
+        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lift bg-white ring-inset-1">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201000%201250%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%231E4976%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230EA5A0%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%221000%22%20height%3D%221250%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%221000%22%20height%3D%221250%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28500%2C625%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22500%22%20y%3D%22705%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%A4%D0%BE%D1%82%D0%BE%3A%20%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82%20%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B8%3C/text%3E%3Ctext%20x%3D%22500%22%20y%3D%22735%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%2C%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%3C/text%3E%3C/svg%3E"
+            alt="Современный кабинет имплантации в клинике"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-ink/40 to-transparent pointer-events-none"></div>
+          <div class="absolute top-5 left-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur text-xs font-medium shadow-card">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            Цифровое 3D-планирование · КТ Planmeca
+          </div>
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur shadow-card">
+            <div class="text-xs font-semibold uppercase tracking-widest text-accent-2">All-on-4</div>
+            <div class="text-sm mt-1">Несъёмный протез на 4 имплантах с фиксацией в день операции</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Методы имплантации</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
+          All-on-4 — имплантация<br/>при полном отсутствии<br/><span class="italic font-light">зубов на челюсти</span>
+        </h2>
+        <p class="text-muted mt-5 max-w-lg">
+          Метод All-on-4 применяют при полном отсутствии зубов и атрофии костной ткани. В большинстве случаев костная пластика не требуется — четыре импланта Straumann или Nobel Biocare устанавливаются под углом в плотные участки челюсти. Окончательный план лечения врач составляет после КТ.
+        </p>
+
+        <div class="mt-8 space-y-3">
+          <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
+            <div class="num display text-3xl text-accent-2 shrink-0">01</div>
+            <div>
+              <h3 class="font-semibold">Несъёмный протез в день имплантации</h3>
+              <p class="text-sm text-muted mt-1">Временный протез на 4 имплантах фиксируется сразу после операции — вы уходите из клиники с новыми зубами.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
+            <div class="num display text-3xl text-accent-2 shrink-0">02</div>
+            <div>
+              <h3 class="font-semibold">Имплантация под седацией</h3>
+              <p class="text-sm text-muted mt-1">Местная анестезия и медикаментозный сон. Анестезиолог контролирует состояние пациента на всех этапах операции.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
+            <div class="num display text-3xl text-accent-2 shrink-0">03</div>
+            <div>
+              <h3 class="font-semibold">Прозрачная цена имплантации</h3>
+              <p class="text-sm text-muted mt-1">Фиксированная стоимость в договоре, понятные сроки лечения и письменные гарантии на импланты и работу врача.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-5">
+          <a href="#cta" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">Подходит ли мне метод?</a>
+          <div class="flex items-center gap-3 text-sm text-muted">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-rose-200 to-orange-300 ring-2 ring-soft"></div>
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-sky-200 to-indigo-300 ring-2 ring-soft"></div>
+            </div>
+            Спросите врача
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div class="max-w-2xl">
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Цены на имплантацию</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
+          Сколько стоит имплантация<br/><span class="italic font-light">зубов в Москве</span>
+        </h2>
+      </div>
+      <p class="text-muted max-w-sm">
+        Цены под ключ: имплант, абатмент, коронка, работа врача и все приёмы. Без доплат после диагностики — фиксируем стоимость в договоре.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- card 1 -->
+      <div class="relative p-7 rounded-3xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="text-xs font-semibold uppercase tracking-widest text-muted">Имплантация одного зуба</div>
+        <h3 class="display text-2xl mt-2">Классическая имплантация под ключ</h3>
+        <div class="mt-6 flex items-baseline gap-2">
+          <span class="display text-5xl num">45 000</span>
+          <span class="text-muted">₽</span>
+        </div>
+        <p class="text-sm text-muted mt-1">Цена за один зуб под ключ</p>
+        <ul class="mt-6 space-y-2.5 text-sm">
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Имплант Osstem или Dentium</li>
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Абатмент и металлокерамическая коронка</li>
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Консультация, КТ и все приёмы</li>
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Гарантия 5 лет на работу и материалы</li>
+        </ul>
+        <a href="#cta" class="mt-7 block text-center h-12 leading-[3rem] rounded-xl border border-ink text-ink font-semibold hover:bg-ink hover:text-white transition">Записаться</a>
+      </div>
+
+      <!-- card 2 highlighted -->
+      <div class="relative p-7 rounded-3xl bg-ink text-white shadow-lift overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-accent/20 blur-3xl"></div>
+        <div class="absolute top-5 right-5 px-3 py-1 rounded-full bg-accent text-ink text-[11px] font-bold uppercase tracking-wider">Хит</div>
+        <div class="text-xs font-semibold uppercase tracking-widest text-accent">Имплантация челюсти</div>
+        <h3 class="display text-2xl mt-2">All-on-4 под ключ</h3>
+        <div class="mt-6 flex items-baseline gap-2">
+          <span class="display text-5xl num">280 000</span>
+          <span class="text-white/60">₽</span>
+        </div>
+        <p class="text-sm text-white/60 mt-1">Цена за челюсть под ключ · рассрочка от 12 500 ₽/мес</p>
+        <ul class="mt-6 space-y-2.5 text-sm">
+          <li class="flex gap-2"><span class="text-accent">✓</span> 4 импланта Straumann или Nobel Biocare</li>
+          <li class="flex gap-2"><span class="text-accent">✓</span> Несъёмный протез в день имплантации</li>
+          <li class="flex gap-2"><span class="text-accent">✓</span> 3D-моделирование, КТ, седация</li>
+          <li class="flex gap-2"><span class="text-accent">✓</span> Все приёмы и постоянный протез на циркониевом каркасе</li>
+          <li class="flex gap-2"><span class="text-accent">✓</span> Пожизненная гарантия на импланты</li>
+        </ul>
+        <a href="#cta" class="mt-7 block text-center h-12 leading-[3rem] rounded-xl bg-accent text-ink font-semibold hover:bg-white transition">Рассчитать имплантацию</a>
+      </div>
+
+      <!-- card 3 -->
+      <div class="relative p-7 rounded-3xl bg-white ring-inset-1 hover:shadow-card transition">
+        <div class="text-xs font-semibold uppercase tracking-widest text-muted">Премиум-имплантация</div>
+        <h3 class="display text-2xl mt-2">All-on-6 под ключ</h3>
+        <div class="mt-6 flex items-baseline gap-2">
+          <span class="display text-5xl num">380 000</span>
+          <span class="text-muted">₽</span>
+        </div>
+        <p class="text-sm text-muted mt-1">Цена за челюсть под ключ</p>
+        <ul class="mt-6 space-y-2.5 text-sm">
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> 6 имплантов премиум-системы Straumann</li>
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Несъёмный циркониевый протез</li>
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Максимальная стабильность жевательной нагрузки</li>
+          <li class="flex gap-2"><span class="text-accent-2">✓</span> Пожизненная гарантия на импланты</li>
+        </ul>
+        <a href="#cta" class="mt-7 block text-center h-12 leading-[3rem] rounded-xl border border-ink text-ink font-semibold hover:bg-ink hover:text-white transition">Записаться</a>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-5 rounded-2xl bg-soft">
+      <div class="flex items-center gap-3 text-sm">
+        <span class="inline-flex w-9 h-9 rounded-xl bg-white items-center justify-center">
+          <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>
+        </span>
+        Рассрочка на имплантацию <b class="num">0%</b> до 24 месяцев. Банки-партнёры: Тинькофф, Сбер, Альфа-Банк.
+      </div>
+      <a href="#" class="text-sm font-semibold underline decoration-accent decoration-2 underline-offset-4">Скачать полный прайс на имплантацию (PDF) →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases" class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div class="max-w-2xl">
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Кейсы имплантации</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Имплантация зубов: фото до и после</h2>
+        <p class="text-muted mt-4">Работы наших врачей-имплантологов: реальные пациенты, реальные результаты. Все фотографии до и после публикуем с письменного согласия пациентов.</p>
+      </div>
+      <div class="flex gap-2">
+        <button class="px-4 h-10 rounded-full bg-ink text-white text-sm font-semibold">Все кейсы</button>
+        <button class="px-4 h-10 rounded-full bg-white ring-inset-1 text-sm">All-on-4</button>
+        <button class="px-4 h-10 rounded-full bg-white ring-inset-1 text-sm">Имплантация одного зуба</button>
+        <button class="px-4 h-10 rounded-full bg-white ring-inset-1 text-sm hidden md:inline">Сложные случаи</button>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- case card 1 -->
+      <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real before/after photo at /images/dental/case-1-before-after.jpg (single image showing before on left half and after on right half, recommended 1200x900) -->
+        <div class="ba aspect-[4/3] bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%20900%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230EA5A0%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%22900%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%221200%22%20height%3D%22900%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28600%2C450%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22600%22%20y%3D%22530%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%A4%D0%BE%D1%82%D0%BE%3A%20%D0%BA%D0%B5%D0%B9%D1%81%20%D0%B4%D0%BE%20/%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%3C/text%3E%3Ctext%20x%3D%22600%22%20y%3D%22560%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3EAll-on-4%3C/text%3E%3C/svg%3E"
+            alt="Имплантация зубов All-on-4 в Москве — фото до и после, полное отсутствие зубов на верхней челюсти"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider">До</span>
+          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider">После</span>
+          <div class="handle"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded-md bg-soft text-muted">All-on-4</span>
+            <span class="text-muted">·</span>
+            <span class="text-muted">1 день</span>
+          </div>
+          <h3 class="font-semibold mt-3">Имплантация All-on-4 при полном отсутствии зубов</h3>
+          <p class="text-sm text-muted mt-1.5">Пациент, 58 лет. Полное отсутствие зубов на верхней челюсти, атрофия костной ткани, отказ в двух клиниках.</p>
+          <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
+            <span class="text-muted">Врач: Иванов А.С.</span>
+            <a href="#" class="font-semibold">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- case card 2 -->
+      <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real before/after photo at /images/dental/case-2-before-after.jpg -->
+        <div class="ba aspect-[4/3] bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%20900%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232DD4BF%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2310355E%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%22900%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%221200%22%20height%3D%22900%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28600%2C450%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22600%22%20y%3D%22530%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%A4%D0%BE%D1%82%D0%BE%3A%20%D0%BA%D0%B5%D0%B9%D1%81%20%D0%B4%D0%BE%20/%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%3C/text%3E%3Ctext%20x%3D%22600%22%20y%3D%22560%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%98%D0%BC%D0%BF%D0%BB%D0%B0%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B7%D1%83%D0%B1%D0%B0%3C/text%3E%3C/svg%3E"
+            alt="Имплантация одного зуба — фото до и после, восстановление жевательных зубов"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider">До</span>
+          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider">После</span>
+          <div class="handle"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded-md bg-soft text-muted">Имплантация одного зуба</span>
+            <span class="text-muted">·</span>
+            <span class="text-muted">4 месяца</span>
+          </div>
+          <h3 class="font-semibold mt-3">Имплантация двух жевательных зубов</h3>
+          <p class="text-sm text-muted mt-1.5">Пациентка, 42 года. Установка имплантов после удаления, восстановление функции жевания и эстетики.</p>
+          <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
+            <span class="text-muted">Врач: Петрова М.В.</span>
+            <a href="#" class="font-semibold">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- case card 3 -->
+      <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real before/after photo at /images/dental/case-3-before-after.jpg -->
+        <div class="ba aspect-[4/3] bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%20900%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230EA5A0%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%22900%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%221200%22%20height%3D%22900%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28600%2C450%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22600%22%20y%3D%22530%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%A4%D0%BE%D1%82%D0%BE%3A%20%D0%BA%D0%B5%D0%B9%D1%81%20%D0%B4%D0%BE%20/%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%3C/text%3E%3Ctext%20x%3D%22600%22%20y%3D%22560%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3EAll-on-6%3C/text%3E%3C/svg%3E"
+            alt="Имплантация All-on-6 — фото до и после, замена съёмного протеза на несъёмный"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider">До</span>
+          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider">После</span>
+          <div class="handle"></div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded-md bg-soft text-muted">All-on-6</span>
+            <span class="text-muted">·</span>
+            <span class="text-muted">1 день</span>
+          </div>
+          <h3 class="font-semibold mt-3">Замена съёмного протеза на All-on-6</h3>
+          <p class="text-sm text-muted mt-1.5">Пациент, 64 года. 8 лет на съёмном протезе, атрофия костной ткани — установлен несъёмный протез на 6 имплантах.</p>
+          <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
+            <span class="text-muted">Врач: Соколов Д.А.</span>
+            <a href="#" class="font-semibold">Подробнее →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="#" class="inline-flex items-center h-12 px-6 rounded-xl bg-white ring-inset-1 font-semibold hover:bg-ink hover:text-white transition">
+        Смотреть все 84 кейса имплантации →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section id="doctors" class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-12">
+      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Врачи-имплантологи</div>
+      <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
+        Команда имплантологов<br/>
+        <span class="italic font-light">с опытом от 9 до 22 лет</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- doctor 1 -->
+      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real portrait at /images/dental/doctor-ivanov.jpg (recommended 800x1000, professional portrait, neutral background, white coat) -->
+        <div class="aspect-[4/5] relative bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%201000%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2310355E%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28400%2C500%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22580%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%20%D0%B2%D1%80%D0%B0%D1%87%D0%B0%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22610%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%20%D0%90.%D0%A1.%3C/text%3E%3C/svg%3E"
+            alt="Иванов Александр Сергеевич — хирург-имплантолог, главный врач клиники Имплант.Центр в Москве"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute top-3 right-3 px-2 py-1 rounded-md bg-white/95 text-[11px] font-semibold">Главный врач</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Иванов А.С.</h3>
+          <p class="text-sm text-muted mt-1">Хирург-имплантолог, главный врач</p>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+            <div>
+              <div class="display text-xl num">18</div>
+              <div class="text-muted">лет стажа</div>
+            </div>
+            <div>
+              <div class="display text-xl num">1 200<span class="text-accent-2">+</span></div>
+              <div class="text-muted">операций</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- doctor 2 -->
+      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real portrait at /images/dental/doctor-petrova.jpg -->
+        <div class="aspect-[4/5] relative bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%201000%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230EA5A0%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2310355E%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28400%2C500%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22580%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%20%D0%B2%D1%80%D0%B0%D1%87%D0%B0%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22610%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B0%20%D0%9C.%D0%92.%3C/text%3E%3C/svg%3E"
+            alt="Петрова Мария Викторовна — ортопед-стоматолог, протезирование на имплантах"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Петрова М.В.</h3>
+          <p class="text-sm text-muted mt-1">Ортопед-стоматолог, протезирование на имплантах</p>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+            <div>
+              <div class="display text-xl num">12</div>
+              <div class="text-muted">лет стажа</div>
+            </div>
+            <div>
+              <div class="display text-xl num">800<span class="text-accent-2">+</span></div>
+              <div class="text-muted">протезов</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- doctor 3 -->
+      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real portrait at /images/dental/doctor-sokolov.jpg -->
+        <div class="aspect-[4/5] relative bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%201000%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%231E4976%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28400%2C500%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22580%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%20%D0%B2%D1%80%D0%B0%D1%87%D0%B0%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22610%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%A1%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%20%D0%94.%D0%90.%3C/text%3E%3C/svg%3E"
+            alt="Соколов Дмитрий Александрович — челюстно-лицевой хирург, костная пластика и имплантация"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Соколов Д.А.</h3>
+          <p class="text-sm text-muted mt-1">Челюстно-лицевой хирург, костная пластика</p>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+            <div>
+              <div class="display text-xl num">22</div>
+              <div class="text-muted">года стажа</div>
+            </div>
+            <div>
+              <div class="display text-xl num">1 500<span class="text-accent-2">+</span></div>
+              <div class="text-muted">операций</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- doctor 4 -->
+      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
+        <!-- TODO: replace with real portrait at /images/dental/doctor-morozova.jpg -->
+        <div class="aspect-[4/5] relative bg-soft">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%201000%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230EA5A0%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28400%2C500%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22580%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%20%D0%B2%D1%80%D0%B0%D1%87%D0%B0%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22610%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%B0%20%D0%95.%D0%9D.%3C/text%3E%3C/svg%3E"
+            alt="Морозова Екатерина Николаевна — хирург-имплантолог, имплантация одного зуба"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold">Морозова Е.Н.</h3>
+          <p class="text-sm text-muted mt-1">Хирург-имплантолог, имплантация одного зуба</p>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+            <div>
+              <div class="display text-xl num">9</div>
+              <div class="text-muted">лет стажа</div>
+            </div>
+            <div>
+              <div class="display text-xl num">500<span class="text-accent-2">+</span></div>
+              <div class="text-muted">операций</div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mb-12">
+      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Этапы имплантации зубов</div>
+      <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Как проходит имплантация: 5 этапов от консультации до постоянного протеза</h2>
+    </div>
+
+    <div class="relative">
+      <div class="hidden lg:block absolute top-8 left-0 right-0 h-px bg-border"></div>
+      <div class="grid lg:grid-cols-5 gap-6 lg:gap-4">
+        <div class="relative">
+          <div class="w-16 h-16 rounded-2xl bg-ink text-white flex items-center justify-center display text-2xl num relative z-10">01</div>
+          <h3 class="font-semibold mt-5">Консультация имплантолога и КТ</h3>
+          <p class="text-sm text-muted mt-2">60 минут, бесплатно. Осмотр полости рта, компьютерная томография, предварительный расчёт стоимости.</p>
+          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 1</div>
+        </div>
+        <div class="relative">
+          <div class="w-16 h-16 rounded-2xl bg-white ring-inset-1 flex items-center justify-center display text-2xl num text-ink relative z-10">02</div>
+          <h3 class="font-semibold mt-5">План лечения и договор</h3>
+          <p class="text-sm text-muted mt-2">Фиксированная смета, сроки и договор на имплантацию — в день обращения, без скрытых доплат.</p>
+          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 1</div>
+        </div>
+        <div class="relative">
+          <div class="w-16 h-16 rounded-2xl bg-white ring-inset-1 flex items-center justify-center display text-2xl num text-ink relative z-10">03</div>
+          <h3 class="font-semibold mt-5">Установка имплантов</h3>
+          <p class="text-sm text-muted mt-2">Имплантация под седацией и местной анестезией. Один день, без боли и стресса для пациента.</p>
+          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 2</div>
+        </div>
+        <div class="relative">
+          <div class="w-16 h-16 rounded-2xl bg-white ring-inset-1 flex items-center justify-center display text-2xl num text-ink relative z-10">04</div>
+          <h3 class="font-semibold mt-5">Временный протез на имплантах</h3>
+          <p class="text-sm text-muted mt-2">Несъёмный эстетичный протез фиксируется сразу после операции — вы уходите с зубами.</p>
+          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 2</div>
+        </div>
+        <div class="relative">
+          <div class="w-16 h-16 rounded-2xl bg-accent text-ink flex items-center justify-center display text-2xl num relative z-10">05</div>
+          <h3 class="font-semibold mt-5">Постоянный протез</h3>
+          <p class="text-sm text-muted mt-2">Через 4–6 месяцев после приживления имплантов — постоянный протез с максимальной прочностью и эстетикой.</p>
+          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">Месяц 4–6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section id="guarantee" class="py-16 md:py-24 bg-ink text-white relative overflow-hidden">
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-accent/10 blur-3xl"></div>
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 relative">
+    <div class="max-w-2xl mb-12">
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Гарантии на имплантацию</div>
+      <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
+        Письменные гарантии<br/>
+        <span class="italic font-light">на импланты и работу врачей</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+        </div>
+        <h3 class="font-semibold">Пожизненная гарантия на импланты</h3>
+        <p class="text-sm text-white/60 mt-2">На системы имплантов Straumann и Nobel Biocare — официальный сертификат от производителя.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="font-semibold">5 лет гарантии на работу врача</h3>
+        <p class="text-sm text-white/60 mt-2">Бесплатное обслуживание, корректировки и исправления в течение 5 лет после имплантации.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 7h18M5 7v12h14V7M9 11h6"/></svg>
+        </div>
+        <h3 class="font-semibold">Фиксированная цена в договоре</h3>
+        <p class="text-sm text-white/60 mt-2">Стоимость имплантации закрепляем в договоре. Никаких доплат после диагностики и в процессе лечения.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l3-3 4 4 8-8 3 3"/></svg>
+        </div>
+        <h3 class="font-semibold">Бесплатная переделка по гарантии</h3>
+        <p class="text-sm text-white/60 mt-2">Если в гарантийный период возникнут проблемы — переделываем имплантацию за счёт клиники, без вопросов.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <div class="text-sm text-white/60 mb-4">Лицензии и сертификаты клиники:</div>
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+        <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
+          <div class="h-full rounded-md bg-white/90 p-2 text-ink">
+            <div class="h-1 bg-accent rounded mb-2"></div>
+            <div class="text-[8px] font-bold">ЛИЦЕНЗИЯ</div>
+            <div class="text-[6px] mt-1 text-muted">Росздравнадзор</div>
+            <div class="mt-4 space-y-1">
+              <div class="h-0.5 bg-ink/20 rounded"></div>
+              <div class="h-0.5 bg-ink/20 rounded w-3/4"></div>
+              <div class="h-0.5 bg-ink/20 rounded"></div>
+              <div class="h-0.5 bg-ink/20 rounded w-2/3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
+          <div class="h-full rounded-md bg-white/90 p-2 text-ink">
+            <div class="text-[8px] font-bold text-accent-2">STRAUMANN</div>
+            <div class="text-[6px] mt-1 text-muted">Сертифицированный партнёр</div>
+            <svg class="w-full mt-3" viewBox="0 0 100 50"><circle cx="50" cy="25" r="20" fill="none" stroke="#0EA5A0" stroke-width="2"/></svg>
+          </div>
+        </div>
+        <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
+          <div class="h-full rounded-md bg-white/90 p-2 text-ink">
+            <div class="text-[8px] font-bold text-accent-2">NOBEL</div>
+            <div class="text-[6px] mt-1 text-muted">Biocare partner</div>
+            <svg class="w-full mt-3" viewBox="0 0 100 50"><rect x="20" y="10" width="60" height="30" fill="none" stroke="#0EA5A0" stroke-width="2"/></svg>
+          </div>
+        </div>
+        <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
+          <div class="h-full rounded-md bg-white/90 p-2 text-ink">
+            <div class="text-[8px] font-bold">ДИПЛОМ</div>
+            <div class="text-[6px] mt-1 text-muted">Implant Course 2024</div>
+            <div class="mt-4 space-y-1">
+              <div class="h-0.5 bg-ink/20 rounded"></div>
+              <div class="h-0.5 bg-ink/20 rounded w-3/4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
+          <div class="h-full rounded-md bg-white/90 p-2 text-ink">
+            <div class="text-[8px] font-bold">ISO 9001</div>
+            <div class="text-[6px] mt-1 text-muted">Стандарт качества</div>
+            <svg class="w-full mt-3" viewBox="0 0 100 50"><polygon points="50,5 60,25 50,45 40,25" fill="#2DD4BF"/></svg>
+          </div>
+        </div>
+        <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
+          <div class="h-full rounded-md bg-white/90 p-2 text-ink">
+            <div class="text-[8px] font-bold">СТО-СтАР</div>
+            <div class="text-[6px] mt-1 text-muted">Стоматологическая ассоциация</div>
+            <div class="mt-3 flex justify-center"><div class="w-8 h-8 rounded-full border-2 border-ink-2"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="py-16 md:py-24">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div class="max-w-2xl">
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Отзывы пациентов об имплантации</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Отзывы об имплантации зубов в клинике</h2>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <div class="flex items-center gap-2"><span class="font-bold num">4.9</span><span class="text-amber-500">★★★★★</span><span class="text-muted">Яндекс.Карты</span></div>
+        <div class="flex items-center gap-2"><span class="font-bold num">4.9</span><span class="text-amber-500">★★★★★</span><span class="text-muted">ПроДокторов</span></div>
+        <div class="flex items-center gap-2"><span class="font-bold num">4.8</span><span class="text-amber-500">★★★★★</span><span class="text-muted">Google Maps</span></div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-5">
+      <!-- video review -->
+      <article class="relative aspect-[4/5] rounded-3xl overflow-hidden group cursor-pointer">
+        <!-- TODO: replace with real preview frame at /images/dental/review-patient.jpg (recommended 800x1000, patient portrait or video thumbnail) -->
+        <img
+          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20800%201000%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230A1F36%22/%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2310355E%22/%3E%0A%3C/linearGradient%3E%0A%3Cpattern%20id%3D%22dots%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%3Ccircle%20cx%3D%222%22%20cy%3D%222%22%20r%3D%221%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.15%29%22/%3E%0A%3C/pattern%3E%0A%3C/defs%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Crect%20width%3D%22800%22%20height%3D%221000%22%20fill%3D%22url%28%23dots%29%22/%3E%0A%3Cg%20transform%3D%22translate%28400%2C500%29%22%3E%0A%3Ccircle%20r%3D%2236%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.18%29%22/%3E%0A%3Cpath%20d%3D%22M-12%20-6%20L-12%206%20L12%200%20Z%22%20fill%3D%22white%22%20opacity%3D%220.9%22/%3E%0A%3C/g%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22580%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22600%22%20fill%3D%22white%22%20opacity%3D%220.95%22%3E%D0%92%D0%B8%D0%B4%D0%B5%D0%BE-%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%20%D0%BF%D0%B0%D1%86%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22610%22%20text-anchor%3D%22middle%22%20font-family%3D%22Manrope%2Csystem-ui%2Csans-serif%22%20font-size%3D%2214%22%20fill%3D%22white%22%20opacity%3D%220.7%22%3E%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9%2C%2058%20%D0%BB%D0%B5%D1%82%20%C2%B7%202%3A34%3C/text%3E%3C/svg%3E"
+          alt="Видео-отзыв пациента Сергея о лечении в клинике"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-20 h-20 rounded-full bg-white/95 flex items-center justify-center group-hover:scale-110 transition shadow-lift">
+            <svg class="w-7 h-7 text-ink ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+          </div>
+        </div>
+        <div class="absolute bottom-5 left-5 right-5 text-white">
+          <div class="flex items-center gap-1 text-amber-300 text-sm">★★★★★</div>
+          <h3 class="font-semibold text-lg mt-2">Сергей, 58 лет · All-on-4</h3>
+          <p class="text-sm text-white/80 mt-1">«Долго откладывал имплантацию — теперь жалею только об этом»</p>
+          <span class="text-xs text-white/60 mt-2 inline-block">2:34 · видео-отзыв об имплантации</span>
+        </div>
+      </article>
+
+      <!-- text review -->
+      <article class="p-7 rounded-3xl bg-soft flex flex-col">
+        <svg class="w-10 h-10 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4H7zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1H5V11h4zm6-4h4v4h-4zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1h-2V11h4z"/></svg>
+        <p class="display text-xl leading-snug mt-4 flex-1">
+          Сделали имплантацию All-on-4 на верхней челюсти. До этого 3 года ходила со съёмным протезом — настоящее мучение. В клинике за один день установили несъёмный протез на имплантах, на следующий день я уже ела яблоко. Договор и фиксированная цена — всё как обещали.
+        </p>
+        <div class="mt-6 hairline pt-5 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-rose-200 to-amber-300"></div>
+          <div>
+            <div class="font-semibold">Татьяна, 61 год</div>
+            <div class="text-xs text-muted">Имплантация All-on-4 на верхней челюсти · март 2025</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- text review 2 -->
+      <article class="p-7 rounded-3xl bg-soft flex flex-col">
+        <svg class="w-10 h-10 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4H7zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1H5V11h4zm6-4h4v4h-4zm2 4v3a3 3 0 0 1-3 3v-2c.5 0 1-.5 1-1h-2V11h4z"/></svg>
+        <p class="display text-xl leading-snug mt-4 flex-1">
+          Долго выбирал клинику для имплантации зубов, был на консультации в пяти. Здесь сразу сделали бесплатное КТ, объяснили варианты лечения, показали реальные кейсы. По цене вышло дешевле, чем в премиум-клинике, а оперировал Соколов Д.А. — челюстно-лицевой хирург с 22-летним стажем. Доволен результатом, рекомендую.
+        </p>
+        <div class="mt-6 hairline pt-5 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-sky-200 to-indigo-300"></div>
+          <div>
+            <div class="font-semibold">Дмитрий, 47 лет</div>
+            <div class="text-xs text-muted">Имплантация двух жевательных зубов · январь 2025</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-10 flex items-center justify-between">
+      <a href="#" class="text-sm font-semibold underline decoration-accent decoration-2 underline-offset-4">Все 380+ отзывов об имплантации на Яндекс.Картах →</a>
+      <div class="flex gap-2">
+        <button class="w-11 h-11 rounded-full ring-inset-1 hover:bg-ink hover:text-white transition">←</button>
+        <button class="w-11 h-11 rounded-full ring-inset-1 hover:bg-ink hover:text-white transition">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-16 md:py-24 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Вопросы об имплантации</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Частые вопросы об имплантации зубов</h2>
+        <p class="text-muted mt-5">Не нашли ответ на свой вопрос? Позвоните или закажите бесплатную консультацию имплантолога.</p>
+        <a href="tel:+74950000000" class="display text-2xl text-ink-2 mt-6 inline-block num hover:text-accent-2 transition">+7 495 000-00-00</a>
+      </div>
+
+      <div class="lg:col-span-8 space-y-3">
+        <details class="group p-6 rounded-2xl bg-white ring-inset-1" open>
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-semibold text-lg pr-6">Имплантация зубов — это больно?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">
+            Имплантация зубов проходит под местной анестезией, при желании — под седацией (медикаментозный сон). Пациент не чувствует боли во время установки имплантов. После операции возможен лёгкий дискомфорт в области дёсен — он снимается обычными обезболивающими в течение 1–2 дней.
+          </p>
+        </details>
+        <details class="group p-6 rounded-2xl bg-white ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-semibold text-lg pr-6">Можно ли сделать имплантацию при атрофии костной ткани?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">Да, наша клиника берёт сложные случаи имплантации. Метод All-on-4 в большинстве случаев не требует костной пластики — четыре импланта устанавливаются под углом в плотные участки челюсти. При значительной атрофии возможно проведение синус-лифтинга или костной пластики.</p>
+        </details>
+        <details class="group p-6 rounded-2xl bg-white ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-semibold text-lg pr-6">Сколько длится операция по имплантации зубов?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">Установка одного импланта занимает 30–40 минут. Имплантация All-on-4 на одну челюсть — 2–3 часа, включая фиксацию временного несъёмного протеза в день операции.</p>
+        </details>
+        <details class="group p-6 rounded-2xl bg-white ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-semibold text-lg pr-6">Можно ли оформить имплантацию в рассрочку?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">Да, доступна рассрочка 0% до 24 месяцев на имплантацию зубов от банков-партнёров: Тинькофф, Сбербанк, Альфа-Банк. Решение по заявке — за 5 минут прямо в клинике.</p>
+        </details>
+        <details class="group p-6 rounded-2xl bg-white ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-semibold text-lg pr-6">Какая гарантия на имплантацию и что в неё входит?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">Пожизненная гарантия на сами импланты Straumann и Nobel Biocare — от производителя по сертификату. 5 лет гарантии на работу врача и протезирование — от клиники. При любых проблемах в гарантийный период все работы по исправлению проводим бесплатно.</p>
+        </details>
+        <details class="group p-6 rounded-2xl bg-white ring-inset-1">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <span class="font-semibold text-lg pr-6">Можно ли получить налоговый вычет за имплантацию зубов?</span>
+            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="text-muted mt-4 leading-relaxed">Да. Имплантация зубов относится к дорогостоящему лечению по коду 02 — можно вернуть 13% от полной стоимости без ограничения суммы. Документы для налоговой инспекции (договор, лицензию, справку об оплате) оформляем бесплатно.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta" class="py-16 md:py-24 bg-ink text-white relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-accent/15 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent-2/15 blur-3xl"></div>
+  </div>
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+          Сегодня свободно 4 окна на приём имплантолога
+        </div>
+        <h2 class="display text-4xl md:text-6xl mt-6 leading-[1.05]">
+          Бесплатная консультация<br/>
+          <span class="italic font-light">имплантолога в Москве</span><br/>
+          и расчёт стоимости
+        </h2>
+        <p class="text-white/70 mt-6 max-w-lg text-lg">
+          Бесплатная консультация имплантолога, КТ-диагностика и фиксированная смета на имплантацию зубов. Без навязывания услуг и доплат после осмотра.
+        </p>
+
+        <div class="mt-8 grid grid-cols-3 gap-4 max-w-md">
+          <div>
+            <div class="display text-3xl num">60<span class="text-accent">′</span></div>
+            <div class="text-xs text-white/60 mt-1">приём имплантолога</div>
+          </div>
+          <div>
+            <div class="display text-3xl num">0 ₽</div>
+            <div class="text-xs text-white/60 mt-1">консультация и КТ</div>
+          </div>
+          <div>
+            <div class="display text-3xl num">1 день</div>
+            <div class="text-xs text-white/60 mt-1">запись на приём</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white text-ink rounded-3xl p-7 md:p-9 shadow-lift">
+        <h3 class="display text-2xl">Запись на консультацию имплантолога</h3>
+        <p class="text-sm text-muted mt-2">Перезвоним в течение 15 минут и согласуем удобное время приёма.</p>
+
+        <form class="mt-6 space-y-3">
+          <label class="block">
+            <span class="text-xs font-medium text-muted">Имя</span>
+            <input type="text" placeholder="Анна" class="mt-1 w-full h-12 px-4 rounded-xl bg-soft focus:bg-white border border-transparent focus:border-ink outline-none transition" />
+          </label>
+          <label class="block">
+            <span class="text-xs font-medium text-muted">Телефон</span>
+            <input type="tel" placeholder="+7 (___) ___-__-__" class="mt-1 w-full h-12 px-4 rounded-xl bg-soft focus:bg-white border border-transparent focus:border-ink outline-none transition num" />
+          </label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="block">
+              <span class="text-xs font-medium text-muted">Удобное время звонка</span>
+              <select class="mt-1 w-full h-12 px-4 rounded-xl bg-soft focus:bg-white border border-transparent focus:border-ink outline-none transition">
+                <option>В любое время</option>
+                <option>Утром (9–12)</option>
+                <option>Днём (12–17)</option>
+                <option>Вечером (17–21)</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-xs font-medium text-muted">Услуга</span>
+              <select class="mt-1 w-full h-12 px-4 rounded-xl bg-soft focus:bg-white border border-transparent focus:border-ink outline-none transition">
+                <option>All-on-4</option>
+                <option>Один зуб</option>
+                <option>All-on-6</option>
+                <option>Не знаю</option>
+              </select>
+            </label>
+          </div>
+          <label class="block">
+            <span class="text-xs font-medium text-muted">Комментарий (необязательно)</span>
+            <textarea rows="2" placeholder="Что вас беспокоит?" class="mt-1 w-full px-4 py-3 rounded-xl bg-soft focus:bg-white border border-transparent focus:border-ink outline-none transition resize-none"></textarea>
+          </label>
+          <button type="button" class="w-full h-14 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">
+            Записаться на консультацию имплантолога →
+          </button>
+          <p class="text-[11px] text-muted leading-relaxed">
+            Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline">политикой обработки персональных данных</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL SEO -->
+<section class="py-14 md:py-20 bg-soft">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <div class="lg:col-span-5">
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Клиника в Москве</div>
+        <h2 class="display text-3xl md:text-4xl mt-3 leading-tight">
+          Имплантация зубов<br/>
+          <span class="italic font-light">в центре Москвы</span>
+        </h2>
+        <p class="text-muted mt-5">
+          Клиника «Имплант.Центр» расположена в центре Москвы, рядом с метро Тверская и Пушкинская. Проводим имплантацию зубов под ключ: All-on-4, All-on-6, имплантация одного зуба, костная пластика, синус-лифтинг. Принимаем пациентов из Москвы и области, а также из других регионов России.
+        </p>
+
+        <dl class="mt-8 space-y-4 text-sm">
+          <div class="flex gap-4">
+            <dt class="w-28 shrink-0 text-muted">Адрес</dt>
+            <dd class="font-medium">г. Москва, ул. Тверская, д. 1, ст. м. Тверская / Пушкинская</dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="w-28 shrink-0 text-muted">Телефон</dt>
+            <dd class="font-medium num"><a href="tel:+74950000000" class="hover:text-accent-2">+7 (495) 000-00-00</a></dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="w-28 shrink-0 text-muted">Часы работы</dt>
+            <dd class="font-medium">Пн–Сб: 9:00–21:00 · Вс: 10:00–19:00</dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="w-28 shrink-0 text-muted">Парковка</dt>
+            <dd class="font-medium">Своя парковка для пациентов клиники</dd>
+          </div>
+          <div class="flex gap-4">
+            <dt class="w-28 shrink-0 text-muted">Метро</dt>
+            <dd class="font-medium">Тверская (3 мин), Пушкинская (4 мин), Чеховская (5 мин)</dd>
+          </div>
+        </dl>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#cta" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">Записаться в клинику</a>
+          <a href="tel:+74950000000" class="inline-flex items-center h-12 px-6 rounded-xl bg-white ring-inset-1 text-ink font-semibold hover:bg-ink hover:text-white transition">Позвонить</a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white ring-inset-1 shadow-card">
+          <!-- TODO: заменить на iframe Яндекс.Карт с реальным адресом клиники -->
+          <div class="absolute inset-0 bg-gradient-to-br from-soft via-white to-soft flex items-center justify-center">
+            <div class="text-center px-6">
+              <svg class="w-12 h-12 mx-auto text-accent-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21s-7-7.5-7-12a7 7 0 0 1 14 0c0 4.5-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <div class="display text-xl mt-4">Карта проезда</div>
+              <p class="text-sm text-muted mt-2">Москва, ул. Тверская, 1 · метро Тверская</p>
+              <p class="text-xs text-muted mt-3">Здесь будет встроена Яндекс.Карта</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 grid sm:grid-cols-3 gap-3 text-sm">
+          <div class="p-4 rounded-2xl bg-white ring-inset-1">
+            <div class="display text-2xl num">17<span class="text-accent-2">+</span></div>
+            <div class="text-xs text-muted mt-1">лет работы в Москве</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white ring-inset-1">
+            <div class="display text-2xl num">2 100<span class="text-accent-2">+</span></div>
+            <div class="text-xs text-muted mt-1">пациентов из Москвы и регионов</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white ring-inset-1">
+            <div class="display text-2xl num">12</div>
+            <div class="text-xs text-muted mt-1">врачей-имплантологов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-white border-t border-white/10">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 py-14">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-1">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-white text-ink">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c2.5 0 4 1.2 4 3 0 1.4-.6 2.4-1 4.5-.4 2-.5 6-1.5 9-.6 1.7-2.2 1.7-2.8 0-1-3-1.1-7-1.5-9-.4-2.1-1-3.1-1-4.5 0-1.8 1.5-3 4-3Z"/></svg>
+          </span>
+          <span class="display text-xl">Имплант<span class="text-accent">.</span>Центр</span>
+        </a>
+        <p class="text-sm text-white/60 mt-4">Клиника имплантации зубов в Москве. 17 лет работы, собственная зуботехническая лаборатория.</p>
+      </div>
+      <div>
+        <div class="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">Услуги</div>
+        <ul class="space-y-2.5 text-sm text-white/80">
+          <li><a href="#" class="hover:text-accent">All-on-4</a></li>
+          <li><a href="#" class="hover:text-accent">All-on-6</a></li>
+          <li><a href="#" class="hover:text-accent">Имплантация одного зуба</a></li>
+          <li><a href="#" class="hover:text-accent">Синус-лифтинг</a></li>
+          <li><a href="#" class="hover:text-accent">Протезирование</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">Контакты</div>
+        <ul class="space-y-2.5 text-sm text-white/80">
+          <li class="num">+7 495 000-00-00</li>
+          <li>info@implant-centre.ru</li>
+          <li>Москва, ул. Тверская, 1</li>
+          <li class="text-white/60">Пн–Сб: 9:00–21:00</li>
+          <li class="text-white/60">Вс: 10:00–19:00</li>
+        </ul>
+        <div class="flex gap-2 mt-4">
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-accent hover:text-ink flex items-center justify-center transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 3.5L3 10.5l6 2.5 2.5 6 3-4.5 5 5 3-16z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-accent hover:text-ink flex items-center justify-center transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-accent hover:text-ink flex items-center justify-center transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">Документы</div>
+        <ul class="space-y-2.5 text-sm text-white/80">
+          <li><a href="#" class="hover:text-accent">Лицензия</a></li>
+          <li><a href="#" class="hover:text-accent">Политика конфиденциальности</a></li>
+          <li><a href="#" class="hover:text-accent">Договор оферты</a></li>
+          <li><a href="#" class="hover:text-accent">Реквизиты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hairline border-white/10 mt-12 pt-6 flex flex-col md:flex-row gap-4 md:items-center justify-between text-xs text-white/40">
+      <div>© 2026 «Имплант.Центр». Лицензия № ЛО-77-01-123456 от 12.03.2023.</div>
+      <div>Имеются противопоказания. Необходима консультация специалиста.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-border">
+  <div class="flex gap-2">
+    <a href="tel:+74950000000" class="flex-1 h-12 rounded-xl ring-inset-1 flex items-center justify-center font-semibold text-sm">
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      Позвонить
+    </a>
+    <a href="#cta" class="flex-1 h-12 rounded-xl bg-ink text-white flex items-center justify-center font-semibold text-sm">
+      Записаться
+    </a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      // Update theme-color meta for mobile browser chrome
+      var meta = document.querySelector('meta[name="theme-color"]:not([media])');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#0A1426' : '#ffffff');
+    });
+  })();
+</script>
+</body>
+</html>

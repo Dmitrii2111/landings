@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10355E"/>
+      <stop offset="1" stop-color="#0A1F36"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.15)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g)"/>
+  <rect width="1200" height="1500" fill="url(#dots)"/>
+  <circle cx="600" cy="750" r="80" fill="rgba(255,255,255,0.12)"/>
+  <path d="M570 744 L570 756 L612 750 Z" fill="white" opacity="0.85"/>
+  <text x="600" y="870" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-size="22" font-weight="600" fill="white" opacity="0.9">Фото: врач + пациент</text>
+  <text x="600" y="900" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-size="14" fill="white" opacity="0.6">клиника, дневной свет</text>
+</svg>
