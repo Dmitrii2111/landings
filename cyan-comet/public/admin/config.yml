@@ -1,0 +1,74 @@
+backend:
+  name: git-gateway
+  branch: window-dental-school
+
+local_backend: true
+
+media_folder: "public/images/cms"
+public_folder: "/images/cms"
+
+collections:
+  - name: landing_projects
+    label: "Лендинги (главная)"
+    files:
+      - name: projects
+        label: "Карточки проектов"
+        file: "src/data/landingProjects.json"
+        fields:
+          - name: projects
+            label: "Проекты"
+            widget: list
+            fields:
+              - name: id
+                label: "ID"
+                widget: string
+                hint: "Служебный идентификатор — не менять"
+              - name: title
+                label: "Название"
+                widget: string
+              - name: category
+                label: "Категория (ключ)"
+                widget: select
+                options:
+                  - { label: "Медицина", value: "medicina" }
+                  - { label: "Строительство", value: "stroitelstvo" }
+                  - { label: "Техника", value: "tehnika" }
+                  - { label: "Юридические услуги", value: "yuridicheskie" }
+                  - { label: "Образование", value: "obrazovanie" }
+              - name: categoryLabel
+                label: "Категория (отображаемое название)"
+                widget: string
+              - name: status
+                label: "Статус (ключ)"
+                widget: select
+                options:
+                  - { label: "Готово", value: "ready" }
+                  - { label: "В переносе", value: "wip" }
+              - name: statusLabel
+                label: "Статус (текст на карточке)"
+                widget: string
+              - name: description
+                label: "Описание"
+                widget: text
+              - name: url
+                label: "URL страницы (например /dental)"
+                widget: string
+                required: false
+              - name: isDisabled
+                label: "Отключить карточку"
+                widget: boolean
+                default: false
+              - name: previewType
+                label: "Тип превью"
+                widget: select
+                options:
+                  - { label: "iframe (живая страница)", value: "iframe" }
+                  - { label: "Заглушка (нет страницы)", value: "mock" }
+              - name: previewUrl
+                label: "URL для iframe-превью"
+                widget: string
+                required: false
+              - name: previewImage
+                label: "Превью-изображение (опционально)"
+                widget: image
+                required: false

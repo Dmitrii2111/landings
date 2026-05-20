@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": "dental",
+      "title": "Стоматология / Имплантация зубов",
+      "category": "medicina",
+      "categoryLabel": "Медицина",
+      "status": "ready",
+      "statusLabel": "Astro-страница готова",
+      "description": "Лендинг стоматологической клиники с акцентом на услугу имплантации зубов.",
+      "url": "/dental",
+      "isDisabled": false,
+      "previewType": "iframe",
+      "previewUrl": "/dental",
+      "previewImage": ""
+    },
+    {
+      "id": "remont",
+      "title": "Ремонт квартир под ключ",
+      "category": "stroitelstvo",
+      "categoryLabel": "Строительство",
+      "status": "ready",
+      "statusLabel": "Astro-страница готова",
+      "description": "Лендинг строительной компании с портфолио объектов и расчётом стоимости.",
+      "url": "/remont",
+      "isDisabled": false,
+      "previewType": "iframe",
+      "previewUrl": "/remont",
+      "previewImage": ""
+    },
+    {
+      "id": "equipment",
+      "title": "Аренда спецтехники",
+      "category": "tehnika",
+      "categoryLabel": "Техника",
+      "status": "ready",
+      "statusLabel": "Astro-страница готова",
+      "description": "Лендинг компании по аренде строительной и дорожной спецтехники.",
+      "url": "/equipment",
+      "isDisabled": false,
+      "previewType": "iframe",
+      "previewUrl": "/equipment",
+      "previewImage": ""
+    },
+    {
+      "id": "school",
+      "title": "Языковая школа",
+      "category": "obrazovanie",
+      "categoryLabel": "Образование",
+      "status": "ready",
+      "statusLabel": "Astro-страница готова",
+      "description": "Лендинг языковой школы с описанием программ и форматов обучения.",
+      "url": "/school",
+      "isDisabled": false,
+      "previewType": "iframe",
+      "previewUrl": "/school",
+      "previewImage": ""
+    },
+    {
+      "id": "bankruptcy",
+      "title": "Банкротство физических лиц",
+      "category": "yuridicheskie",
+      "categoryLabel": "Юридические услуги",
+      "status": "wip",
+      "statusLabel": "В переносе",
+      "description": "Лендинг юридической компании по сопровождению процедуры банкротства граждан.",
+      "url": "",
+      "isDisabled": true,
+      "previewType": "mock",
+      "previewUrl": "",
+      "previewImage": ""
+    }
+  ]
+}
