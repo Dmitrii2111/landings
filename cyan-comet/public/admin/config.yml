@@ -72,3 +72,265 @@ collections:
                 label: "Превью-изображение (опционально)"
                 widget: image
                 required: false
+
+  - name: dental_page
+    label: "Стоматология"
+    files:
+      - name: dental
+        label: "Страница /dental"
+        file: "src/data/dentalPage.json"
+        media_folder: "public/images/dental"
+        public_folder: "/images/dental"
+        fields:
+          - name: meta
+            label: "SEO"
+            widget: object
+            fields:
+              - { name: title, label: "Title страницы", widget: string }
+              - { name: description, label: "Meta description", widget: text }
+
+          - name: hero
+            label: "Hero"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Бейдж над заголовком", widget: string }
+              - { name: titleLine1, label: "Заголовок: строка 1", widget: string }
+              - { name: titleLine2, label: "Заголовок: строка 2 (курсив)", widget: string }
+              - { name: titleLine3, label: "Заголовок: строка 3 (с ценой)", widget: string }
+              - { name: subtitle, label: "Подзаголовок", widget: text }
+              - name: benefits
+                label: "Список преимуществ"
+                widget: list
+                field: { name: item, label: "Пункт", widget: string }
+              - { name: primaryCta, label: "Кнопка: основной CTA", widget: string }
+              - { name: secondaryCta, label: "Кнопка: вторичный CTA", widget: string }
+              - { name: reviewScore, label: "Рейтинг (число)", widget: string }
+              - { name: reviewText, label: "Текст под рейтингом", widget: string }
+              - { name: heroImage, label: "Фото Hero", widget: image }
+
+          - name: pricing
+            label: "Цены"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок секции", widget: string }
+              - { name: sectionTitleAccent, label: "Заголовок: акцентная часть (курсив)", widget: string }
+              - { name: sectionSubtitle, label: "Описание под заголовком", widget: text }
+              - { name: installmentText, label: "Текст рассрочки", widget: string }
+              - name: cards
+                label: "Карточки тарифов"
+                widget: list
+                fields:
+                  - { name: label, label: "Метка (тип)", widget: string }
+                  - { name: title, label: "Название тарифа", widget: string }
+                  - { name: price, label: "Цена (без ₽)", widget: string }
+                  - { name: priceNote, label: "Подпись под ценой", widget: string }
+                  - name: features
+                    label: "Включено"
+                    widget: list
+                    field: { name: item, label: "Пункт", widget: string }
+                  - { name: cta, label: "Текст кнопки", widget: string }
+                  - { name: isActive, label: "Активная по умолчанию", widget: boolean, default: false }
+                  - { name: badge, label: "Бейдж (например Хит)", widget: string, required: false }
+
+          - name: faq
+            label: "FAQ"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок секции", widget: string }
+              - { name: sectionSubtitle, label: "Описание под заголовком", widget: text }
+              - name: items
+                label: "Вопросы и ответы"
+                widget: list
+                fields:
+                  - { name: question, label: "Вопрос", widget: string }
+                  - { name: answer, label: "Ответ", widget: text }
+
+          - name: contacts
+            label: "Контакты"
+            widget: object
+            fields:
+              - { name: phoneTel, label: "Телефон для href (без пробелов)", widget: string, hint: "Формат: +74950000000" }
+              - { name: phoneDisplay, label: "Телефон для отображения", widget: string, hint: "Формат: +7 495 000-00-00" }
+              - { name: phoneFormatted, label: "Телефон с скобками", widget: string, hint: "Формат: +7 (495) 000-00-00" }
+              - { name: email, label: "Email", widget: string }
+              - { name: address, label: "Полный адрес", widget: string }
+              - { name: addressShort, label: "Краткий адрес (для футера)", widget: string }
+              - { name: workWeekdays, label: "Часы работы в будни", widget: string }
+              - { name: workSunday, label: "Часы работы в воскресенье", widget: string }
+              - { name: parking, label: "Парковка", widget: string }
+              - { name: metro, label: "Метро", widget: string }
+
+          - name: pains
+            label: "Боли пациентов"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок (строка 1)", widget: string }
+              - { name: sectionTitleAccent, label: "Заголовок (строка 2, курсив)", widget: string }
+              - name: items
+                label: "Карточки боли"
+                widget: list
+                fields:
+                  - { name: title, label: "Заголовок", widget: string }
+                  - { name: desc, label: "Описание", widget: text }
+              - { name: ctaTitle, label: "CTA-карточка: заголовок", widget: string }
+              - { name: ctaDesc, label: "CTA-карточка: описание", widget: text }
+              - { name: ctaText, label: "CTA-карточка: текст ссылки", widget: string }
+
+          - name: solutions
+            label: "Методы имплантации"
+            widget: object
+            fields:
+              - { name: imgBadge, label: "Бейдж на фото", widget: string }
+              - { name: imgCardLabel, label: "Карточка на фото: метка", widget: string }
+              - { name: imgCardDesc, label: "Карточка на фото: описание", widget: string }
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitleLine1, label: "Заголовок: строка 1", widget: string }
+              - { name: sectionTitleLine2, label: "Заголовок: строка 2", widget: string }
+              - { name: sectionTitleAccent, label: "Заголовок: строка 3 (курсив)", widget: string }
+              - { name: subtitle, label: "Описание", widget: text }
+              - name: items
+                label: "Преимущества метода"
+                widget: list
+                fields:
+                  - { name: num, label: "Номер", widget: string }
+                  - { name: title, label: "Заголовок", widget: string }
+                  - { name: desc, label: "Описание", widget: text }
+              - { name: ctaText, label: "Кнопка: текст", widget: string }
+              - { name: ctaHelper, label: "Подпись рядом с кнопкой", widget: string }
+              - { name: sectionImage, label: "Фото секции", widget: image }
+
+          - name: reviews
+            label: "Отзывы"
+            widget: object
+            fields:
+              - { name: videoThumb, label: "Превью видео-отзыва", widget: image }
+
+          - name: cases
+            label: "Кейсы"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок секции", widget: string }
+              - { name: sectionSubtitle, label: "Описание секции", widget: text }
+              - { name: emptyText, label: "Текст при пустой фильтрации", widget: string }
+              - { name: modalButtonText, label: "Кнопка «Смотреть все»", widget: string }
+              - name: filters
+                label: "Фильтры"
+                widget: list
+                fields:
+                  - { name: value, label: "Значение (ключ)", widget: string }
+                  - { name: label, label: "Текст кнопки", widget: string }
+                  - { name: isActive, label: "Активен по умолчанию", widget: boolean, default: false }
+                  - { name: hideMobile, label: "Скрыть на мобильном", widget: boolean, default: false }
+              - name: visibleCases
+                label: "Видимые кейсы (3 шт.)"
+                widget: list
+                fields:
+                  - { name: category, label: "Категория (ключ)", widget: string }
+                  - { name: categoryLabel, label: "Категория (текст)", widget: string }
+                  - { name: duration, label: "Срок лечения", widget: string }
+                  - { name: title, label: "Заголовок кейса", widget: string }
+                  - { name: desc, label: "Описание кейса", widget: text }
+                  - { name: doctor, label: "Врач", widget: string }
+                  - { name: beforeImage, label: "Фото До", widget: image }
+                  - { name: afterImage, label: "Фото После", widget: image }
+              - name: modalCases
+                label: "Все кейсы в модальном окне (26 шт.)"
+                widget: list
+                fields:
+                  - { name: category, label: "Категория (ключ)", widget: string }
+                  - { name: categoryLabel, label: "Категория (текст)", widget: string }
+                  - { name: title, label: "Заголовок", widget: string }
+                  - { name: desc, label: "Описание", widget: text }
+                  - { name: duration, label: "Срок лечения", widget: string }
+                  - { name: beforeImage, label: "Фото До", widget: image }
+                  - { name: afterImage, label: "Фото После", widget: image }
+
+          - name: doctors
+            label: "Врачи"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок секции", widget: string }
+              - { name: sectionTitleAccent, label: "Заголовок: акцент (курсив)", widget: string }
+              - name: items
+                label: "Врачи"
+                widget: list
+                fields:
+                  - { name: name, label: "ФИО", widget: string }
+                  - { name: role, label: "Должность и специализация", widget: string }
+                  - { name: badge, label: "Бейдж на фото (например Главный врач)", widget: string, required: false }
+                  - { name: photo, label: "Фото врача", widget: image }
+                  - { name: stat1Value, label: "Статистика 1: значение", widget: string }
+                  - { name: stat1Label, label: "Статистика 1: подпись", widget: string }
+                  - { name: stat2Value, label: "Статистика 2: значение", widget: string }
+                  - { name: stat2Label, label: "Статистика 2: подпись", widget: string }
+
+          - name: process
+            label: "Этапы лечения"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок секции", widget: string }
+              - name: steps
+                label: "Шаги"
+                widget: list
+                fields:
+                  - { name: num, label: "Номер", widget: string }
+                  - { name: title, label: "Заголовок шага", widget: string }
+                  - { name: desc, label: "Описание шага", widget: text }
+                  - { name: tag, label: "Временная метка (День 1 и т.п.)", widget: string }
+
+          - name: guarantee
+            label: "Гарантии"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок: строка 1", widget: string }
+              - { name: sectionTitleAccent, label: "Заголовок: строка 2 (курсив)", widget: string }
+              - { name: certsLabel, label: "Подпись над сертификатами", widget: string }
+              - name: items
+                label: "Карточки гарантий"
+                widget: list
+                fields:
+                  - { name: title, label: "Заголовок", widget: string }
+                  - { name: desc, label: "Описание", widget: text }
+
+          - name: cta
+            label: "Финальный CTA"
+            widget: object
+            fields:
+              - { name: sectionEyebrow, label: "Бейдж секции", widget: string }
+              - { name: sectionTitle, label: "Заголовок: строка 1", widget: string }
+              - { name: sectionTitleAccent, label: "Заголовок: строка 2 (курсив)", widget: string }
+              - { name: sectionTitleSuffix, label: "Заголовок: строка 3", widget: string }
+              - { name: subtitle, label: "Описание", widget: text }
+              - name: stats
+                label: "Статистика (3 блока)"
+                widget: list
+                fields:
+                  - { name: value, label: "Значение", widget: string }
+                  - { name: label, label: "Подпись", widget: string }
+              - { name: formTitle, label: "Заголовок формы", widget: string }
+              - { name: formSubtitle, label: "Подзаголовок формы", widget: string }
+              - { name: submitText, label: "Текст кнопки отправки", widget: string }
+
+          - name: formMessages
+            label: "Сообщения формы"
+            widget: object
+            fields:
+              - { name: nameError, label: "Ошибка: некорректное имя", widget: string }
+              - { name: phoneError, label: "Ошибка: некорректный телефон", widget: string }
+              - { name: toastText, label: "Тост об успешной отправке", widget: string }
+
+          - name: footer
+            label: "Футер"
+            widget: object
+            fields:
+              - { name: description, label: "Описание клиники", widget: text }
+              - { name: ctaText, label: "Текст CTA-кнопки в футере", widget: string }
+              - { name: license, label: "Копирайт и лицензия", widget: string }
+              - { name: disclaimer, label: "Дисклеймер", widget: string }

@@ -1,0 +1,232 @@
+---
+import '../styles/cms-demo.css';
+---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>CMS для редактирования лендинга</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+</head>
+<body class="cd-body">
+
+  <header class="cd-site-header">
+    <a href="/" class="cd-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M10 3L5 8l5 5"/>
+      </svg>
+      На главную
+    </a>
+  </header>
+
+  <!-- Hero -->
+  <section class="cd-hero">
+    <div class="cd-container">
+      <div class="cd-hero-badge">Decap CMS</div>
+      <h1 class="cd-hero-title">CMS для редактирования лендинга</h1>
+      <p class="cd-hero-sub">В проект подключается реальная Decap CMS: владелец сайта сможет менять тексты, цены, FAQ, контакты и изображения без работы с кодом.</p>
+    </div>
+  </section>
+
+  <!-- Что можно редактировать -->
+  <section class="cd-section">
+    <div class="cd-container">
+      <h2 class="cd-section-title">Что можно редактировать</h2>
+      <div class="cd-cards">
+
+        <div class="cd-card">
+          <div class="cd-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 6h12M4 10h8M4 14h5"/>
+            </svg>
+          </div>
+          <div class="cd-card-text">
+            <strong>Заголовки и тексты</strong>
+            <span>Название компании, описания услуг, подзаголовки секций</span>
+          </div>
+        </div>
+
+        <div class="cd-card">
+          <div class="cd-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10 2v16M6 6h8M6 14h8"/>
+              <circle cx="10" cy="10" r="8"/>
+            </svg>
+          </div>
+          <div class="cd-card-text">
+            <strong>Цены и тарифы</strong>
+            <span>Стоимость услуг, акции, условия рассрочки</span>
+          </div>
+        </div>
+
+        <div class="cd-card">
+          <div class="cd-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="10" cy="10" r="8"/><path d="M10 6v4M10 14v.5"/>
+            </svg>
+          </div>
+          <div class="cd-card-text">
+            <strong>FAQ</strong>
+            <span>Вопросы и ответы: добавлять, удалять, редактировать</span>
+          </div>
+        </div>
+
+        <div class="cd-card">
+          <div class="cd-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 8l4 3 4-4 5 5"/>
+            </svg>
+          </div>
+          <div class="cd-card-text">
+            <strong>Фото и изображения</strong>
+            <span>Загрузка через интерфейс, без FTP и хостинга</span>
+          </div>
+        </div>
+
+        <div class="cd-card">
+          <div class="cd-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 10a4 4 0 108 0 4 4 0 00-8 0"/><path d="M2 10h2M16 10h2M10 4V2M10 18v-2"/>
+            </svg>
+          </div>
+          <div class="cd-card-text">
+            <strong>Контакты</strong>
+            <span>Телефон, адрес, email, ссылки на соцсети</span>
+          </div>
+        </div>
+
+        <div class="cd-card">
+          <div class="cd-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="7" height="7" rx="1.5"/><rect x="11" y="2" width="7" height="7" rx="1.5"/><rect x="2" y="11" width="7" height="7" rx="1.5"/><rect x="11" y="11" width="7" height="7" rx="1.5"/>
+            </svg>
+          </div>
+          <div class="cd-card-text">
+            <strong>Карточки на главной</strong>
+            <span>Название, категория, описание лендингов в портфолио</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Как это работает -->
+  <section class="cd-section cd-section--alt">
+    <div class="cd-container">
+      <h2 class="cd-section-title">Как это работает</h2>
+      <ol class="cd-steps">
+        <li class="cd-step">
+          <div class="cd-step-num">1</div>
+          <div class="cd-step-body">
+            <strong>Контент хранится в файлах проекта</strong>
+            <span>JSON или Markdown — прямо в репозитории рядом с кодом. Никакой отдельной базы данных.</span>
+          </div>
+        </li>
+        <li class="cd-step">
+          <div class="cd-step-num">2</div>
+          <div class="cd-step-body">
+            <strong>Decap CMS даёт визуальный интерфейс</strong>
+            <span>Владелец сайта видит форму с полями, а не JSON. Нажал — отредактировал — сохранил.</span>
+          </div>
+        </li>
+        <li class="cd-step">
+          <div class="cd-step-num">3</div>
+          <div class="cd-step-body">
+            <strong>Изменения попадают в Git</strong>
+            <span>Каждое сохранение — это коммит в репозиторий. История изменений сохраняется автоматически.</span>
+          </div>
+        </li>
+        <li class="cd-step">
+          <div class="cd-step-num">4</div>
+          <div class="cd-step-body">
+            <strong>Сайт пересобирается и публикует новую версию</strong>
+            <span>CI/CD подхватывает изменения и через минуту обновлённая страница доступна пользователям.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Что видит владелец -->
+  <section class="cd-section">
+    <div class="cd-container">
+      <h2 class="cd-section-title">Что видит владелец сайта</h2>
+      <p class="cd-section-sub">Схематичный пример. Внешний вид реальной CMS зависит от настройки проекта.</p>
+
+      <div class="cd-mock">
+        <!-- Mock topbar -->
+        <div class="cd-mock-bar">
+          <div class="cd-mock-logo">
+            <span class="cd-mock-logo-icon"></span>
+            Decap CMS
+          </div>
+          <div class="cd-mock-bar-right">
+            <span class="cd-mock-status">● Published</span>
+            <span class="cd-mock-btn cd-mock-btn--ghost">Preview</span>
+            <span class="cd-mock-btn cd-mock-btn--primary">Save</span>
+          </div>
+        </div>
+
+        <!-- Mock body -->
+        <div class="cd-mock-body">
+          <div class="cd-mock-sidebar">
+            <div class="cd-mock-nav-label">Коллекции</div>
+            <div class="cd-mock-nav-item">Главная</div>
+            <div class="cd-mock-nav-item cd-mock-nav-item--active">Стоматология</div>
+            <div class="cd-mock-nav-item">Медиа</div>
+          </div>
+          <div class="cd-mock-editor">
+            <div class="cd-mock-field">
+              <div class="cd-mock-field-label">Заголовок</div>
+              <div class="cd-mock-field-input">Имплантация зубов под ключ</div>
+            </div>
+            <div class="cd-mock-field">
+              <div class="cd-mock-field-label">Описание</div>
+              <div class="cd-mock-field-textarea">Лечение зубов без боли. Бесплатная консультация и КТ.</div>
+            </div>
+            <div class="cd-mock-row">
+              <div class="cd-mock-field">
+                <div class="cd-mock-field-label">Телефон</div>
+                <div class="cd-mock-field-input">+7 (495) 000-00-00</div>
+              </div>
+              <div class="cd-mock-field">
+                <div class="cd-mock-field-label">Цена</div>
+                <div class="cd-mock-field-input">от 45 000 ₽</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cd-mock-caption">Схематичный пример. Реальный интерфейс зависит от настройки проекта.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Важно -->
+  <section class="cd-section cd-section--alt">
+    <div class="cd-container">
+      <div class="cd-notice">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="10" cy="10" r="8.5"/><path d="M10 6.5v4M10 13v.5"/>
+        </svg>
+        <div>
+          <strong>Важно</strong>
+          <p>Это не публичная админка. Реальный доступ к CMS выдаётся владельцу проекта после настройки авторизации. Без авторизации никто не может редактировать контент.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cd-section cd-cta-section">
+    <div class="cd-container cd-cta">
+      <h2 class="cd-cta-title">Нужна CMS для вашего проекта?</h2>
+      <p class="cd-cta-sub">Decap CMS подключается к любому лендингу из портфолио. Настройка занимает от одного дня.</p>
+      <a href="/" class="cd-cta-btn">← Вернуться к портфолио</a>
+    </div>
+  </section>
+
+</body>
+</html>

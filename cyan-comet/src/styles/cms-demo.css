@@ -1,0 +1,269 @@
+/* ── CMS presentation page ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body.cd-body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 15px; line-height: 1.6;
+  color: #1f2937; background: #ffffff;
+}
+
+/* ── Site header ── */
+.cd-site-header {
+  padding: 16px 32px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #fff;
+}
+
+.cd-back {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: #6b7280; font-size: 13px; font-weight: 500;
+  text-decoration: none;
+  transition: color .12s;
+}
+.cd-back:hover { color: #111827; }
+
+/* ── Container ── */
+.cd-container {
+  max-width: 860px; margin: 0 auto; padding: 0 24px;
+}
+
+/* ── Hero ── */
+.cd-hero {
+  background: linear-gradient(160deg, #0f172a 0%, #1e3a5f 100%);
+  padding: 72px 0 64px;
+  text-align: center;
+}
+
+.cd-hero-badge {
+  display: inline-block;
+  padding: 4px 12px; border-radius: 999px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  font-size: 12px; font-weight: 700; color: rgba(255,255,255,.8);
+  letter-spacing: .06em; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.cd-hero-title {
+  font-size: clamp(28px, 5vw, 44px); font-weight: 800; color: #fff;
+  letter-spacing: -.03em; line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.cd-hero-sub {
+  font-size: 17px; color: rgba(255,255,255,.72);
+  max-width: 620px; margin: 0 auto; line-height: 1.65;
+}
+
+/* ── Sections ── */
+.cd-section { padding: 64px 0; }
+.cd-section--alt { background: #f9fafb; }
+
+.cd-section-title {
+  font-size: 26px; font-weight: 800; color: #111827;
+  letter-spacing: -.02em; margin-bottom: 10px;
+}
+
+.cd-section-sub {
+  font-size: 14px; color: #6b7280; margin-bottom: 36px; margin-top: 6px;
+}
+
+/* ── Feature cards ── */
+.cd-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.cd-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 20px; border-radius: 10px;
+  border: 1px solid #e5e7eb; background: #fff;
+}
+
+.cd-card-icon {
+  width: 40px; height: 40px; border-radius: 9px; flex-shrink: 0;
+  background: #eff6ff; border: 1px solid #dbeafe;
+  display: flex; align-items: center; justify-content: center;
+  color: #2563eb;
+}
+
+.cd-card-text {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.cd-card-text strong { font-size: 14px; font-weight: 700; color: #111827; }
+.cd-card-text span  { font-size: 13px; color: #6b7280; line-height: 1.5; }
+
+/* ── Steps ── */
+.cd-steps {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0;
+  margin-top: 36px;
+  border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden;
+  background: #fff;
+}
+
+.cd-step {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 22px 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.cd-step:last-child { border-bottom: none; }
+
+.cd-step-num {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: #2563eb; color: #fff;
+  font-size: 14px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+
+.cd-step-body {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.cd-step-body strong { font-size: 15px; font-weight: 700; color: #111827; }
+.cd-step-body span  { font-size: 14px; color: #6b7280; line-height: 1.55; }
+
+/* ── Static mock ── */
+.cd-mock {
+  border: 1px solid #e5e7eb; border-radius: 10px;
+  overflow: hidden; background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,.06);
+  margin-top: 32px;
+}
+
+.cd-mock-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px; border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.cd-mock-logo {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; color: #1f2937;
+}
+.cd-mock-logo-icon {
+  width: 22px; height: 22px; border-radius: 5px; background: #2563eb; flex-shrink: 0;
+}
+
+.cd-mock-bar-right { display: flex; align-items: center; gap: 8px; }
+
+.cd-mock-status {
+  font-size: 12px; font-weight: 700; color: #16a34a;
+  background: #f0fdf4; border: 1px solid #bbf7d0;
+  padding: 4px 10px; border-radius: 999px;
+}
+
+.cd-mock-btn {
+  font-size: 12px; font-weight: 600; padding: 6px 12px;
+  border-radius: 5px; cursor: default; user-select: none;
+}
+.cd-mock-btn--ghost {
+  border: 1px solid #e5e7eb; color: #374151; background: #fff;
+}
+.cd-mock-btn--primary {
+  background: #2563eb; color: #fff; border: 1px solid #2563eb;
+}
+
+.cd-mock-body {
+  display: grid; grid-template-columns: 180px 1fr;
+}
+
+.cd-mock-sidebar {
+  border-right: 1px solid #f3f4f6; padding: 16px 0;
+  background: #fafafa;
+}
+.cd-mock-nav-label {
+  padding: 0 16px 8px;
+  font-size: 10px; font-weight: 700; color: #9ca3af;
+  letter-spacing: .07em; text-transform: uppercase;
+}
+.cd-mock-nav-item {
+  padding: 7px 16px;
+  font-size: 13px; color: #6b7280;
+  border-left: 3px solid transparent;
+  cursor: default; user-select: none;
+}
+.cd-mock-nav-item--active {
+  color: #2563eb; background: #eff6ff;
+  border-left-color: #2563eb; font-weight: 600;
+}
+
+.cd-mock-editor {
+  padding: 20px 22px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.cd-mock-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+
+.cd-mock-field {
+  display: flex; flex-direction: column; gap: 5px;
+}
+.cd-mock-field-label {
+  font-size: 11px; font-weight: 700; color: #374151;
+}
+.cd-mock-field-input {
+  padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 5px;
+  font-size: 13px; color: #1f2937; background: #fff; cursor: default;
+}
+.cd-mock-field-textarea {
+  padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 5px;
+  font-size: 13px; color: #1f2937; background: #fff;
+  min-height: 60px; cursor: default;
+}
+
+.cd-mock-caption {
+  padding: 10px 18px; border-top: 1px solid #f3f4f6;
+  font-size: 12px; color: #9ca3af; text-align: center;
+  background: #fafafa;
+}
+
+/* ── Notice ── */
+.cd-notice {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px 24px; border-radius: 10px;
+  border: 1px solid #fde68a; background: #fffbeb;
+  color: #92400e;
+}
+.cd-notice svg { flex-shrink: 0; margin-top: 2px; color: #d97706; }
+.cd-notice strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #78350f; }
+.cd-notice p { font-size: 14px; line-height: 1.6; }
+
+/* ── CTA ── */
+.cd-cta-section { background: #0f172a; }
+.cd-cta { text-align: center; }
+
+.cd-cta-title {
+  font-size: 28px; font-weight: 800; color: #fff;
+  letter-spacing: -.02em; margin-bottom: 12px;
+}
+.cd-cta-sub {
+  font-size: 16px; color: rgba(255,255,255,.65);
+  margin-bottom: 28px; line-height: 1.6;
+}
+.cd-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 8px;
+  background: #2563eb; color: #fff; font-size: 15px; font-weight: 700;
+  text-decoration: none;
+  transition: background .12s;
+}
+.cd-cta-btn:hover { background: #1d4ed8; }
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .cd-cards { grid-template-columns: 1fr; }
+  .cd-mock-body { grid-template-columns: 1fr; }
+  .cd-mock-sidebar { border-right: none; border-bottom: 1px solid #f3f4f6; }
+  .cd-mock-row { grid-template-columns: 1fr; }
+  .cd-site-header { padding: 14px 16px; }
+  .cd-hero { padding: 48px 0 40px; }
+  .cd-section { padding: 44px 0; }
+}
+
+@media (max-width: 500px) {
+  .cd-mock-bar { flex-wrap: wrap; gap: 10px; }
+  .cd-mock-bar-right { flex-wrap: wrap; }
+}

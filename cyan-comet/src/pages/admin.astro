@@ -10,6 +10,335 @@
     <title>Decap CMS</title>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script is:inline src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script is:inline>
+      (function () {
+        // helpers
+        function g(obj, key) { return obj && obj.get ? obj.get(key) : null; }
+        function gList(obj, key) { var v = g(obj, key); return v && v.toJS ? v.toJS() : []; }
+        function safe(v) { return v || ''; }
+
+        // preview template
+        var DentalPreview = createClass({
+          render: function () {
+            var entry = this.props.entry;
+            var getAsset = this.props.getAsset;
+            var data = entry.getIn(['data']);
+
+            var meta      = g(data, 'meta');
+            var hero      = g(data, 'hero');
+            var pains     = g(data, 'pains');
+            var solutions = g(data, 'solutions');
+            var pricing   = g(data, 'pricing');
+            var cases     = g(data, 'cases');
+            var doctors   = g(data, 'doctors');
+            var process_  = g(data, 'process');
+            var guarantee = g(data, 'guarantee');
+            var reviews   = g(data, 'reviews');
+            var faq       = g(data, 'faq');
+            var cta       = g(data, 'cta');
+            var contacts  = g(data, 'contacts');
+            var footer    = g(data, 'footer');
+
+            var heroImgRaw = g(hero, 'heroImage');
+            var heroImgSrc = heroImgRaw ? getAsset(heroImgRaw).toString() : null;
+
+            var solImgRaw  = g(solutions, 'sectionImage');
+            var solImgSrc  = solImgRaw ? getAsset(solImgRaw).toString() : null;
+
+            var revThumbRaw = g(reviews, 'videoThumb');
+            var revThumbSrc = revThumbRaw ? getAsset(revThumbRaw).toString() : null;
+
+            var pricingCards  = gList(pricing, 'cards').slice(0, 3);
+            var faqItems      = gList(faq, 'items').slice(0, 6);
+            var visCases      = gList(cases, 'visibleCases');
+            var painsItems    = gList(pains, 'items');
+            var solItems      = gList(solutions, 'items');
+            var doctorItems   = gList(doctors, 'items');
+            var processSteps  = gList(process_, 'steps');
+            var guarItems     = gList(guarantee, 'items');
+            var ctaStats      = gList(cta, 'stats');
+
+            return h('div', { className: 'dp' },
+
+              // ── SEO meta ──
+              meta && h('div', { className: 'dp-meta' },
+                h('div', { className: 'dp-meta-title' }, safe(g(meta, 'title'))),
+                h('div', { className: 'dp-meta-desc' }, safe(g(meta, 'description')))
+              ),
+
+              // ── Hero ──
+              hero && h('div', { className: 'dp-hero' },
+                h('div', { className: 'dp-eyebrow' }, safe(g(hero, 'eyebrow'))),
+                h('h1', { className: 'dp-h1' },
+                  [g(hero,'titleLine1'), g(hero,'titleLine2'), g(hero,'titleLine3')].filter(Boolean).join(' ')
+                ),
+                heroImgSrc && h('img', { src: heroImgSrc, alt: '', className: 'dp-hero-img' }),
+                h('p', { className: 'dp-sub' }, safe(g(hero, 'subtitle'))),
+                gList(hero, 'benefits').length > 0 && h('ul', { className: 'dp-benefits' },
+                  gList(hero, 'benefits').map(function(b, i) { return h('li', { key: i }, b); })
+                ),
+                h('div', { className: 'dp-cta-row' },
+                  h('span', { className: 'dp-btn-primary' }, safe(g(hero, 'primaryCta'))),
+                  h('span', { className: 'dp-btn-ghost' }, safe(g(hero, 'secondaryCta')))
+                ),
+                (g(hero,'reviewScore') || g(hero,'reviewText')) && h('div', { className: 'dp-hero-review' },
+                  h('span', { className: 'dp-hero-stars' }, '★★★★★ ' + safe(g(hero, 'reviewScore'))),
+                  h('span', { className: 'dp-hero-review-text' }, ' · ' + safe(g(hero, 'reviewText')))
+                )
+              ),
+
+              // ── Pains ──
+              pains && h('div', { className: 'dp-section dp-section--dark' },
+                h('div', { className: 'dp-eyebrow-sm' }, safe(g(pains, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' },
+                  [g(pains,'sectionTitle'), g(pains,'sectionTitleAccent')].filter(Boolean).join(' ')
+                ),
+                painsItems.length > 0 && h('div', { className: 'dp-grid-2' },
+                  painsItems.map(function(item, i) {
+                    return h('div', { key: i, className: 'dp-pain-card' },
+                      h('div', { className: 'dp-pain-title' }, safe(item.title)),
+                      h('div', { className: 'dp-pain-desc' }, safe(item.desc))
+                    );
+                  })
+                ),
+                (g(pains,'ctaTitle') || g(pains,'ctaText')) && h('div', { className: 'dp-cta-card' },
+                  h('div', { className: 'dp-cta-card-title' }, safe(g(pains, 'ctaTitle'))),
+                  h('div', { className: 'dp-cta-card-desc' }, safe(g(pains, 'ctaDesc'))),
+                  h('span', { className: 'dp-btn-accent' }, safe(g(pains, 'ctaText')))
+                )
+              ),
+
+              // ── Solutions ──
+              solutions && h('div', { className: 'dp-section' },
+                h('div', { className: 'dp-eyebrow-sm' }, safe(g(solutions, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' },
+                  [g(solutions,'sectionTitleLine1'), g(solutions,'sectionTitleLine2'), g(solutions,'sectionTitleAccent')].filter(Boolean).join(' ')
+                ),
+                h('p', { className: 'dp-text-muted' }, safe(g(solutions, 'subtitle'))),
+                solImgSrc && h('img', { src: solImgSrc, alt: '', className: 'dp-section-img' }),
+                solItems.length > 0 && h('div', { className: 'dp-sol-list' },
+                  solItems.map(function(item, i) {
+                    return h('div', { key: i, className: 'dp-sol-item' },
+                      h('div', { className: 'dp-sol-num' }, safe(item.num)),
+                      h('div', {},
+                        h('div', { className: 'dp-sol-title' }, safe(item.title)),
+                        h('div', { className: 'dp-text-muted' }, safe(item.desc))
+                      )
+                    );
+                  })
+                ),
+                h('div', { className: 'dp-cta-row' },
+                  h('span', { className: 'dp-btn-primary-dark' }, safe(g(solutions, 'ctaText'))),
+                  g(solutions,'ctaHelper') && h('span', { className: 'dp-text-muted' }, safe(g(solutions, 'ctaHelper')))
+                )
+              ),
+
+              // ── Pricing ──
+              pricing && pricingCards.length > 0 && h('div', { className: 'dp-section' },
+                g(pricing,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm' }, safe(g(pricing, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' },
+                  [g(pricing,'sectionTitle'), g(pricing,'sectionTitleAccent')].filter(Boolean).join(' ')
+                ),
+                g(pricing,'sectionSubtitle') && h('p', { className: 'dp-text-muted' }, safe(g(pricing, 'sectionSubtitle'))),
+                g(pricing,'installmentText') && h('div', { className: 'dp-installment' }, safe(g(pricing, 'installmentText'))),
+                h('div', { className: 'dp-cards' },
+                  pricingCards.map(function(card, i) {
+                    return h('div', { key: i, className: 'dp-card' + (card.isActive ? ' dp-card--active' : '') },
+                      card.badge && h('div', { className: 'dp-card-badge' }, card.badge),
+                      h('div', { className: 'dp-card-label' }, safe(card.label)),
+                      h('div', { className: 'dp-card-title' }, safe(card.title)),
+                      h('div', { className: 'dp-card-price' }, safe(card.price) + ' ₽'),
+                      h('div', { className: 'dp-card-note' }, safe(card.priceNote)),
+                      card.features && card.features.length > 0 && h('ul', { className: 'dp-card-features' },
+                        card.features.map(function(f, fi) { return h('li', { key: fi }, f); })
+                      ),
+                      card.cta && h('div', { className: 'dp-card-cta' }, safe(card.cta))
+                    );
+                  })
+                )
+              ),
+
+              // ── Cases ──
+              cases && visCases.length > 0 && h('div', { className: 'dp-section' },
+                g(cases,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm' }, safe(g(cases, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' }, safe(g(cases, 'sectionTitle')) || 'Кейсы'),
+                g(cases,'sectionSubtitle') && h('p', { className: 'dp-text-muted' }, safe(g(cases, 'sectionSubtitle'))),
+                h('div', { className: 'dp-cases' },
+                  visCases.map(function(c, i) {
+                    var bSrc = c.beforeImage ? getAsset(c.beforeImage).toString() : null;
+                    var aSrc = c.afterImage  ? getAsset(c.afterImage).toString()  : null;
+                    return h('div', { key: i, className: 'dp-case' },
+                      h('div', { className: 'dp-case-meta' },
+                        h('span', { className: 'dp-case-cat' }, safe(c.categoryLabel)),
+                        h('span', { className: 'dp-case-dur' }, safe(c.duration))
+                      ),
+                      h('div', { className: 'dp-case-title' }, safe(c.title)),
+                      c.desc && h('div', { className: 'dp-text-muted' }, safe(c.desc)),
+                      c.doctor && h('div', { className: 'dp-case-doctor' }, 'Врач: ' + c.doctor),
+                      h('div', { className: 'dp-case-imgs' },
+                        bSrc && h('figure', { className: 'dp-case-fig' },
+                          h('img', { src: bSrc, alt: 'До', className: 'dp-case-img' }),
+                          h('figcaption', {}, 'До')
+                        ),
+                        aSrc && h('figure', { className: 'dp-case-fig' },
+                          h('img', { src: aSrc, alt: 'После', className: 'dp-case-img' }),
+                          h('figcaption', {}, 'После')
+                        )
+                      )
+                    );
+                  })
+                )
+              ),
+
+              // ── Doctors ──
+              doctors && doctorItems.length > 0 && h('div', { className: 'dp-section' },
+                g(doctors,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm' }, safe(g(doctors, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' },
+                  [g(doctors,'sectionTitle'), g(doctors,'sectionTitleAccent')].filter(Boolean).join(' ')
+                ),
+                h('div', { className: 'dp-doctors' },
+                  doctorItems.map(function(doc, i) {
+                    var photoSrc = doc.photo ? getAsset(doc.photo).toString() : null;
+                    return h('div', { key: i, className: 'dp-doctor' },
+                      photoSrc && h('div', { className: 'dp-doctor-photo-wrap' },
+                        doc.badge && h('div', { className: 'dp-doctor-badge' }, doc.badge),
+                        h('img', { src: photoSrc, alt: safe(doc.name), className: 'dp-doctor-photo' })
+                      ),
+                      h('div', { className: 'dp-doctor-info' },
+                        h('div', { className: 'dp-doctor-name' }, safe(doc.name)),
+                        h('div', { className: 'dp-doctor-role' }, safe(doc.role)),
+                        h('div', { className: 'dp-doctor-stats' },
+                          h('div', { className: 'dp-doctor-stat' },
+                            h('span', { className: 'dp-doctor-stat-val' }, safe(doc.stat1Value)),
+                            h('span', { className: 'dp-doctor-stat-lbl' }, ' ' + safe(doc.stat1Label))
+                          ),
+                          h('div', { className: 'dp-doctor-stat' },
+                            h('span', { className: 'dp-doctor-stat-val' }, safe(doc.stat2Value)),
+                            h('span', { className: 'dp-doctor-stat-lbl' }, ' ' + safe(doc.stat2Label))
+                          )
+                        )
+                      )
+                    );
+                  })
+                )
+              ),
+
+              // ── Process ──
+              process_ && processSteps.length > 0 && h('div', { className: 'dp-section' },
+                g(process_,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm' }, safe(g(process_, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' }, safe(g(process_, 'sectionTitle'))),
+                h('div', { className: 'dp-steps' },
+                  processSteps.map(function(step, i) {
+                    return h('div', { key: i, className: 'dp-step' },
+                      h('div', { className: 'dp-step-num' }, safe(step.num)),
+                      h('div', { className: 'dp-step-body' },
+                        h('div', { className: 'dp-step-tag' }, safe(step.tag)),
+                        h('div', { className: 'dp-step-title' }, safe(step.title)),
+                        h('div', { className: 'dp-text-muted' }, safe(step.desc))
+                      )
+                    );
+                  })
+                )
+              ),
+
+              // ── Guarantee ──
+              guarantee && guarItems.length > 0 && h('div', { className: 'dp-section' },
+                g(guarantee,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm' }, safe(g(guarantee, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' },
+                  [g(guarantee,'sectionTitle'), g(guarantee,'sectionTitleAccent')].filter(Boolean).join(' ')
+                ),
+                g(guarantee,'certsLabel') && h('div', { className: 'dp-certs-label' }, safe(g(guarantee, 'certsLabel'))),
+                h('div', { className: 'dp-grid-2' },
+                  guarItems.map(function(item, i) {
+                    return h('div', { key: i, className: 'dp-guar-card' },
+                      h('div', { className: 'dp-guar-title' }, safe(item.title)),
+                      h('div', { className: 'dp-text-muted' }, safe(item.desc))
+                    );
+                  })
+                )
+              ),
+
+              // ── Reviews (static stub) ──
+              reviews && h('div', { className: 'dp-section dp-section--reviews' },
+                h('h2', { className: 'dp-h2' }, 'Отзывы'),
+                revThumbSrc
+                  ? h('img', { src: revThumbSrc, alt: 'Превью видео-отзыва', className: 'dp-review-thumb' })
+                  : h('div', { className: 'dp-review-stub' }, 'Превью видео-отзыва')
+              ),
+
+              // ── FAQ ──
+              faq && faqItems.length > 0 && h('div', { className: 'dp-section' },
+                g(faq,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm' }, safe(g(faq, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2' }, safe(g(faq, 'sectionTitle'))),
+                g(faq,'sectionSubtitle') && h('p', { className: 'dp-text-muted' }, safe(g(faq, 'sectionSubtitle'))),
+                h('div', { className: 'dp-faq' },
+                  faqItems.map(function(item, i) {
+                    return h('div', { key: i, className: 'dp-faq-item' },
+                      h('strong', {}, safe(item.question)),
+                      h('p', {}, safe(item.answer))
+                    );
+                  })
+                )
+              ),
+
+              // ── Final CTA ──
+              cta && h('div', { className: 'dp-section dp-section--cta' },
+                g(cta,'sectionEyebrow') && h('div', { className: 'dp-eyebrow-sm dp-eyebrow-sm--light' }, safe(g(cta, 'sectionEyebrow'))),
+                h('h2', { className: 'dp-h2 dp-h2--light' },
+                  [g(cta,'sectionTitle'), g(cta,'sectionTitleAccent'), g(cta,'sectionTitleSuffix')].filter(Boolean).join(' ')
+                ),
+                g(cta,'subtitle') && h('p', { className: 'dp-cta-sub' }, safe(g(cta, 'subtitle'))),
+                ctaStats.length > 0 && h('div', { className: 'dp-cta-stats' },
+                  ctaStats.map(function(stat, i) {
+                    return h('div', { key: i, className: 'dp-cta-stat' },
+                      h('div', { className: 'dp-cta-stat-val' }, safe(stat.value)),
+                      h('div', { className: 'dp-cta-stat-lbl' }, safe(stat.label))
+                    );
+                  })
+                ),
+                h('div', { className: 'dp-cta-form-stub' },
+                  g(cta,'formTitle') && h('div', { className: 'dp-cta-form-title' }, safe(g(cta, 'formTitle'))),
+                  g(cta,'formSubtitle') && h('div', { className: 'dp-cta-form-sub' }, safe(g(cta, 'formSubtitle'))),
+                  h('div', { className: 'dp-cta-form-fields' },
+                    h('div', { className: 'dp-field-stub' }, 'Ваше имя'),
+                    h('div', { className: 'dp-field-stub' }, 'Телефон'),
+                    h('span', { className: 'dp-btn-primary-dark' }, safe(g(cta, 'submitText')) || 'Записаться →')
+                  )
+                )
+              ),
+
+              // ── Contacts ──
+              contacts && h('div', { className: 'dp-section' },
+                h('h2', { className: 'dp-h2' }, 'Контакты'),
+                h('dl', { className: 'dp-contacts' },
+                  h('dt', {}, 'Телефон'), h('dd', {}, safe(g(contacts, 'phoneDisplay'))),
+                  h('dt', {}, 'Email'),   h('dd', {}, safe(g(contacts, 'email'))),
+                  h('dt', {}, 'Адрес'),  h('dd', {}, safe(g(contacts, 'address'))),
+                  h('dt', {}, 'Метро'),  h('dd', {}, safe(g(contacts, 'metro'))),
+                  h('dt', {}, 'Парковка'), h('dd', {}, safe(g(contacts, 'parking'))),
+                  h('dt', {}, 'Пн–Сб'), h('dd', {}, safe(g(contacts, 'workWeekdays'))),
+                  h('dt', {}, 'Вс'),     h('dd', {}, safe(g(contacts, 'workSunday')))
+                )
+              ),
+
+              // ── Footer ──
+              footer && h('div', { className: 'dp-footer' },
+                g(footer,'description') && h('p', { className: 'dp-footer-desc' }, safe(g(footer, 'description'))),
+                g(footer,'ctaText') && h('span', { className: 'dp-btn-ghost-dark' }, safe(g(footer, 'ctaText'))),
+                h('div', { className: 'dp-footer-legal' },
+                  g(footer,'license') && h('div', {}, safe(g(footer, 'license'))),
+                  g(footer,'disclaimer') && h('div', { className: 'dp-footer-disclaimer' }, safe(g(footer, 'disclaimer')))
+                )
+              )
+            );
+          }
+        });
+
+        CMS.registerPreviewStyle('/admin/preview.css');
+        CMS.registerPreviewTemplate('dental', DentalPreview);
+        CMS.registerPreviewTemplate('dental_page', DentalPreview);
+      })();
+    </script>
   </body>
 </html>

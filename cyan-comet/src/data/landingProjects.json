@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "cms-demo",
+      "title": "CMS-демо",
+      "category": "cms",
+      "categoryLabel": "CMS",
+      "status": "demo",
+      "statusLabel": "Демо-режим",
+      "description": "Безопасный пример редактирования текстов, фото и кнопок без сохранения изменений.",
+      "url": "/cms-demo",
+      "isDisabled": false,
+      "previewType": "mock",
+      "previewUrl": "/cms-demo",
+      "previewImage": ""
+    },
+    {
       "statusLabel": "Astro-страница готова",
       "previewType": "iframe",
       "isDisabled": false,

@@ -1,7 +1,8 @@
 ---
 import '../styles/dental.css';
-const title = "Имплантация зубов под ключ в Москве — цена от 45 000 ₽ | Имплант.Центр";
-const description = "Имплантация зубов в Москве под ключ: Straumann, Nobel Biocare, All-on-4 и All-on-6. Бесплатная консультация и КТ, рассрочка 0% до 24 мес., фиксированная цена в договоре. 17 лет опыта, 4 800+ установленных имплантов Straumann и Nobel.";
+import dental from '../data/dentalPage.json';
+const title = dental.meta.title;
+const description = dental.meta.description;
 ---
 
 <html lang="ru">
@@ -64,7 +65,7 @@ const description = "Имплантация зубов в Москве под к
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
         </svg>
       </button>
-      <a href="tel:+74950000000" class="hidden md:inline text-sm font-semibold tracking-tight num">+7 495 000-00-00</a>
+      <a href={"tel:" + dental.contacts.phoneTel} class="hidden md:inline text-sm font-semibold tracking-tight num">{dental.contacts.phoneDisplay}</a>
       <a href="#cta" class="inline-flex items-center h-10 md:h-11 px-4 md:px-5 rounded-xl bg-ink text-white text-sm font-semibold hover:bg-ink-2 transition">Записаться</a>
     </div>
   </div>
@@ -85,55 +86,39 @@ const description = "Имплантация зубов в Москве под к
       <div class="lg:col-span-6">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white ring-inset-1 text-xs font-medium text-muted">
           <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-          Имплантация в Москве · приём в день обращения · свободно 4 окна
+          {dental.hero.eyebrow}
         </div>
         <h1 class="display mt-6 text-[44px] leading-[1.02] sm:text-6xl lg:text-[72px] font-medium">
-          Имплантация зубов<br/>
-          <span class="italic font-light text-ink-2">в Москве</span> —<br/>
+          {dental.hero.titleLine1}<br/>
+          <span class="italic font-light text-ink-2">{dental.hero.titleLine2}</span> —<br/>
           <span class="relative inline-block">
-            под ключ от 45 000 ₽
+            {dental.hero.titleLine3}
             <svg class="absolute -bottom-2 left-0 w-full" height="14" viewBox="0 0 400 14" fill="none" preserveAspectRatio="none">
               <path d="M2 8 Q 100 2 200 7 T 398 6" stroke="#2DD4BF" stroke-width="4" stroke-linecap="round" fill="none"/>
             </svg>
           </span>
         </h1>
         <p class="mt-6 text-base md:text-lg text-muted max-w-xl">
-          Имплантация одного зуба, All-on-4 и All-on-6 в Москве. Полный цикл от диагностики и компьютерной томографии до установки постоянных коронок. Системы Straumann и Nobel Biocare. Принимаем сложные случаи после отказов в других клиниках.
+          {dental.hero.subtitle}
         </p>
 
         <ul class="mt-7 grid sm:grid-cols-2 gap-3 max-w-xl text-sm">
-          <li class="flex items-start gap-2.5">
-            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
-              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
-            </span>
-            Бесплатная КТ-диагностика и план лечения
-          </li>
-          <li class="flex items-start gap-2.5">
-            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
-              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
-            </span>
-            Рассрочка 0% от банков-партнёров до 24 мес.
-          </li>
-          <li class="flex items-start gap-2.5">
-            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
-              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
-            </span>
-            Имплантация под седацией — без боли и страха
-          </li>
-          <li class="flex items-start gap-2.5">
-            <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
-              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
-            </span>
-            Фиксированная цена имплантации в договоре
-          </li>
+          {dental.hero.benefits.map((benefit) => (
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-accent/15 text-accent-2 items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg>
+              </span>
+              {benefit}
+            </li>
+          ))}
         </ul>
 
         <div class="mt-8 flex flex-wrap items-center gap-4">
           <a href="#cta" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition shadow-card">
-            Записаться на консультацию имплантолога
+            {dental.hero.primaryCta}
           </a>
           <a href="#pricing" class="inline-flex items-center h-12 px-1 text-ink font-semibold underline decoration-accent decoration-2 underline-offset-4 hover:decoration-ink-2">
-            Узнать цену имплантации →
+            {dental.hero.secondaryCta}
           </a>
         </div>
 
@@ -149,7 +134,7 @@ const description = "Имплантация зубов в Москве под к
               <span>★★★★★</span>
               <span class="text-ink font-semibold ml-1 num">4.9</span>
             </div>
-            <div class="text-muted">2 100+ отзывов · Яндекс, ПроДокторов</div>
+            <div class="text-muted">{dental.hero.reviewText}</div>
           </div>
         </div>
       </div>
@@ -163,7 +148,7 @@ const description = "Имплантация зубов в Москве под к
 
           <!-- Hero image -->
           <div class="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-lift bg-soft">
-            <img src="/images/dental/hero-dental-consultation.jpg"
+            <img src={dental.hero.heroImage}
                  alt="Консультация имплантолога в клинике Имплант.Центр"
                  class="absolute inset-0 w-full h-full object-cover"
                  loading="eager" decoding="async" />
@@ -258,10 +243,10 @@ const description = "Имплантация зубов в Москве под к
 <section class="py-16 md:py-24">
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
     <div class="max-w-2xl">
-      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Кому нужна имплантация</div>
+      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.pains.sectionEyebrow}</div>
       <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
-        Если откладывать лечение зубов,<br class="hidden md:block"/>
-        <span class="italic font-light text-muted">имплантация становится сложнее и дороже</span>
+        {dental.pains.sectionTitle}<br class="hidden md:block"/>
+        <span class="italic font-light text-muted">{dental.pains.sectionTitleAccent}</span>
       </h2>
     </div>
 
@@ -272,8 +257,8 @@ const description = "Имплантация зубов в Москве под к
             <path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><path d="M12 3a9 9 0 1 0 9 9"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-lg">Не хватает передних зубов</h3>
-        <p class="text-sm text-muted mt-1.5">Стесняюсь улыбаться, закрываю рот рукой на фотографиях, избегаю встреч и публичных мест.</p>
+        <h3 class="font-semibold text-lg">{dental.pains.items[0].title}</h3>
+        <p class="text-sm text-muted mt-1.5">{dental.pains.items[0].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
         <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
@@ -281,8 +266,8 @@ const description = "Имплантация зубов в Москве под к
             <path d="M4 12h16M4 12l4-4M4 12l4 4M20 6v12"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-lg">Съёмный протез доставляет дискомфорт</h3>
-        <p class="text-sm text-muted mt-1.5">Натирает дёсны, выпадает во время еды, мешает чётко говорить. Хочу заменить на несъёмный протез на имплантах.</p>
+        <h3 class="font-semibold text-lg">{dental.pains.items[1].title}</h3>
+        <p class="text-sm text-muted mt-1.5">{dental.pains.items[1].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
         <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
@@ -290,8 +275,8 @@ const description = "Имплантация зубов в Москве под к
             <path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="3"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-lg">Боюсь имплантации и боли</h3>
-        <p class="text-sm text-muted mt-1.5">Слышал, что установка имплантов — это долго и больно. Хочу пройти лечение под седацией, без стресса.</p>
+        <h3 class="font-semibold text-lg">{dental.pains.items[2].title}</h3>
+        <p class="text-sm text-muted mt-1.5">{dental.pains.items[2].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
         <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
@@ -299,8 +284,8 @@ const description = "Имплантация зубов в Москве под к
             <path d="M3 7h18M5 7v12h14V7M9 11h6"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-lg">Атрофия кости — отказали в других клиниках</h3>
-        <p class="text-sm text-muted mt-1.5">В двух клиниках сказали, что без костной пластики имплантация невозможна. Ищу клинику, которая берётся за сложные случаи.</p>
+        <h3 class="font-semibold text-lg">{dental.pains.items[3].title}</h3>
+        <p class="text-sm text-muted mt-1.5">{dental.pains.items[3].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white ring-inset-1 hover:shadow-card transition">
         <div class="w-10 h-10 rounded-xl bg-soft flex items-center justify-center mb-4">
@@ -308,15 +293,15 @@ const description = "Имплантация зубов в Москве под к
             <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-lg">Не понимаю итоговую цену имплантации</h3>
-        <p class="text-sm text-muted mt-1.5">Везде «от» — реальная стоимость имплантации зуба всплывает только после диагностики и осмотра.</p>
+        <h3 class="font-semibold text-lg">{dental.pains.items[4].title}</h3>
+        <p class="text-sm text-muted mt-1.5">{dental.pains.items[4].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-ink text-white relative overflow-hidden">
         <div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-accent/20 blur-2xl"></div>
-        <h3 class="font-semibold text-lg">Узнаёте себя хотя бы в одном пункте?</h3>
-        <p class="text-sm text-white/70 mt-1.5">Запишитесь на бесплатную консультацию имплантолога с КТ-диагностикой — подберём подходящее решение.</p>
+        <h3 class="font-semibold text-lg">{dental.pains.ctaTitle}</h3>
+        <p class="text-sm text-white/70 mt-1.5">{dental.pains.ctaDesc}</p>
         <a href="#cta" class="mt-4 inline-flex items-center text-sm font-semibold text-accent hover:text-white transition">
-          Записаться →
+          {dental.pains.ctaText}
         </a>
       </div>
     </div>
@@ -329,63 +314,51 @@ const description = "Имплантация зубов в Москве под к
     <div class="grid lg:grid-cols-12 gap-10 items-center">
       <div class="lg:col-span-6">
         <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lift bg-white ring-inset-1">
-          <img src="/images/dental/clinic-interior.jpg"
+          <img src={dental.solutions.sectionImage}
                alt="Кабинет имплантации клиники Имплант.Центр"
                class="absolute inset-0 w-full h-full object-cover"
                loading="lazy" decoding="async" />
           <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-ink/40 to-transparent pointer-events-none"></div>
           <div class="absolute top-5 left-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur text-xs font-medium shadow-card">
             <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            Цифровое 3D-планирование · КТ Planmeca
+            {dental.solutions.imgBadge}
           </div>
           <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur shadow-card">
-            <div class="text-xs font-semibold uppercase tracking-widest text-accent-2">All-on-4</div>
-            <div class="text-sm mt-1">Несъёмный протез на 4 имплантах с фиксацией в день операции</div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-accent-2">{dental.solutions.imgCardLabel}</div>
+            <div class="text-sm mt-1">{dental.solutions.imgCardDesc}</div>
           </div>
         </div>
       </div>
 
       <div class="lg:col-span-6">
-        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Методы имплантации</div>
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.solutions.sectionEyebrow}</div>
         <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
-          All-on-4 — имплантация<br/>при полном отсутствии<br/><span class="italic font-light">зубов на челюсти</span>
+          {dental.solutions.sectionTitleLine1}<br/>при полном отсутствии<br/><span class="italic font-light">{dental.solutions.sectionTitleAccent}</span>
         </h2>
         <p class="text-muted mt-5 max-w-lg">
-          Метод All-on-4 применяют при полном отсутствии зубов и атрофии костной ткани. В большинстве случаев костная пластика не требуется — четыре импланта Straumann или Nobel Biocare устанавливаются под углом в плотные участки челюсти. Окончательный план лечения врач составляет после КТ.
+          {dental.solutions.subtitle}
         </p>
 
         <div class="mt-8 space-y-3">
-          <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
-            <div class="num display text-3xl text-accent-2 shrink-0">01</div>
-            <div>
-              <h3 class="font-semibold">Несъёмный протез в день имплантации</h3>
-              <p class="text-sm text-muted mt-1">Временный протез на 4 имплантах фиксируется сразу после операции — вы уходите из клиники с новыми зубами.</p>
+          {dental.solutions.items.map((item) => (
+            <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
+              <div class="num display text-3xl text-accent-2 shrink-0">{item.num}</div>
+              <div>
+                <h3 class="font-semibold">{item.title}</h3>
+                <p class="text-sm text-muted mt-1">{item.desc}</p>
+              </div>
             </div>
-          </div>
-          <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
-            <div class="num display text-3xl text-accent-2 shrink-0">02</div>
-            <div>
-              <h3 class="font-semibold">Имплантация под седацией</h3>
-              <p class="text-sm text-muted mt-1">Местная анестезия и медикаментозный сон. Анестезиолог контролирует состояние пациента на всех этапах операции.</p>
-            </div>
-          </div>
-          <div class="flex gap-4 p-5 rounded-2xl bg-white ring-inset-1">
-            <div class="num display text-3xl text-accent-2 shrink-0">03</div>
-            <div>
-              <h3 class="font-semibold">Прозрачная цена имплантации</h3>
-              <p class="text-sm text-muted mt-1">Фиксированная стоимость в договоре, понятные сроки лечения и письменные гарантии на импланты и работу врача.</p>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div class="mt-8 flex flex-wrap items-center gap-5">
-          <a href="#cta" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">Подходит ли мне метод?</a>
+          <a href="#cta" class="inline-flex items-center h-12 px-6 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">{dental.solutions.ctaText}</a>
           <div class="flex items-center gap-3 text-sm text-muted">
             <div class="flex -space-x-2">
               <div class="w-8 h-8 rounded-full bg-gradient-to-br from-rose-200 to-orange-300 ring-2 ring-soft"></div>
               <div class="w-8 h-8 rounded-full bg-gradient-to-br from-sky-200 to-indigo-300 ring-2 ring-soft"></div>
             </div>
-            Спросите врача
+            {dental.solutions.ctaHelper}
           </div>
         </div>
       </div>
@@ -398,73 +371,36 @@ const description = "Имплантация зубов в Москве под к
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
       <div class="max-w-2xl">
-        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Цены на имплантацию</div>
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.pricing.sectionEyebrow}</div>
         <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
-          Сколько стоит имплантация<br/><span class="italic font-light">зубов в Москве</span>
+          {dental.pricing.sectionTitle}<br/><span class="italic font-light">{dental.pricing.sectionTitleAccent}</span>
         </h2>
       </div>
       <p class="text-muted max-w-sm">
-        Цены под ключ: имплант, абатмент, коронка, работа врача и все приёмы. Без доплат после диагностики — фиксируем стоимость в договоре.
+        {dental.pricing.sectionSubtitle}
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 items-stretch" id="dental-pricing-grid">
-      <!-- card 1: классическая -->
-      <div class="dental-price-card relative p-7 rounded-3xl" data-dental-price>
-        <div class="dental-price-label text-xs font-semibold uppercase tracking-widest">Имплантация одного зуба</div>
-        <h3 class="display text-2xl mt-2">Классическая имплантация под ключ</h3>
-        <div class="mt-6 flex items-baseline gap-2">
-          <span class="display text-5xl num">45 000</span>
-          <span class="dental-price-sub">₽</span>
+      {dental.pricing.cards.map((card) => (
+        <div class={`dental-price-card${card.isActive ? ' is-active' : ''} relative p-7 rounded-3xl${card.isActive ? ' overflow-hidden' : ''}`} data-dental-price>
+          {card.isActive && <div class="dental-price-glow absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl"></div>}
+          {card.badge && <div class="absolute top-5 right-5 px-3 py-1 rounded-full bg-accent text-ink text-[11px] font-bold uppercase tracking-wider">{card.badge}</div>}
+          <div class="dental-price-label text-xs font-semibold uppercase tracking-widest">{card.label}</div>
+          <h3 class="display text-2xl mt-2">{card.title}</h3>
+          <div class="mt-6 flex items-baseline gap-2">
+            <span class="display text-5xl num">{card.price}</span>
+            <span class="dental-price-sub">₽</span>
+          </div>
+          <p class="dental-price-sub text-sm mt-1">{card.priceNote}</p>
+          <ul class="mt-6 space-y-2.5 text-sm">
+            {card.features.map((f) => (
+              <li class="flex gap-2"><span class="dental-price-check">✓</span> {f}</li>
+            ))}
+          </ul>
+          <a href="#cta" class="dental-price-cta mt-7">{card.cta}</a>
         </div>
-        <p class="dental-price-sub text-sm mt-1">Цена за один зуб под ключ</p>
-        <ul class="mt-6 space-y-2.5 text-sm">
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Имплант Osstem или Dentium</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Абатмент и металлокерамическая коронка</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Консультация, КТ и все приёмы</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Гарантия 5 лет на работу и материалы</li>
-        </ul>
-        <a href="#cta" class="dental-price-cta mt-7">Записаться</a>
-      </div>
-
-      <!-- card 2: All-on-4 (активна по умолчанию) -->
-      <div class="dental-price-card is-active relative p-7 rounded-3xl overflow-hidden" data-dental-price>
-        <div class="dental-price-glow absolute -top-20 -right-20 w-64 h-64 rounded-full blur-3xl"></div>
-        <div class="absolute top-5 right-5 px-3 py-1 rounded-full bg-accent text-ink text-[11px] font-bold uppercase tracking-wider">Хит</div>
-        <div class="dental-price-label text-xs font-semibold uppercase tracking-widest">Имплантация челюсти</div>
-        <h3 class="display text-2xl mt-2">All-on-4 под ключ</h3>
-        <div class="mt-6 flex items-baseline gap-2">
-          <span class="display text-5xl num">280 000</span>
-          <span class="dental-price-sub">₽</span>
-        </div>
-        <p class="dental-price-sub text-sm mt-1">Цена за челюсть под ключ · рассрочка от 12 500 ₽/мес</p>
-        <ul class="mt-6 space-y-2.5 text-sm">
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> 4 импланта Straumann или Nobel Biocare</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Несъёмный протез в день имплантации</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> 3D-моделирование, КТ, седация</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Все приёмы и постоянный протез на циркониевом каркасе</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Пожизненная гарантия на импланты</li>
-        </ul>
-        <a href="#cta" class="dental-price-cta mt-7">Рассчитать имплантацию</a>
-      </div>
-
-      <!-- card 3: All-on-6 -->
-      <div class="dental-price-card relative p-7 rounded-3xl" data-dental-price>
-        <div class="dental-price-label text-xs font-semibold uppercase tracking-widest">Премиум-имплантация</div>
-        <h3 class="display text-2xl mt-2">All-on-6 под ключ</h3>
-        <div class="mt-6 flex items-baseline gap-2">
-          <span class="display text-5xl num">380 000</span>
-          <span class="dental-price-sub">₽</span>
-        </div>
-        <p class="dental-price-sub text-sm mt-1">Цена за челюсть под ключ</p>
-        <ul class="mt-6 space-y-2.5 text-sm">
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> 6 имплантов премиум-системы Straumann</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Несъёмный циркониевый протез</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Максимальная стабильность жевательной нагрузки</li>
-          <li class="flex gap-2"><span class="dental-price-check">✓</span> Пожизненная гарантия на импланты</li>
-        </ul>
-        <a href="#cta" class="dental-price-cta mt-7">Записаться</a>
-      </div>
+      ))}
     </div>
 
     <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-5 rounded-2xl bg-soft">
@@ -472,7 +408,7 @@ const description = "Имплантация зубов в Москве под к
         <span class="inline-flex w-9 h-9 rounded-xl bg-white items-center justify-center">
           <svg class="w-5 h-5 text-ink-2" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>
         </span>
-        Рассрочка на имплантацию <b class="num">0%</b> до 24 месяцев. Банки-партнёры: Тинькофф, Сбер, Альфа-Банк.
+        {dental.pricing.installmentText}
       </div>
       <a href="#" class="text-sm font-semibold underline decoration-accent decoration-2 underline-offset-4">Скачать полный прайс на имплантацию (PDF) →</a>
     </div>
@@ -484,122 +420,61 @@ const description = "Имплантация зубов в Москве под к
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
       <div class="max-w-2xl">
-        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Кейсы имплантации</div>
-        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Имплантация зубов: фото до и после</h2>
-        <p class="text-muted mt-4">Работы наших врачей-имплантологов: реальные пациенты, реальные результаты. Все фотографии до и после публикуем с письменного согласия пациентов.</p>
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.cases.sectionEyebrow}</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">{dental.cases.sectionTitle}</h2>
+        <p class="text-muted mt-4">{dental.cases.sectionSubtitle}</p>
       </div>
       <div id="dental-cases-filters" class="flex flex-wrap gap-2">
-        <button type="button" data-dental-filter="all"       class="dental-case-filter is-active px-4 h-10 rounded-full text-sm font-semibold">Все кейсы</button>
-        <button type="button" data-dental-filter="all-on-4"  class="dental-case-filter px-4 h-10 rounded-full text-sm">All-on-4</button>
-        <button type="button" data-dental-filter="all-on-6"  class="dental-case-filter px-4 h-10 rounded-full text-sm">All-on-6</button>
-        <button type="button" data-dental-filter="one-tooth" class="dental-case-filter px-4 h-10 rounded-full text-sm">Имплантация одного зуба</button>
-        <button type="button" data-dental-filter="complex"   class="dental-case-filter px-4 h-10 rounded-full text-sm hidden md:inline-flex">Сложные случаи</button>
+        {dental.cases.filters.map((f) => (
+          <button
+            type="button"
+            data-dental-filter={f.value}
+            class={`dental-case-filter${f.isActive ? ' is-active' : ''} px-4 h-10 rounded-full text-sm${f.isActive ? ' font-semibold' : ''}${f.hideMobile ? ' hidden md:inline-flex' : ''}`}
+          >{f.label}</button>
+        ))}
       </div>
     </div>
 
     <div id="dental-cases-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- case 1: All-on-4 -->
-      <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition" data-dental-category="all-on-4">
-        <div class="ba aspect-[4/3] bg-soft" data-dental-ba>
-          <img src="/images/dental/patient-smile-checkup.jpg"
-               alt="До — кейс All-on-4"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-          <div class="after">
-            <img src="/images/dental/clinic-interior.jpg"
-                 alt="После — кейс All-on-4"
+      {dental.cases.visibleCases.map((c) => (
+        <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition" data-dental-category={c.category}>
+          <div class="ba aspect-[4/3] bg-soft" data-dental-ba>
+            <img src={c.beforeImage}
+                 alt={`До — ${c.title}`}
                  class="absolute inset-0 w-full h-full object-cover"
                  loading="lazy" decoding="async" />
+            <div class="after">
+              <img src={c.afterImage}
+                   alt={`После — ${c.title}`}
+                   class="absolute inset-0 w-full h-full object-cover"
+                   loading="lazy" decoding="async" />
+            </div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider pointer-events-none">До</span>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider pointer-events-none">После</span>
+            <div class="handle" data-dental-ba-handle></div>
           </div>
-          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider pointer-events-none">До</span>
-          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider pointer-events-none">После</span>
-          <div class="handle" data-dental-ba-handle></div>
-        </div>
-        <div class="p-5">
-          <div class="flex items-center gap-2 text-xs">
-            <span class="px-2 py-1 rounded-md bg-soft text-muted">All-on-4</span>
-            <span class="text-muted">·</span>
-            <span class="text-muted">1 день</span>
+          <div class="p-5">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="px-2 py-1 rounded-md bg-soft text-muted">{c.categoryLabel}</span>
+              <span class="text-muted">·</span>
+              <span class="text-muted">{c.duration}</span>
+            </div>
+            <h3 class="font-semibold mt-3">{c.title}</h3>
+            <p class="text-sm text-muted mt-1.5">{c.desc}</p>
+            <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
+              <span class="text-muted">Врач: {c.doctor}</span>
+              <a href="#" class="font-semibold">Подробнее →</a>
+            </div>
           </div>
-          <h3 class="font-semibold mt-3">Имплантация All-on-4 при полном отсутствии зубов</h3>
-          <p class="text-sm text-muted mt-1.5">Пациент, 58 лет. Полное отсутствие зубов на верхней челюсти, атрофия костной ткани, отказ в двух клиниках.</p>
-          <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
-            <span class="text-muted">Врач: Иванов А.С.</span>
-            <a href="#" class="font-semibold">Подробнее →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- case 2: Имплантация одного зуба -->
-      <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition" data-dental-category="one-tooth">
-        <div class="ba aspect-[4/3] bg-soft" data-dental-ba>
-          <img src="/images/dental/doctor-patient-treatment.jpg"
-               alt="До — имплантация одного зуба"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-          <div class="after">
-            <img src="/images/dental/dental-equipment.jpg"
-                 alt="После — имплантация одного зуба"
-                 class="absolute inset-0 w-full h-full object-cover"
-                 loading="lazy" decoding="async" />
-          </div>
-          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider pointer-events-none">До</span>
-          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider pointer-events-none">После</span>
-          <div class="handle" data-dental-ba-handle></div>
-        </div>
-        <div class="p-5">
-          <div class="flex items-center gap-2 text-xs">
-            <span class="px-2 py-1 rounded-md bg-soft text-muted">Имплантация одного зуба</span>
-            <span class="text-muted">·</span>
-            <span class="text-muted">4 месяца</span>
-          </div>
-          <h3 class="font-semibold mt-3">Имплантация двух жевательных зубов</h3>
-          <p class="text-sm text-muted mt-1.5">Пациентка, 42 года. Установка имплантов после удаления, восстановление функции жевания и эстетики.</p>
-          <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
-            <span class="text-muted">Врач: Петрова М.В.</span>
-            <a href="#" class="font-semibold">Подробнее →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- case 3: All-on-6 -->
-      <article class="group bg-white rounded-3xl overflow-hidden ring-inset-1 hover:shadow-card transition" data-dental-category="all-on-6">
-        <div class="ba aspect-[4/3] bg-soft" data-dental-ba>
-          <img src="/images/dental/xray-consultation.jpg"
-               alt="До — кейс All-on-6"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-          <div class="after">
-            <img src="/images/dental/implant-model.jpg"
-                 alt="После — кейс All-on-6"
-                 class="absolute inset-0 w-full h-full object-cover"
-                 loading="lazy" decoding="async" />
-          </div>
-          <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 text-[11px] font-bold uppercase tracking-wider pointer-events-none">До</span>
-          <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-ink text-white text-[11px] font-bold uppercase tracking-wider pointer-events-none">После</span>
-          <div class="handle" data-dental-ba-handle></div>
-        </div>
-        <div class="p-5">
-          <div class="flex items-center gap-2 text-xs">
-            <span class="px-2 py-1 rounded-md bg-soft text-muted">All-on-6</span>
-            <span class="text-muted">·</span>
-            <span class="text-muted">1 день</span>
-          </div>
-          <h3 class="font-semibold mt-3">Замена съёмного протеза на All-on-6</h3>
-          <p class="text-sm text-muted mt-1.5">Пациент, 64 года. 8 лет на съёмном протезе, атрофия костной ткани — установлен несъёмный протез на 6 имплантах.</p>
-          <div class="mt-4 hairline pt-3 flex items-center justify-between text-xs">
-            <span class="text-muted">Врач: Соколов Д.А.</span>
-            <a href="#" class="font-semibold">Подробнее →</a>
-          </div>
-        </div>
-      </article>
+        </article>
+      ))}
     </div>
 
-    <p id="dental-cases-empty" class="dental-cases-empty">Кейсы по этому направлению скоро появятся.</p>
+    <p id="dental-cases-empty" class="dental-cases-empty">{dental.cases.emptyText}</p>
 
     <div class="mt-10 text-center">
       <button type="button" id="dental-modal-open" class="inline-flex items-center h-12 px-6 rounded-xl bg-white ring-inset-1 font-semibold hover:bg-ink hover:text-white transition">
-        Смотреть все 26 кейсов имплантации →
+        {dental.cases.modalButtonText}
       </button>
     </div>
   </div>
@@ -609,110 +484,39 @@ const description = "Имплантация зубов в Москве под к
 <section id="doctors" class="py-16 md:py-24">
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
     <div class="max-w-2xl mb-12">
-      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Врачи-имплантологи</div>
+      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.doctors.sectionEyebrow}</div>
       <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
-        Команда имплантологов<br/>
-        <span class="italic font-light">с опытом от 9 до 22 лет</span>
+        {dental.doctors.sectionTitle}<br/>
+        <span class="italic font-light">{dental.doctors.sectionTitleAccent}</span>
       </h2>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <!-- doctor 1 -->
-      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
-        <div class="aspect-[4/5] relative bg-soft">
-          <img src="/images/dental/doctor-portrait.jpg"
-               alt="Иванов А.С. — хирург-имплантолог, главный врач"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-          <div class="absolute top-3 right-3 px-2 py-1 rounded-md bg-white/95 text-[11px] font-semibold">Главный врач</div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold">Иванов А.С.</h3>
-          <p class="text-sm text-muted mt-1">Хирург-имплантолог, главный врач</p>
-          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <div class="display text-xl num">18</div>
-              <div class="text-muted">лет стажа</div>
-            </div>
-            <div>
-              <div class="display text-xl num">1 200<span class="text-accent-2">+</span></div>
-              <div class="text-muted">операций</div>
+      {dental.doctors.items.map((doc) => (
+        <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
+          <div class="aspect-[4/5] relative bg-soft">
+            <img src={doc.photo}
+                 alt={`${doc.name} — ${doc.role}`}
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="lazy" decoding="async" />
+            {doc.badge && <div class="absolute top-3 right-3 px-2 py-1 rounded-md bg-white/95 text-[11px] font-semibold">{doc.badge}</div>}
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold">{doc.name}</h3>
+            <p class="text-sm text-muted mt-1">{doc.role}</p>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+              <div>
+                <div class="display text-xl num">{doc.stat1Value}</div>
+                <div class="text-muted">{doc.stat1Label}</div>
+              </div>
+              <div>
+                <div class="display text-xl num">{doc.stat2Value}</div>
+                <div class="text-muted">{doc.stat2Label}</div>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-
-      <!-- doctor 2 -->
-      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
-        <div class="aspect-[4/5] relative bg-soft">
-          <img src="/images/dental/doctor-portrait.jpg"
-               alt="Петрова М.В. — ортопед-стоматолог"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold">Петрова М.В.</h3>
-          <p class="text-sm text-muted mt-1">Ортопед-стоматолог, протезирование на имплантах</p>
-          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <div class="display text-xl num">12</div>
-              <div class="text-muted">лет стажа</div>
-            </div>
-            <div>
-              <div class="display text-xl num">800<span class="text-accent-2">+</span></div>
-              <div class="text-muted">протезов</div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- doctor 3 -->
-      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
-        <div class="aspect-[4/5] relative bg-soft">
-          <img src="/images/dental/doctor-portrait.jpg"
-               alt="Соколов Д.А. — челюстно-лицевой хирург"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold">Соколов Д.А.</h3>
-          <p class="text-sm text-muted mt-1">Челюстно-лицевой хирург, костная пластика</p>
-          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <div class="display text-xl num">22</div>
-              <div class="text-muted">года стажа</div>
-            </div>
-            <div>
-              <div class="display text-xl num">1 500<span class="text-accent-2">+</span></div>
-              <div class="text-muted">операций</div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- doctor 4 -->
-      <article class="rounded-3xl overflow-hidden bg-white ring-inset-1 hover:shadow-card transition">
-        <div class="aspect-[4/5] relative bg-soft">
-          <img src="/images/dental/doctor-portrait.jpg"
-               alt="Морозова Е.Н. — хирург-имплантолог"
-               class="absolute inset-0 w-full h-full object-cover"
-               loading="lazy" decoding="async" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold">Морозова Е.Н.</h3>
-          <p class="text-sm text-muted mt-1">Хирург-имплантолог, имплантация одного зуба</p>
-          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <div class="display text-xl num">9</div>
-              <div class="text-muted">лет стажа</div>
-            </div>
-            <div>
-              <div class="display text-xl num">500<span class="text-accent-2">+</span></div>
-              <div class="text-muted">операций</div>
-            </div>
-          </div>
-        </div>
-      </article>
+        </article>
+      ))}
     </div>
   </div>
 </section>
@@ -721,43 +525,21 @@ const description = "Имплантация зубов в Москве под к
 <section class="py-16 md:py-24 bg-soft">
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
     <div class="max-w-2xl mb-12">
-      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Этапы имплантации зубов</div>
-      <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Как проходит имплантация: 5 этапов от консультации до постоянного протеза</h2>
+      <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.process.sectionEyebrow}</div>
+      <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">{dental.process.sectionTitle}</h2>
     </div>
 
     <div class="relative">
       <div class="hidden lg:block absolute top-8 left-0 right-0 h-px bg-border"></div>
       <div class="grid lg:grid-cols-5 gap-6 lg:gap-4">
-        <div class="relative">
-          <div class="w-16 h-16 rounded-2xl bg-ink text-white flex items-center justify-center display text-2xl num relative z-10">01</div>
-          <h3 class="font-semibold mt-5">Консультация имплантолога и КТ</h3>
-          <p class="text-sm text-muted mt-2">60 минут, бесплатно. Осмотр полости рта, компьютерная томография, предварительный расчёт стоимости.</p>
-          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 1</div>
-        </div>
-        <div class="relative">
-          <div class="w-16 h-16 rounded-2xl bg-white ring-inset-1 flex items-center justify-center display text-2xl num text-ink relative z-10">02</div>
-          <h3 class="font-semibold mt-5">План лечения и договор</h3>
-          <p class="text-sm text-muted mt-2">Фиксированная смета, сроки и договор на имплантацию — в день обращения, без скрытых доплат.</p>
-          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 1</div>
-        </div>
-        <div class="relative">
-          <div class="w-16 h-16 rounded-2xl bg-white ring-inset-1 flex items-center justify-center display text-2xl num text-ink relative z-10">03</div>
-          <h3 class="font-semibold mt-5">Установка имплантов</h3>
-          <p class="text-sm text-muted mt-2">Имплантация под седацией и местной анестезией. Один день, без боли и стресса для пациента.</p>
-          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 2</div>
-        </div>
-        <div class="relative">
-          <div class="w-16 h-16 rounded-2xl bg-white ring-inset-1 flex items-center justify-center display text-2xl num text-ink relative z-10">04</div>
-          <h3 class="font-semibold mt-5">Временный протез на имплантах</h3>
-          <p class="text-sm text-muted mt-2">Несъёмный эстетичный протез фиксируется сразу после операции — вы уходите с зубами.</p>
-          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">День 2</div>
-        </div>
-        <div class="relative">
-          <div class="w-16 h-16 rounded-2xl bg-accent text-ink flex items-center justify-center display text-2xl num relative z-10">05</div>
-          <h3 class="font-semibold mt-5">Постоянный протез</h3>
-          <p class="text-sm text-muted mt-2">Через 4–6 месяцев после приживления имплантов — постоянный протез с максимальной прочностью и эстетикой.</p>
-          <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">Месяц 4–6</div>
-        </div>
+        {dental.process.steps.map((step, i) => (
+          <div class="relative">
+            <div class={`w-16 h-16 rounded-2xl flex items-center justify-center display text-2xl num relative z-10 ${i === 0 ? 'bg-ink text-white' : i === dental.process.steps.length - 1 ? 'bg-accent text-ink' : 'bg-white ring-inset-1 text-ink'}`}>{step.num}</div>
+            <h3 class="font-semibold mt-5">{step.title}</h3>
+            <p class="text-sm text-muted mt-2">{step.desc}</p>
+            <div class="text-xs text-accent-2 font-semibold mt-3 uppercase tracking-wider">{step.tag}</div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
@@ -768,10 +550,10 @@ const description = "Имплантация зубов в Москве под к
   <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-accent/10 blur-3xl"></div>
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 relative">
     <div class="max-w-2xl mb-12">
-      <div class="text-xs font-semibold tracking-widest text-accent uppercase">Гарантии на имплантацию</div>
+      <div class="text-xs font-semibold tracking-widest text-accent uppercase">{dental.guarantee.sectionEyebrow}</div>
       <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">
-        Письменные гарантии<br/>
-        <span class="italic font-light">на импланты и работу врачей</span>
+        {dental.guarantee.sectionTitle}<br/>
+        <span class="italic font-light">{dental.guarantee.sectionTitleAccent}</span>
       </h2>
     </div>
 
@@ -780,34 +562,34 @@ const description = "Имплантация зубов в Москве под к
         <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
         </div>
-        <h3 class="font-semibold">Пожизненная гарантия на импланты</h3>
-        <p class="text-sm text-white/60 mt-2">На системы имплантов Straumann и Nobel Biocare — официальный сертификат от производителя.</p>
+        <h3 class="font-semibold">{dental.guarantee.items[0].title}</h3>
+        <p class="text-sm text-white/60 mt-2">{dental.guarantee.items[0].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
         <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
-        <h3 class="font-semibold">5 лет гарантии на работу врача</h3>
-        <p class="text-sm text-white/60 mt-2">Бесплатное обслуживание, корректировки и исправления в течение 5 лет после имплантации.</p>
+        <h3 class="font-semibold">{dental.guarantee.items[1].title}</h3>
+        <p class="text-sm text-white/60 mt-2">{dental.guarantee.items[1].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
         <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 7h18M5 7v12h14V7M9 11h6"/></svg>
         </div>
-        <h3 class="font-semibold">Фиксированная цена в договоре</h3>
-        <p class="text-sm text-white/60 mt-2">Стоимость имплантации закрепляем в договоре. Никаких доплат после диагностики и в процессе лечения.</p>
+        <h3 class="font-semibold">{dental.guarantee.items[2].title}</h3>
+        <p class="text-sm text-white/60 mt-2">{dental.guarantee.items[2].desc}</p>
       </div>
       <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
         <div class="w-11 h-11 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l3-3 4 4 8-8 3 3"/></svg>
         </div>
-        <h3 class="font-semibold">Бесплатная переделка по гарантии</h3>
-        <p class="text-sm text-white/60 mt-2">Если в гарантийный период возникнут проблемы — переделываем имплантацию за счёт клиники, без вопросов.</p>
+        <h3 class="font-semibold">{dental.guarantee.items[3].title}</h3>
+        <p class="text-sm text-white/60 mt-2">{dental.guarantee.items[3].desc}</p>
       </div>
     </div>
 
     <div class="mt-12">
-      <div class="text-sm text-white/60 mb-4">Лицензии и сертификаты клиники:</div>
+      <div class="text-sm text-white/60 mb-4">{dental.guarantee.certsLabel}</div>
       <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
         <div class="aspect-[3/4] rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 transition cursor-pointer">
           <div class="h-full rounded-md bg-white/90 p-2 text-ink">
@@ -883,7 +665,7 @@ const description = "Имплантация зубов в Москве под к
     <div class="grid lg:grid-cols-3 gap-5">
       <!-- video review -->
       <article class="relative aspect-[4/5] rounded-3xl overflow-hidden group cursor-pointer">
-        <img src="/images/dental/patient-smile-checkup.jpg"
+        <img src={dental.reviews.videoThumb}
              alt="Видео-отзыв пациента Сергея о результате имплантации All-on-4"
              class="absolute inset-0 w-full h-full object-cover"
              loading="lazy" decoding="async" />
@@ -947,79 +729,26 @@ const description = "Имплантация зубов в Москве под к
   <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
     <div class="grid lg:grid-cols-12 gap-12">
       <div class="lg:col-span-4">
-        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">Вопросы об имплантации</div>
-        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">Частые вопросы об имплантации зубов</h2>
-        <p class="text-muted mt-5">Не нашли ответ на свой вопрос? Позвоните или закажите бесплатную консультацию имплантолога.</p>
-        <a href="tel:+74950000000" class="display text-2xl text-ink-2 mt-6 inline-block num hover:text-accent-2 transition">+7 495 000-00-00</a>
+        <div class="text-xs font-semibold tracking-widest text-accent-2 uppercase">{dental.faq.sectionEyebrow}</div>
+        <h2 class="display text-3xl md:text-5xl mt-3 leading-tight">{dental.faq.sectionTitle}</h2>
+        <p class="text-muted mt-5">{dental.faq.sectionSubtitle}</p>
+        <a href={"tel:" + dental.contacts.phoneTel} class="display text-2xl text-ink-2 mt-6 inline-block num hover:text-accent-2 transition">{dental.contacts.phoneDisplay}</a>
       </div>
 
       <div class="lg:col-span-8 dental-faq space-y-3">
-        <details class="group p-6 rounded-2xl bg-white ring-inset-1 is-open" open>
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <span class="font-semibold text-lg pr-6">Имплантация зубов — это больно?</span>
-            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <div class="faq-body">
-            <p class="text-muted mt-4 leading-relaxed">Имплантация зубов проходит под местной анестезией, при желании — под седацией (медикаментозный сон). Пациент не чувствует боли во время установки имплантов. После операции возможен лёгкий дискомфорт в области дёсен — он снимается обычными обезболивающими в течение 1–2 дней.</p>
-          </div>
-        </details>
-        <details class="group p-6 rounded-2xl bg-white ring-inset-1" open>
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <span class="font-semibold text-lg pr-6">Можно ли сделать имплантацию при атрофии костной ткани?</span>
-            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <div class="faq-body">
-            <p class="text-muted mt-4 leading-relaxed">Да, наша клиника берёт сложные случаи имплантации. Метод All-on-4 в большинстве случаев не требует костной пластики — четыре импланта устанавливаются под углом в плотные участки челюсти. При значительной атрофии возможно проведение синус-лифтинга или костной пластики.</p>
-          </div>
-        </details>
-        <details class="group p-6 rounded-2xl bg-white ring-inset-1" open>
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <span class="font-semibold text-lg pr-6">Сколько длится операция по имплантации зубов?</span>
-            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <div class="faq-body">
-            <p class="text-muted mt-4 leading-relaxed">Установка одного импланта занимает 30–40 минут. Имплантация All-on-4 на одну челюсть — 2–3 часа, включая фиксацию временного несъёмного протеза в день операции.</p>
-          </div>
-        </details>
-        <details class="group p-6 rounded-2xl bg-white ring-inset-1" open>
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <span class="font-semibold text-lg pr-6">Можно ли оформить имплантацию в рассрочку?</span>
-            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <div class="faq-body">
-            <p class="text-muted mt-4 leading-relaxed">Да, доступна рассрочка 0% до 24 месяцев на имплантацию зубов от банков-партнёров: Тинькофф, Сбербанк, Альфа-Банк. Решение по заявке — за 5 минут прямо в клинике.</p>
-          </div>
-        </details>
-        <details class="group p-6 rounded-2xl bg-white ring-inset-1" open>
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <span class="font-semibold text-lg pr-6">Какая гарантия на имплантацию и что в неё входит?</span>
-            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <div class="faq-body">
-            <p class="text-muted mt-4 leading-relaxed">Пожизненная гарантия на сами импланты Straumann и Nobel Biocare — от производителя по сертификату. 5 лет гарантии на работу врача и протезирование — от клиники. При любых проблемах в гарантийный период все работы по исправлению проводим бесплатно.</p>
-          </div>
-        </details>
-        <details class="group p-6 rounded-2xl bg-white ring-inset-1" open>
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <span class="font-semibold text-lg pr-6">Можно ли получить налоговый вычет за имплантацию зубов?</span>
-            <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <div class="faq-body">
-            <p class="text-muted mt-4 leading-relaxed">Да. Имплантация зубов относится к дорогостоящему лечению по коду 02 — можно вернуть 13% от полной стоимости без ограничения суммы. Документы для налоговой инспекции (договор, лицензию, справку об оплате) оформляем бесплатно.</p>
-          </div>
-        </details>
+        {dental.faq.items.map((item, i) => (
+          <details class={`group p-6 rounded-2xl bg-white ring-inset-1${i === 0 ? ' is-open' : ''}`} open>
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <span class="font-semibold text-lg pr-6">{item.question}</span>
+              <span class="chev w-8 h-8 rounded-full bg-soft flex items-center justify-center transition-transform shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p class="text-muted mt-4 leading-relaxed">{item.answer}</p>
+            </div>
+          </details>
+        ))}
       </div>
     </div>
   </div>
@@ -1036,35 +765,29 @@ const description = "Имплантация зубов в Москве под к
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-medium">
           <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-          Сегодня свободно 4 окна на приём имплантолога
+          {dental.cta.sectionEyebrow}
         </div>
         <h2 class="display text-4xl md:text-6xl mt-6 leading-[1.05]">
-          Бесплатная консультация<br/>
-          <span class="italic font-light">имплантолога в Москве</span><br/>
-          и расчёт стоимости
+          {dental.cta.sectionTitle}<br/>
+          <span class="italic font-light">{dental.cta.sectionTitleAccent}</span><br/>
+          {dental.cta.sectionTitleSuffix}
         </h2>
         <p class="text-white/70 mt-6 max-w-lg text-lg">
-          Бесплатная консультация имплантолога, КТ-диагностика и фиксированная смета на имплантацию зубов. Без навязывания услуг и доплат после осмотра.
+          {dental.cta.subtitle}
         </p>
         <div class="mt-8 grid grid-cols-3 gap-4 max-w-md">
-          <div>
-            <div class="display text-3xl num">60<span class="text-accent">′</span></div>
-            <div class="text-xs text-white/60 mt-1">приём имплантолога</div>
-          </div>
-          <div>
-            <div class="display text-3xl num">0 ₽</div>
-            <div class="text-xs text-white/60 mt-1">консультация и КТ</div>
-          </div>
-          <div>
-            <div class="display text-3xl num">1 день</div>
-            <div class="text-xs text-white/60 mt-1">запись на приём</div>
-          </div>
+          {dental.cta.stats.map((stat) => (
+            <div>
+              <div class="display text-3xl num">{stat.value}</div>
+              <div class="text-xs text-white/60 mt-1">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
 
       <div class="bg-white text-ink rounded-3xl p-7 md:p-9 shadow-lift">
-        <h3 class="display text-2xl">Запись на консультацию имплантолога</h3>
-        <p class="text-sm text-muted mt-2">Перезвоним в течение 15 минут и согласуем удобное время приёма.</p>
+        <h3 class="display text-2xl">{dental.cta.formTitle}</h3>
+        <p class="text-sm text-muted mt-2">{dental.cta.formSubtitle}</p>
         <form class="mt-6 space-y-3" data-dental-form>
           <label class="block">
             <span class="text-xs font-medium text-muted">Имя</span>
@@ -1101,7 +824,7 @@ const description = "Имплантация зубов в Москве под к
             <textarea rows="2" placeholder="Что вас беспокоит?" class="mt-1 w-full px-4 py-3 rounded-xl bg-soft focus:bg-white border border-transparent focus:border-ink outline-none transition resize-none"></textarea>
           </label>
           <button type="button" data-dental-submit class="w-full h-14 rounded-xl bg-ink text-white font-semibold hover:bg-ink-2 transition">
-            Записаться на консультацию имплантолога →
+            {dental.cta.submitText}
           </button>
           <p class="text-[11px] text-muted leading-relaxed">
             Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline">политикой обработки персональных данных</a>.
@@ -1129,23 +852,23 @@ const description = "Имплантация зубов в Москве под к
         <dl class="mt-8 space-y-4 text-sm">
           <div class="flex gap-4">
             <dt class="w-28 shrink-0 text-muted">Адрес</dt>
-            <dd class="font-medium">г. Москва, ул. Тверская, д. 1, ст. м. Тверская / Пушкинская</dd>
+            <dd class="font-medium">{dental.contacts.address}</dd>
           </div>
           <div class="flex gap-4">
             <dt class="w-28 shrink-0 text-muted">Телефон</dt>
-            <dd class="font-medium num"><a href="tel:+74950000000" class="hover:text-accent-2">+7 (495) 000-00-00</a></dd>
+            <dd class="font-medium num"><a href={"tel:" + dental.contacts.phoneTel} class="hover:text-accent-2">{dental.contacts.phoneFormatted}</a></dd>
           </div>
           <div class="flex gap-4">
             <dt class="w-28 shrink-0 text-muted">Часы работы</dt>
-            <dd class="font-medium">Пн–Сб: 9:00–21:00 · Вс: 10:00–19:00</dd>
+            <dd class="font-medium">{dental.contacts.workWeekdays} · {dental.contacts.workSunday}</dd>
           </div>
           <div class="flex gap-4">
             <dt class="w-28 shrink-0 text-muted">Парковка</dt>
-            <dd class="font-medium">Своя парковка для пациентов клиники</dd>
+            <dd class="font-medium">{dental.contacts.parking}</dd>
           </div>
           <div class="flex gap-4">
             <dt class="w-28 shrink-0 text-muted">Метро</dt>
-            <dd class="font-medium">Тверская (3 мин), Пушкинская (4 мин), Чеховская (5 мин)</dd>
+            <dd class="font-medium">{dental.contacts.metro}</dd>
           </div>
         </dl>
 
@@ -1198,7 +921,7 @@ const description = "Имплантация зубов в Москве под к
           </span>
           <span class="display text-xl">Имплант<span class="text-accent">.</span>Центр</span>
         </a>
-        <p class="text-sm text-white/60 mt-4">Клиника имплантации зубов в Москве. 17 лет работы, собственная зуботехническая лаборатория.</p>
+        <p class="text-sm text-white/60 mt-4">{dental.footer.description}</p>
       </div>
 
       <!-- services -->
@@ -1217,11 +940,11 @@ const description = "Имплантация зубов в Москве под к
       <div>
         <div class="text-xs font-semibold text-white/40 uppercase tracking-widest mb-4">Контакты</div>
         <ul class="space-y-2.5 text-sm text-white/80">
-          <li class="num"><a href="tel:+74950000000" class="hover:text-accent transition">+7 495 000-00-00</a></li>
-          <li><a href="mailto:info@implant-centre.ru" class="hover:text-accent transition">info@implant-centre.ru</a></li>
-          <li>Москва, ул. Тверская, 1</li>
-          <li class="text-white/60">Пн–Сб: 9:00–21:00</li>
-          <li class="text-white/60">Вс: 10:00–19:00</li>
+          <li class="num"><a href={"tel:" + dental.contacts.phoneTel} class="hover:text-accent transition">{dental.contacts.phoneDisplay}</a></li>
+          <li><a href={"mailto:" + dental.contacts.email} class="hover:text-accent transition">{dental.contacts.email}</a></li>
+          <li>{dental.contacts.addressShort}</li>
+          <li class="text-white/60">{dental.contacts.workWeekdays}</li>
+          <li class="text-white/60">{dental.contacts.workSunday}</li>
         </ul>
         <div class="flex gap-2 mt-4">
           <a href="#" aria-label="Telegram" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-accent hover:text-ink flex items-center justify-center transition">
@@ -1246,15 +969,15 @@ const description = "Имплантация зубов в Москве под к
           <li><a href="#" class="hover:text-accent transition">Реквизиты</a></li>
         </ul>
         <a href="#cta" class="mt-6 inline-flex items-center h-11 px-5 rounded-xl bg-accent text-ink font-semibold hover:bg-white transition text-sm">
-          Записаться →
+          {dental.footer.ctaText}
         </a>
       </div>
     </div>
 
     <!-- copyright -->
     <div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row gap-4 md:items-center justify-between text-xs text-white/40">
-      <div>© 2026 «Имплант.Центр». Лицензия № ЛО-77-01-123456 от 12.03.2023.</div>
-      <div>Имеются противопоказания. Необходима консультация специалиста.</div>
+      <div>{dental.footer.license}</div>
+      <div>{dental.footer.disclaimer}</div>
     </div>
   </div>
 </footer>
@@ -1262,7 +985,7 @@ const description = "Имплантация зубов в Москве под к
 <!-- Mobile sticky CTA -->
 <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-border">
   <div class="flex gap-2">
-    <a href="tel:+74950000000" class="flex-1 h-12 rounded-xl ring-inset-1 flex items-center justify-center font-semibold text-sm">
+    <a href={"tel:" + dental.contacts.phoneTel} class="flex-1 h-12 rounded-xl ring-inset-1 flex items-center justify-center font-semibold text-sm">
       <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
       Позвонить
     </a>
@@ -1299,8 +1022,13 @@ const description = "Имплантация зубов в Москве под к
 <!-- Form success toast -->
 <div id="dental-toast" class="dental-toast" role="alert" aria-live="polite">
   <svg class="dental-toast-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="9"/><path d="M6.5 10.5l2.5 2.5 4.5-5"/></svg>
-  Заявка отправлена. Мы перезвоним в течение 15 минут.
+  {dental.formMessages.toastText}
 </div>
+
+<script is:inline define:vars={{ __dm: dental.cases.modalCases, __dfm: dental.formMessages }}>
+  window.__dentalModalCases = __dm;
+  window.__dentalFormMessages = __dfm;
+</script>
 
 <script is:inline>
   document.getElementById('theme-toggle').addEventListener('click', function () {
@@ -1433,45 +1161,17 @@ const description = "Имплантация зубов в Москве под к
     var emptyEl  = document.getElementById('dental-modal-empty');
     if (!modal || !openBtn || !grid) return;
 
-    var BI = ['patient-smile-checkup.jpg','doctor-patient-treatment.jpg','xray-consultation.jpg','dental-chair.jpg','hero-dental-consultation.jpg','implant-kit.jpg','hero-clinic.jpg'];
-    var AI = ['clinic-interior.jpg','dental-equipment.jpg','implant-model.jpg','doctor-portrait.jpg','dental-chair.jpg','implant-kit.jpg','hero-clinic.jpg'];
-
-    var CASES = [
-      ['all-on-4','All-on-4','Имплантация All-on-4 при полном отсутствии зубов','Пациент, 58 лет. Отсутствие зубов верхней челюсти, атрофия костной ткани, отказ в двух клиниках.','1 день'],
-      ['all-on-4','All-on-4','All-on-4 нижней челюсти в день операции','Пациентка, 52 года. Установка 4 имплантов Straumann и временный протез в день операции.','1 день'],
-      ['all-on-4','All-on-4','Восстановление обеих челюстей по методу All-on-4','Пациент, 64 года. Одновременная имплантация обеих челюстей с фиксацией несъёмных протезов.','2 дня'],
-      ['all-on-4','All-on-4','All-on-4 при значительной атрофии костной ткани','Пациентка, 67 лет. Имплантация без костной пластики благодаря наклонной установке имплантов.','1 день'],
-      ['all-on-4','All-on-4','Замена частичного съёмного протеза на All-on-4','Пациент, 55 лет. Неудобный частичный протез заменён несъёмной конструкцией на имплантах.','1 день'],
-      ['all-on-4','All-on-4','All-on-4 после множественного удаления зубов','Пациентка, 49 лет. Удаление оставшихся зубов и немедленная имплантация за одно посещение.','1 день'],
-      ['all-on-4','All-on-4','Имплантация All-on-4 с цифровым планированием','Пациент, 61 год. 3D-план операции и изготовление протеза в собственной лаборатории клиники.','1 день'],
-      ['all-on-4','All-on-4','All-on-4 для пациента с сахарным диабетом II типа','Пациент, 60 лет. Тщательная подготовка и гликемический контроль — успешная имплантация.','3 дня'],
-      ['all-on-6','All-on-6','Замена съёмного протеза на All-on-6','Пациент, 64 года. 8 лет на съёмном протезе — несъёмная конструкция на 6 имплантах.','1 день'],
-      ['all-on-6','All-on-6','All-on-6 с циркониевым монолитным протезом','Пациентка, 58 лет. Максимальная нагрузка — 6 имплантов Straumann и анатомический протез.','2 дня'],
-      ['all-on-6','All-on-6','All-on-6 с предварительным синус-лифтингом','Пациент, 70 лет. Синус-лифтинг + 6 имплантов — полное восстановление жевательной функции.','5 дней'],
-      ['all-on-6','All-on-6','Имплантация All-on-6 обеих челюстей','Пациентка, 56 лет. Обе челюсти без зубов — несъёмное протезирование за два визита.','2 дня'],
-      ['all-on-6','All-on-6','All-on-6 после неудачной имплантации в другой клинике','Пациент, 62 года. Извлечение нестабильных имплантов, аугментация и повторная имплантация.','7 дней'],
-      ['all-on-6','All-on-6','Премиум All-on-6 с индивидуальными коронками','Пациентка, 53 года. Индивидуальные циркониевые коронки для максимальной эстетики улыбки.','2 дня'],
-      ['one-tooth','Имплантация одного зуба','Имплантация переднего зуба с немедленной нагрузкой','Пациентка, 34 года. Потеря переднего зуба при травме — восстановление за одно посещение.','1 день'],
-      ['one-tooth','Имплантация одного зуба','Замена разрушенного жевательного зуба','Пациент, 45 лет. Корень зуба не подлежал восстановлению — имплант Osstem под ключ.','3 месяца'],
-      ['one-tooth','Имплантация одного зуба','Имплантация после удаления зуба мудрости','Пациентка, 29 лет. Восстановление костной ткани после удаления и установка импланта Dentium.','4 месяца'],
-      ['one-tooth','Имплантация одного зуба','Два импланта для жевательных зубов','Пациентка, 42 года. Два соседних отсутствующих зуба — два независимых импланта с коронками.','4 месяца'],
-      ['one-tooth','Имплантация одного зуба','Имплант с циркониевой коронкой в зоне улыбки','Пациент, 38 лет. Верхний резец — высокоэстетичная коронка без металла, Straumann BLT.','5 месяцев'],
-      ['one-tooth','Имплантация одного зуба','Имплантация сразу после удаления (протокол Fresh Socket)','Пациент, 50 лет. Удаление и установка Nobel Active в одно посещение — минимальная инвазия.','1 день'],
-      ['one-tooth','Имплантация одного зуба','Восстановление зуба после 10 лет отсутствия','Пациентка, 55 лет. Значительная атрофия — костная пластика и отсроченная имплантация.','8 месяцев'],
-      ['one-tooth','Имплантация одного зуба','Два импланта Straumann в жевательной зоне','Пациент, 47 лет. Пять лет без зубов — успешная имплантация с минимальной костной пластикой.','5 месяцев'],
-      ['complex','Сложные случаи','Имплантация после тяжёлого генерализованного пародонтита','Пациент, 62 года. Тотальный пародонтит — санация, аугментация, полное протезирование.','3 месяца'],
-      ['complex','Сложные случаи','Реимплантация после двукратного отторжения','Пациентка, 48 лет. Два импланта отторглись — направленная костная регенерация и повторная операция.','6 месяцев'],
-      ['complex','Сложные случаи','Имплантация у пациента с онкологией в анамнезе','Пациент, 67 лет. Консультация онколога и специальная медикаментозная подготовка — успешный результат.','4 месяца'],
-      ['complex','Сложные случаи','All-on-4 после многолетнего неудачного съёмного протезирования','Пациентка, 71 год. Выраженная двусторонняя атрофия — тилт-имплантация без костной пластики.','1 день'],
-    ];
+    var CASES = (window.__dentalModalCases || []).map(function(c) {
+      return [c.category, c.categoryLabel, c.title, c.desc, c.duration, c.beforeImage || '/images/dental/patient-smile-checkup.jpg', c.afterImage || '/images/dental/clinic-interior.jpg'];
+    });
 
     var built = false;
     function buildCards() {
       if (built) return;
       built = true;
       CASES.forEach(function(c, i) {
-        var bImg = '/images/dental/' + BI[i % 7];
-        var aImg = '/images/dental/' + AI[(i + 4) % 7];
+        var bImg = c[5];
+        var aImg = c[6];
         var el = document.createElement('article');
         el.className = 'bg-white rounded-2xl overflow-hidden ring-inset-1';
         el.setAttribute('data-modal-category', c[0]);
@@ -1543,7 +1243,7 @@ const description = "Имплантация зубов в Москве под к
       if (nameEl) {
         var name = nameEl.value.trim();
         if (name.length < 2) {
-          dentalShowError(nameEl, 'Введите имя (минимум 2 символа)');
+          dentalShowError(nameEl, (window.__dentalFormMessages || {}).nameError || 'Введите имя (минимум 2 символа)');
           valid = false;
         }
       }
@@ -1551,7 +1251,7 @@ const description = "Имплантация зубов в Москве под к
       var phoneEl = form.querySelector('[data-dental-phone]');
       if (phoneEl) {
         if (!dentalValidatePhone(phoneEl.value)) {
-          dentalShowError(phoneEl, 'Введите корректный российский номер телефона');
+          dentalShowError(phoneEl, (window.__dentalFormMessages || {}).phoneError || 'Введите корректный российский номер телефона');
           valid = false;
         }
       }

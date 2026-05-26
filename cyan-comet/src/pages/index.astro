@@ -3,6 +3,7 @@ import '../styles/global.css';
 import projectsData from '../data/landingProjects.json';
 
 const projects = projectsData.projects;
+const publishedProjects = projects.filter((p) => p.status !== "wip" && !p.isDisabled);
 
 const statusStyle: Record<string, string> = {
   ready: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
@@ -50,7 +51,8 @@ const filters = [
         <span class="text-base font-semibold tracking-tight">Commercial Landings</span>
         <span class="text-gray-400 hidden sm:inline">·</span>
         <span class="text-sm text-gray-500 hidden sm:inline">Портфолио коммерческих лендингов</span>
-        <span class="ml-auto text-xs font-medium bg-blue-600 text-white px-3 py-1 rounded-full">{projects.length} лендингов</span>
+        <a href="https://t.me/dmhmsk" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700">Telegram</a>
+        <span class="ml-auto text-xs font-medium bg-blue-600 text-white px-3 py-1 rounded-full">{publishedProjects.length} примеров</span>
       </div>
     </header>
 
@@ -63,7 +65,7 @@ const filters = [
         Коммерческие лендинги<br class="hidden sm:block" /> для разных ниш
       </h1>
       <p class="text-lg text-gray-500 max-w-xl mx-auto mb-10">
-        Пять лендингов для разных ниш: медицина, ремонт, спецтехника, юридические услуги и образование.
+        Готовые примеры для медицины, ремонта, спецтехники и образования. Отдельно показан CMS-демо для редактирования контента.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a
@@ -73,10 +75,12 @@ const filters = [
           Смотреть проекты
         </a>
         <a
-          href="/dental"
+          href="https://t.me/dmhmsk"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center gap-2 bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 text-sm font-semibold px-6 py-3 rounded-xl transition-colors"
         >
-          Открыть пример
+          Написать в Telegram
         </a>
       </div>
     </section>
@@ -181,7 +185,8 @@ const filters = [
     <footer class="border-t border-gray-200 bg-white">
       <div class="max-w-6xl mx-auto px-6 py-10 text-center">
         <p class="text-base font-semibold text-gray-800 mb-1">Commercial Landings</p>
-        <p class="text-sm text-gray-400">&copy; 2026 &middot; Astro + Tailwind CSS &middot; 5 коммерческих лендингов</p>
+        <p class="text-sm text-gray-400">&copy; 2026 &middot; Astro + Tailwind CSS &middot; 4 готовых лендинга · CMS-демо · 1 пример в переносе</p>
+        <a href="https://t.me/dmhmsk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm">Обсудить лендинг: @dmhmsk</a>
       </div>
     </footer>
 
