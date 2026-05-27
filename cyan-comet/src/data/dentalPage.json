@@ -1,59 +1,4 @@
 {
-  "meta": {
-    "title": "Имплантация зубов под ключ в Москве — цена от 45 000 ₽ | Имплант.Центр",
-    "description": "Имплантация зубов в Москве под ключ: Straumann, Nobel Biocare, All-on-4 и All-on-6. Бесплатная консультация и КТ, рассрочка 0% до 24 мес., фиксированная цена в договоре. 17 лет опыта, 4 800+ установленных имплантов Straumann и Nobel."
-  },
-  "hero": {
-    "eyebrow": "Имплантация в Москве · приём в день обращения · свободно 4 окна",
-    "titleLine1": "Имплантация зубов",
-    "titleLine2": "в Москве",
-    "titleLine3": "под ключ от 45 000 ₽",
-    "subtitle": "Имплантация одного зуба, All-on-4 и All-on-6 в Москве. Полный цикл от диагностики и компьютерной томографии до установки постоянных коронок. Системы Straumann и Nobel Biocare. Принимаем сложные случаи после отказов в других клиниках.",
-    "benefits": [
-      "Бесплатная КТ-диагностика и план лечения",
-      "Рассрочка 0% от банков-партнёров до 24 мес.",
-      "Имплантация под седацией — без боли и страха",
-      "Фиксированная цена имплантации в договоре"
-    ],
-    "primaryCta": "Записаться на консультацию имплантолога",
-    "secondaryCta": "Узнать цену имплантации →",
-    "reviewScore": "4.9",
-    "reviewText": "2 100+ отзывов · Яндекс, ПроДокторов",
-    "heroImage": "/images/dental/hero-dental-consultation.jpg"
-  },
-  "pains": {
-    "sectionEyebrow": "Кому нужна имплантация",
-    "sectionTitle": "Если откладывать лечение зубов,",
-    "sectionTitleAccent": "имплантация становится сложнее и дороже",
-    "items": [
-      { "title": "Не хватает передних зубов", "desc": "Стесняюсь улыбаться, закрываю рот рукой на фотографиях, избегаю встреч и публичных мест." },
-      { "title": "Съёмный протез доставляет дискомфорт", "desc": "Натирает дёсны, выпадает во время еды, мешает чётко говорить. Хочу заменить на несъёмный протез на имплантах." },
-      { "title": "Боюсь имплантации и боли", "desc": "Слышал, что установка имплантов — это долго и больно. Хочу пройти лечение под седацией, без стресса." },
-      { "title": "Атрофия кости — отказали в других клиниках", "desc": "В двух клиниках сказали, что без костной пластики имплантация невозможна. Ищу клинику, которая берётся за сложные случаи." },
-      { "title": "Не понимаю итоговую цену имплантации", "desc": "Везде «от» — реальная стоимость имплантации зуба всплывает только после диагностики и осмотра." }
-    ],
-    "ctaTitle": "Узнаёте себя хотя бы в одном пункте?",
-    "ctaDesc": "Запишитесь на бесплатную консультацию имплантолога с КТ-диагностикой — подберём подходящее решение.",
-    "ctaText": "Записаться →"
-  },
-  "solutions": {
-    "imgBadge": "Цифровое 3D-планирование · КТ Planmeca",
-    "imgCardLabel": "All-on-4",
-    "imgCardDesc": "Несъёмный протез на 4 имплантах с фиксацией в день операции",
-    "sectionEyebrow": "Методы имплантации",
-    "sectionTitleLine1": "All-on-4 — имплантация",
-    "sectionTitleLine2": "при полном отсутствии",
-    "sectionTitleAccent": "зубов на челюсти",
-    "subtitle": "Метод All-on-4 применяют при полном отсутствии зубов и атрофии костной ткани. В большинстве случаев костная пластика не требуется — четыре импланта Straumann или Nobel Biocare устанавливаются под углом в плотные участки челюсти. Окончательный план лечения врач составляет после КТ.",
-    "items": [
-      { "num": "01", "title": "Несъёмный протез в день имплантации", "desc": "Временный протез на 4 имплантах фиксируется сразу после операции — вы уходите из клиники с новыми зубами." },
-      { "num": "02", "title": "Имплантация под седацией", "desc": "Местная анестезия и медикаментозный сон. Анестезиолог контролирует состояние пациента на всех этапах операции." },
-      { "num": "03", "title": "Прозрачная цена имплантации", "desc": "Фиксированная стоимость в договоре, понятные сроки лечения и письменные гарантии на импланты и работу врача." }
-    ],
-    "ctaText": "Подходит ли мне метод?",
-    "ctaHelper": "Спросите врача",
-    "sectionImage": "/images/dental/clinic-interior.jpg"
-  },
   "cases": {
     "sectionEyebrow": "Кейсы имплантации",
     "sectionTitle": "Имплантация зубов: фото до и после",
@@ -61,11 +6,36 @@
     "emptyText": "Кейсы по этому направлению скоро появятся.",
     "modalButtonText": "Смотреть все 26 кейсов имплантации →",
     "filters": [
-      { "value": "all",       "label": "Все кейсы",              "isActive": true,  "hideMobile": false },
-      { "value": "all-on-4",  "label": "All-on-4",               "isActive": false, "hideMobile": false },
-      { "value": "all-on-6",  "label": "All-on-6",               "isActive": false, "hideMobile": false },
-      { "value": "one-tooth", "label": "Имплантация одного зуба", "isActive": false, "hideMobile": false },
-      { "value": "complex",   "label": "Сложные случаи",          "isActive": false, "hideMobile": true  }
+      {
+        "value": "all",
+        "label": "Все кейсы",
+        "isActive": true,
+        "hideMobile": false
+      },
+      {
+        "value": "all-on-4",
+        "label": "All-on-4",
+        "isActive": false,
+        "hideMobile": false
+      },
+      {
+        "value": "all-on-6",
+        "label": "All-on-6",
+        "isActive": false,
+        "hideMobile": false
+      },
+      {
+        "value": "one-tooth",
+        "label": "Имплантация одного зуба",
+        "isActive": false,
+        "hideMobile": false
+      },
+      {
+        "value": "complex",
+        "label": "Сложные случаи",
+        "isActive": false,
+        "hideMobile": true
+      }
     ],
     "visibleCases": [
       {
@@ -100,90 +70,245 @@
       }
     ],
     "modalCases": [
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "Имплантация All-on-4 при полном отсутствии зубов",               "desc": "Пациент, 58 лет. Отсутствие зубов верхней челюсти, атрофия костной ткани, отказ в двух клиниках.",                             "duration": "1 день",    "beforeImage": "/images/dental/patient-smile-checkup.jpg",     "afterImage": "/images/dental/dental-chair.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "All-on-4 нижней челюсти в день операции",                        "desc": "Пациентка, 52 года. Установка 4 имплантов Straumann и временный протез в день операции.",                                     "duration": "1 день",    "beforeImage": "/images/dental/doctor-patient-treatment.jpg",  "afterImage": "/images/dental/implant-kit.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "Восстановление обеих челюстей по методу All-on-4",                "desc": "Пациент, 64 года. Одновременная имплантация обеих челюстей с фиксацией несъёмных протезов.",                                  "duration": "2 дня",     "beforeImage": "/images/dental/xray-consultation.jpg",         "afterImage": "/images/dental/hero-clinic.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "All-on-4 при значительной атрофии костной ткани",                 "desc": "Пациентка, 67 лет. Имплантация без костной пластики благодаря наклонной установке имплантов.",                                "duration": "1 день",    "beforeImage": "/images/dental/dental-chair.jpg",              "afterImage": "/images/dental/clinic-interior.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "Замена частичного съёмного протеза на All-on-4",                  "desc": "Пациент, 55 лет. Неудобный частичный протез заменён несъёмной конструкцией на имплантах.",                                    "duration": "1 день",    "beforeImage": "/images/dental/hero-dental-consultation.jpg",  "afterImage": "/images/dental/dental-equipment.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "All-on-4 после множественного удаления зубов",                   "desc": "Пациентка, 49 лет. Удаление оставшихся зубов и немедленная имплантация за одно посещение.",                                   "duration": "1 день",    "beforeImage": "/images/dental/implant-kit.jpg",               "afterImage": "/images/dental/implant-model.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "Имплантация All-on-4 с цифровым планированием",                  "desc": "Пациент, 61 год. 3D-план операции и изготовление протеза в собственной лаборатории клиники.",                                 "duration": "1 день",    "beforeImage": "/images/dental/hero-clinic.jpg",               "afterImage": "/images/dental/doctor-portrait.jpg" },
-      { "category": "all-on-4",  "categoryLabel": "All-on-4",               "title": "All-on-4 для пациента с сахарным диабетом II типа",               "desc": "Пациент, 60 лет. Тщательная подготовка и гликемический контроль — успешная имплантация.",                                     "duration": "3 дня",     "beforeImage": "/images/dental/patient-smile-checkup.jpg",     "afterImage": "/images/dental/dental-chair.jpg" },
-      { "category": "all-on-6",  "categoryLabel": "All-on-6",               "title": "Замена съёмного протеза на All-on-6",                             "desc": "Пациент, 64 года. 8 лет на съёмном протезе — несъёмная конструкция на 6 имплантах.",                                         "duration": "1 день",    "beforeImage": "/images/dental/doctor-patient-treatment.jpg",  "afterImage": "/images/dental/implant-kit.jpg" },
-      { "category": "all-on-6",  "categoryLabel": "All-on-6",               "title": "All-on-6 с циркониевым монолитным протезом",                      "desc": "Пациентка, 58 лет. Максимальная нагрузка — 6 имплантов Straumann и анатомический протез.",                                    "duration": "2 дня",     "beforeImage": "/images/dental/xray-consultation.jpg",         "afterImage": "/images/dental/hero-clinic.jpg" },
-      { "category": "all-on-6",  "categoryLabel": "All-on-6",               "title": "All-on-6 с предварительным синус-лифтингом",                      "desc": "Пациент, 70 лет. Синус-лифтинг + 6 имплантов — полное восстановление жевательной функции.",                                   "duration": "5 дней",    "beforeImage": "/images/dental/dental-chair.jpg",              "afterImage": "/images/dental/clinic-interior.jpg" },
-      { "category": "all-on-6",  "categoryLabel": "All-on-6",               "title": "Имплантация All-on-6 обеих челюстей",                             "desc": "Пациентка, 56 лет. Обе челюсти без зубов — несъёмное протезирование за два визита.",                                          "duration": "2 дня",     "beforeImage": "/images/dental/hero-dental-consultation.jpg",  "afterImage": "/images/dental/dental-equipment.jpg" },
-      { "category": "all-on-6",  "categoryLabel": "All-on-6",               "title": "All-on-6 после неудачной имплантации в другой клинике",            "desc": "Пациент, 62 года. Извлечение нестабильных имплантов, аугментация и повторная имплантация.",                                   "duration": "7 дней",    "beforeImage": "/images/dental/implant-kit.jpg",               "afterImage": "/images/dental/implant-model.jpg" },
-      { "category": "all-on-6",  "categoryLabel": "All-on-6",               "title": "Премиум All-on-6 с индивидуальными коронками",                     "desc": "Пациентка, 53 года. Индивидуальные циркониевые коронки для максимальной эстетики улыбки.",                                    "duration": "2 дня",     "beforeImage": "/images/dental/hero-clinic.jpg",               "afterImage": "/images/dental/doctor-portrait.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Имплантация переднего зуба с немедленной нагрузкой",              "desc": "Пациентка, 34 года. Потеря переднего зуба при травме — восстановление за одно посещение.",                                    "duration": "1 день",    "beforeImage": "/images/dental/patient-smile-checkup.jpg",     "afterImage": "/images/dental/dental-chair.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Замена разрушенного жевательного зуба",                          "desc": "Пациент, 45 лет. Корень зуба не подлежал восстановлению — имплант Osstem под ключ.",                                         "duration": "3 месяца",  "beforeImage": "/images/dental/doctor-patient-treatment.jpg",  "afterImage": "/images/dental/implant-kit.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Имплантация после удаления зуба мудрости",                       "desc": "Пациентка, 29 лет. Восстановление костной ткани после удаления и установка импланта Dentium.",                                "duration": "4 месяца",  "beforeImage": "/images/dental/xray-consultation.jpg",         "afterImage": "/images/dental/hero-clinic.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Два импланта для жевательных зубов",                             "desc": "Пациентка, 42 года. Два соседних отсутствующих зуба — два независимых импланта с коронками.",                                 "duration": "4 месяца",  "beforeImage": "/images/dental/dental-chair.jpg",              "afterImage": "/images/dental/clinic-interior.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Имплант с циркониевой коронкой в зоне улыбки",                   "desc": "Пациент, 38 лет. Верхний резец — высокоэстетичная коронка без металла, Straumann BLT.",                                      "duration": "5 месяцев", "beforeImage": "/images/dental/hero-dental-consultation.jpg",  "afterImage": "/images/dental/dental-equipment.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Имплантация сразу после удаления (протокол Fresh Socket)",        "desc": "Пациент, 50 лет. Удаление и установка Nobel Active в одно посещение — минимальная инвазия.",                                   "duration": "1 день",    "beforeImage": "/images/dental/implant-kit.jpg",               "afterImage": "/images/dental/implant-model.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Восстановление зуба после 10 лет отсутствия",                    "desc": "Пациентка, 55 лет. Значительная атрофия — костная пластика и отсроченная имплантация.",                                      "duration": "8 месяцев", "beforeImage": "/images/dental/hero-clinic.jpg",               "afterImage": "/images/dental/doctor-portrait.jpg" },
-      { "category": "one-tooth", "categoryLabel": "Имплантация одного зуба", "title": "Два импланта Straumann в жевательной зоне",                      "desc": "Пациент, 47 лет. Пять лет без зубов — успешная имплантация с минимальной костной пластикой.",                                  "duration": "5 месяцев", "beforeImage": "/images/dental/patient-smile-checkup.jpg",     "afterImage": "/images/dental/dental-chair.jpg" },
-      { "category": "complex",   "categoryLabel": "Сложные случаи",          "title": "Имплантация после тяжёлого генерализованного пародонтита",       "desc": "Пациент, 62 года. Тотальный пародонтит — санация, аугментация, полное протезирование.",                                       "duration": "3 месяца",  "beforeImage": "/images/dental/doctor-patient-treatment.jpg",  "afterImage": "/images/dental/implant-kit.jpg" },
-      { "category": "complex",   "categoryLabel": "Сложные случаи",          "title": "Реимплантация после двукратного отторжения",                     "desc": "Пациентка, 48 лет. Два импланта отторглись — направленная костная регенерация и повторная операция.",                          "duration": "6 месяцев", "beforeImage": "/images/dental/xray-consultation.jpg",         "afterImage": "/images/dental/hero-clinic.jpg" },
-      { "category": "complex",   "categoryLabel": "Сложные случаи",          "title": "Имплантация у пациента с онкологией в анамнезе",                 "desc": "Пациент, 67 лет. Консультация онколога и специальная медикаментозная подготовка — успешный результат.",                       "duration": "4 месяца",  "beforeImage": "/images/dental/dental-chair.jpg",              "afterImage": "/images/dental/clinic-interior.jpg" },
-      { "category": "complex",   "categoryLabel": "Сложные случаи",          "title": "All-on-4 после многолетнего неудачного съёмного протезирования",  "desc": "Пациентка, 71 год. Выраженная двусторонняя атрофия — тилт-имплантация без костной пластики.",                                 "duration": "1 день",    "beforeImage": "/images/dental/hero-dental-consultation.jpg",  "afterImage": "/images/dental/dental-equipment.jpg" }
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "Имплантация All-on-4 при полном отсутствии зубов",
+        "desc": "Пациент, 58 лет. Отсутствие зубов верхней челюсти, атрофия костной ткани, отказ в двух клиниках.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/patient-smile-checkup.jpg",
+        "afterImage": "/images/dental/dental-chair.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "All-on-4 нижней челюсти в день операции",
+        "desc": "Пациентка, 52 года. Установка 4 имплантов Straumann и временный протез в день операции.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/doctor-patient-treatment.jpg",
+        "afterImage": "/images/dental/implant-kit.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "Восстановление обеих челюстей по методу All-on-4",
+        "desc": "Пациент, 64 года. Одновременная имплантация обеих челюстей с фиксацией несъёмных протезов.",
+        "duration": "2 дня",
+        "beforeImage": "/images/dental/xray-consultation.jpg",
+        "afterImage": "/images/dental/hero-clinic.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "All-on-4 при значительной атрофии костной ткани",
+        "desc": "Пациентка, 67 лет. Имплантация без костной пластики благодаря наклонной установке имплантов.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/dental-chair.jpg",
+        "afterImage": "/images/dental/clinic-interior.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "Замена частичного съёмного протеза на All-on-4",
+        "desc": "Пациент, 55 лет. Неудобный частичный протез заменён несъёмной конструкцией на имплантах.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/hero-dental-consultation.jpg",
+        "afterImage": "/images/dental/dental-equipment.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "All-on-4 после множественного удаления зубов",
+        "desc": "Пациентка, 49 лет. Удаление оставшихся зубов и немедленная имплантация за одно посещение.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/implant-kit.jpg",
+        "afterImage": "/images/dental/implant-model.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "Имплантация All-on-4 с цифровым планированием",
+        "desc": "Пациент, 61 год. 3D-план операции и изготовление протеза в собственной лаборатории клиники.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/hero-clinic.jpg",
+        "afterImage": "/images/dental/doctor-portrait.jpg"
+      },
+      {
+        "category": "all-on-4",
+        "categoryLabel": "All-on-4",
+        "title": "All-on-4 для пациента с сахарным диабетом II типа",
+        "desc": "Пациент, 60 лет. Тщательная подготовка и гликемический контроль — успешная имплантация.",
+        "duration": "3 дня",
+        "beforeImage": "/images/dental/patient-smile-checkup.jpg",
+        "afterImage": "/images/dental/dental-chair.jpg"
+      },
+      {
+        "category": "all-on-6",
+        "categoryLabel": "All-on-6",
+        "title": "Замена съёмного протеза на All-on-6",
+        "desc": "Пациент, 64 года. 8 лет на съёмном протезе — несъёмная конструкция на 6 имплантах.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/doctor-patient-treatment.jpg",
+        "afterImage": "/images/dental/implant-kit.jpg"
+      },
+      {
+        "category": "all-on-6",
+        "categoryLabel": "All-on-6",
+        "title": "All-on-6 с циркониевым монолитным протезом",
+        "desc": "Пациентка, 58 лет. Максимальная нагрузка — 6 имплантов Straumann и анатомический протез.",
+        "duration": "2 дня",
+        "beforeImage": "/images/dental/xray-consultation.jpg",
+        "afterImage": "/images/dental/hero-clinic.jpg"
+      },
+      {
+        "category": "all-on-6",
+        "categoryLabel": "All-on-6",
+        "title": "All-on-6 с предварительным синус-лифтингом",
+        "desc": "Пациент, 70 лет. Синус-лифтинг + 6 имплантов — полное восстановление жевательной функции.",
+        "duration": "5 дней",
+        "beforeImage": "/images/dental/dental-chair.jpg",
+        "afterImage": "/images/dental/clinic-interior.jpg"
+      },
+      {
+        "category": "all-on-6",
+        "categoryLabel": "All-on-6",
+        "title": "Имплантация All-on-6 обеих челюстей",
+        "desc": "Пациентка, 56 лет. Обе челюсти без зубов — несъёмное протезирование за два визита.",
+        "duration": "2 дня",
+        "beforeImage": "/images/dental/hero-dental-consultation.jpg",
+        "afterImage": "/images/dental/dental-equipment.jpg"
+      },
+      {
+        "category": "all-on-6",
+        "categoryLabel": "All-on-6",
+        "title": "All-on-6 после неудачной имплантации в другой клинике",
+        "desc": "Пациент, 62 года. Извлечение нестабильных имплантов, аугментация и повторная имплантация.",
+        "duration": "7 дней",
+        "beforeImage": "/images/dental/implant-kit.jpg",
+        "afterImage": "/images/dental/implant-model.jpg"
+      },
+      {
+        "category": "all-on-6",
+        "categoryLabel": "All-on-6",
+        "title": "Премиум All-on-6 с индивидуальными коронками",
+        "desc": "Пациентка, 53 года. Индивидуальные циркониевые коронки для максимальной эстетики улыбки.",
+        "duration": "2 дня",
+        "beforeImage": "/images/dental/hero-clinic.jpg",
+        "afterImage": "/images/dental/doctor-portrait.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Имплантация переднего зуба с немедленной нагрузкой",
+        "desc": "Пациентка, 34 года. Потеря переднего зуба при травме — восстановление за одно посещение.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/patient-smile-checkup.jpg",
+        "afterImage": "/images/dental/dental-chair.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Замена разрушенного жевательного зуба",
+        "desc": "Пациент, 45 лет. Корень зуба не подлежал восстановлению — имплант Osstem под ключ.",
+        "duration": "3 месяца",
+        "beforeImage": "/images/dental/doctor-patient-treatment.jpg",
+        "afterImage": "/images/dental/implant-kit.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Имплантация после удаления зуба мудрости",
+        "desc": "Пациентка, 29 лет. Восстановление костной ткани после удаления и установка импланта Dentium.",
+        "duration": "4 месяца",
+        "beforeImage": "/images/dental/xray-consultation.jpg",
+        "afterImage": "/images/dental/hero-clinic.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Два импланта для жевательных зубов",
+        "desc": "Пациентка, 42 года. Два соседних отсутствующих зуба — два независимых импланта с коронками.",
+        "duration": "4 месяца",
+        "beforeImage": "/images/dental/dental-chair.jpg",
+        "afterImage": "/images/dental/clinic-interior.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Имплант с циркониевой коронкой в зоне улыбки",
+        "desc": "Пациент, 38 лет. Верхний резец — высокоэстетичная коронка без металла, Straumann BLT.",
+        "duration": "5 месяцев",
+        "beforeImage": "/images/dental/hero-dental-consultation.jpg",
+        "afterImage": "/images/dental/dental-equipment.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Имплантация сразу после удаления (протокол Fresh Socket)",
+        "desc": "Пациент, 50 лет. Удаление и установка Nobel Active в одно посещение — минимальная инвазия.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/implant-kit.jpg",
+        "afterImage": "/images/dental/implant-model.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Восстановление зуба после 10 лет отсутствия",
+        "desc": "Пациентка, 55 лет. Значительная атрофия — костная пластика и отсроченная имплантация.",
+        "duration": "8 месяцев",
+        "beforeImage": "/images/dental/hero-clinic.jpg",
+        "afterImage": "/images/dental/doctor-portrait.jpg"
+      },
+      {
+        "category": "one-tooth",
+        "categoryLabel": "Имплантация одного зуба",
+        "title": "Два импланта Straumann в жевательной зоне",
+        "desc": "Пациент, 47 лет. Пять лет без зубов — успешная имплантация с минимальной костной пластикой.",
+        "duration": "5 месяцев",
+        "beforeImage": "/images/dental/patient-smile-checkup.jpg",
+        "afterImage": "/images/dental/dental-chair.jpg"
+      },
+      {
+        "category": "complex",
+        "categoryLabel": "Сложные случаи",
+        "title": "Имплантация после тяжёлого генерализованного пародонтита",
+        "desc": "Пациент, 62 года. Тотальный пародонтит — санация, аугментация, полное протезирование.",
+        "duration": "3 месяца",
+        "beforeImage": "/images/dental/doctor-patient-treatment.jpg",
+        "afterImage": "/images/dental/implant-kit.jpg"
+      },
+      {
+        "category": "complex",
+        "categoryLabel": "Сложные случаи",
+        "title": "Реимплантация после двукратного отторжения",
+        "desc": "Пациентка, 48 лет. Два импланта отторглись — направленная костная регенерация и повторная операция.",
+        "duration": "6 месяцев",
+        "beforeImage": "/images/dental/xray-consultation.jpg",
+        "afterImage": "/images/dental/hero-clinic.jpg"
+      },
+      {
+        "category": "complex",
+        "categoryLabel": "Сложные случаи",
+        "title": "Имплантация у пациента с онкологией в анамнезе",
+        "desc": "Пациент, 67 лет. Консультация онколога и специальная медикаментозная подготовка — успешный результат.",
+        "duration": "4 месяца",
+        "beforeImage": "/images/dental/dental-chair.jpg",
+        "afterImage": "/images/dental/clinic-interior.jpg"
+      },
+      {
+        "category": "complex",
+        "categoryLabel": "Сложные случаи",
+        "title": "All-on-4 после многолетнего неудачного съёмного протезирования",
+        "desc": "Пациентка, 71 год. Выраженная двусторонняя атрофия — тилт-имплантация без костной пластики.",
+        "duration": "1 день",
+        "beforeImage": "/images/dental/hero-dental-consultation.jpg",
+        "afterImage": "/images/dental/dental-equipment.jpg"
+      }
     ]
   },
-  "reviews": {
-    "videoThumb": "/images/dental/patient-smile-checkup.jpg"
-  },
-  "doctors": {
-    "sectionEyebrow": "Врачи-имплантологи",
-    "sectionTitle": "Команда имплантологов",
-    "sectionTitleAccent": "с опытом от 9 до 22 лет",
-    "items": [
-      { "name": "Иванов А.С.",   "role": "Хирург-имплантолог, главный врач",                    "badge": "Главный врач", "photo": "/images/dental/doctor-portrait.jpg", "stat1Value": "18",     "stat1Label": "лет стажа",  "stat2Value": "1 200+", "stat2Label": "операций" },
-      { "name": "Петрова М.В.",  "role": "Ортопед-стоматолог, протезирование на имплантах",     "badge": "",            "photo": "/images/dental/doctor-portrait.jpg", "stat1Value": "12",     "stat1Label": "лет стажа",  "stat2Value": "800+",   "stat2Label": "протезов" },
-      { "name": "Соколов Д.А.",  "role": "Челюстно-лицевой хирург, костная пластика",           "badge": "",            "photo": "/images/dental/doctor-portrait.jpg", "stat1Value": "22",     "stat1Label": "года стажа", "stat2Value": "1 500+", "stat2Label": "операций" },
-      { "name": "Морозова Е.Н.", "role": "Хирург-имплантолог, имплантация одного зуба",         "badge": "",            "photo": "/images/dental/doctor-portrait.jpg", "stat1Value": "9",      "stat1Label": "лет стажа",  "stat2Value": "500+",   "stat2Label": "операций" }
-    ]
-  },
-  "process": {
-    "sectionEyebrow": "Этапы имплантации зубов",
-    "sectionTitle": "Как проходит имплантация: 5 этапов от консультации до постоянного протеза",
-    "steps": [
-      { "num": "01", "title": "Консультация имплантолога и КТ",      "desc": "60 минут, бесплатно. Осмотр полости рта, компьютерная томография, предварительный расчёт стоимости.",          "tag": "День 1" },
-      { "num": "02", "title": "План лечения и договор",               "desc": "Фиксированная смета, сроки и договор на имплантацию — в день обращения, без скрытых доплат.",                  "tag": "День 1" },
-      { "num": "03", "title": "Установка имплантов",                  "desc": "Имплантация под седацией и местной анестезией. Один день, без боли и стресса для пациента.",                     "tag": "День 2" },
-      { "num": "04", "title": "Временный протез на имплантах",        "desc": "Несъёмный эстетичный протез фиксируется сразу после операции — вы уходите с зубами.",                            "tag": "День 2" },
-      { "num": "05", "title": "Постоянный протез",                    "desc": "Через 4–6 месяцев после приживления имплантов — постоянный протез с максимальной прочностью и эстетикой.",       "tag": "Месяц 4–6" }
-    ]
-  },
-  "guarantee": {
-    "sectionEyebrow": "Гарантии на имплантацию",
-    "sectionTitle": "Письменные гарантии",
-    "sectionTitleAccent": "на импланты и работу врачей",
-    "certsLabel": "Лицензии и сертификаты клиники:",
-    "items": [
-      { "title": "Пожизненная гарантия на импланты",  "desc": "На системы имплантов Straumann и Nobel Biocare — официальный сертификат от производителя." },
-      { "title": "5 лет гарантии на работу врача",    "desc": "Бесплатное обслуживание, корректировки и исправления в течение 5 лет после имплантации." },
-      { "title": "Фиксированная цена в договоре",     "desc": "Стоимость имплантации закрепляем в договоре. Никаких доплат после диагностики и в процессе лечения." },
-      { "title": "Бесплатная переделка по гарантии",  "desc": "Если в гарантийный период возникнут проблемы — переделываем имплантацию за счёт клиники, без вопросов." }
-    ]
-  },
-  "cta": {
-    "sectionEyebrow": "Сегодня свободно 4 окна на приём имплантолога",
-    "sectionTitle": "Бесплатная консультация",
-    "sectionTitleAccent": "имплантолога в Москве",
-    "sectionTitleSuffix": "и расчёт стоимости",
-    "subtitle": "Бесплатная консультация имплантолога, КТ-диагностика и фиксированная смета на имплантацию зубов. Без навязывания услуг и доплат после осмотра.",
-    "stats": [
-      { "value": "60′", "label": "приём имплантолога" },
-      { "value": "0 ₽", "label": "консультация и КТ" },
-      { "value": "1 день", "label": "запись на приём" }
-    ],
-    "formTitle": "Запись на консультацию имплантолога",
-    "formSubtitle": "Перезвоним в течение 15 минут и согласуем удобное время приёма.",
-    "submitText": "Записаться на консультацию имплантолога →"
-  },
-  "formMessages": {
-    "nameError": "Введите имя (минимум 2 символа)",
-    "phoneError": "Введите корректный российский номер телефона",
-    "toastText": "Заявка отправлена. Мы перезвоним в течение 15 минут."
+  "meta": {
+    "title": "Имплантация зубов под ключ в Москве — цена от 50 000 ₽ | Имплант.Центр",
+    "description": "Имплантация зубов в Москве под ключ: Straumann, Nobel Biocare, All-on-4 и All-on-6. Бесплатная консультация и КТ, рассрочка 0% до 24 мес., фиксированная цена в договоре. 17 лет опыта, 4 800+ установленных имплантов Straumann и Nobel."
   },
   "pricing": {
     "sectionEyebrow": "Цены на имплантацию",
@@ -240,6 +365,154 @@
       }
     ]
   },
+  "guarantee": {
+    "sectionEyebrow": "Гарантии на имплантацию",
+    "sectionTitle": "Письменные гарантии",
+    "sectionTitleAccent": "на импланты и работу врачей",
+    "certsLabel": "Лицензии и сертификаты клиники:",
+    "items": [
+      {
+        "title": "Пожизненная гарантия на импланты",
+        "desc": "На системы имплантов Straumann и Nobel Biocare — официальный сертификат от производителя."
+      },
+      {
+        "title": "5 лет гарантии на работу врача",
+        "desc": "Бесплатное обслуживание, корректировки и исправления в течение 5 лет после имплантации."
+      },
+      {
+        "title": "Фиксированная цена в договоре",
+        "desc": "Стоимость имплантации закрепляем в договоре. Никаких доплат после диагностики и в процессе лечения."
+      },
+      {
+        "title": "Бесплатная переделка по гарантии",
+        "desc": "Если в гарантийный период возникнут проблемы — переделываем имплантацию за счёт клиники, без вопросов."
+      }
+    ]
+  },
+  "process": {
+    "sectionEyebrow": "Этапы имплантации зубов",
+    "sectionTitle": "Как проходит имплантация: 5 этапов от консультации до постоянного протеза",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Консультация имплантолога и КТ",
+        "desc": "60 минут, бесплатно. Осмотр полости рта, компьютерная томография, предварительный расчёт стоимости.",
+        "tag": "День 1"
+      },
+      {
+        "num": "02",
+        "title": "План лечения и договор",
+        "desc": "Фиксированная смета, сроки и договор на имплантацию — в день обращения, без скрытых доплат.",
+        "tag": "День 1"
+      },
+      {
+        "num": "03",
+        "title": "Установка имплантов",
+        "desc": "Имплантация под седацией и местной анестезией. Один день, без боли и стресса для пациента.",
+        "tag": "День 2"
+      },
+      {
+        "num": "04",
+        "title": "Временный протез на имплантах",
+        "desc": "Несъёмный эстетичный протез фиксируется сразу после операции — вы уходите с зубами.",
+        "tag": "День 2"
+      },
+      {
+        "num": "05",
+        "title": "Постоянный протез",
+        "desc": "Через 4–6 месяцев после приживления имплантов — постоянный протез с максимальной прочностью и эстетикой.",
+        "tag": "Месяц 4–6"
+      }
+    ]
+  },
+  "cta": {
+    "sectionEyebrow": "Сегодня свободно 4 окна на приём имплантолога",
+    "sectionTitleSuffix": "и расчёт стоимости",
+    "submitText": "Записаться на консультацию имплантолога →",
+    "sectionTitle": "Бесплатная консультация",
+    "formTitle": "Запись на консультацию имплантолога",
+    "subtitle": "Бесплатная консультация имплантолога, КТ-диагностика и фиксированная смета на имплантацию зубов. Без навязывания услуг и доплат после осмотра.",
+    "formSubtitle": "Перезвоним в течение 15 минут и согласуем удобное время приёма.",
+    "sectionTitleAccent": "имплантолога в Москве",
+    "stats": [
+      {
+        "value": "60′",
+        "label": "приём имплантолога"
+      },
+      {
+        "value": "0 ₽",
+        "label": "консультация и КТ"
+      },
+      {
+        "value": "1 день",
+        "label": "запись на приём"
+      }
+    ]
+  },
+  "formMessages": {
+    "nameError": "Введите имя (минимум 2 символа)",
+    "phoneError": "Введите корректный российский номер телефона",
+    "toastText": "Заявка отправлена. Мы перезвоним в течение 15 минут."
+  },
+  "contacts": {
+    "workSunday": "Вс: 10:00–19:00",
+    "addressShort": "Москва, ул. Тверская, 1",
+    "phoneTel": "+74950000000",
+    "phoneFormatted": "+7 (495) 000-00-00",
+    "phoneDisplay": "+7 495 000-00-00",
+    "address": "г. Москва, ул. Тверская, д. 1, ст. м. Тверская / Пушкинская",
+    "parking": "Своя парковка для пациентов клиники",
+    "metro": "Тверская (3 мин), Пушкинская (4 мин), Чеховская (5 мин)",
+    "workWeekdays": "Пн–Сб: 9:00–21:00",
+    "email": "info@implant-centre.ru"
+  },
+  "doctors": {
+    "sectionEyebrow": "Врачи-имплантологи",
+    "sectionTitle": "Команда имплантологов",
+    "sectionTitleAccent": "с опытом от 9 до 22 лет",
+    "items": [
+      {
+        "name": "Иванов А.С.",
+        "role": "Хирург-имплантолог, главный врач",
+        "badge": "Главный врач",
+        "photo": "/images/dental/doctor-portrait.jpg",
+        "stat1Value": "18",
+        "stat1Label": "лет стажа",
+        "stat2Value": "1 200+",
+        "stat2Label": "операций"
+      },
+      {
+        "name": "Петрова М.В.",
+        "role": "Ортопед-стоматолог, протезирование на имплантах",
+        "badge": "",
+        "photo": "/images/dental/doctor-portrait.jpg",
+        "stat1Value": "12",
+        "stat1Label": "лет стажа",
+        "stat2Value": "800+",
+        "stat2Label": "протезов"
+      },
+      {
+        "name": "Соколов Д.А.",
+        "role": "Челюстно-лицевой хирург, костная пластика",
+        "badge": "",
+        "photo": "/images/dental/doctor-portrait.jpg",
+        "stat1Value": "22",
+        "stat1Label": "года стажа",
+        "stat2Value": "1 500+",
+        "stat2Label": "операций"
+      },
+      {
+        "name": "Морозова Е.Н.",
+        "role": "Хирург-имплантолог, имплантация одного зуба",
+        "badge": "",
+        "photo": "/images/dental/doctor-portrait.jpg",
+        "stat1Value": "9",
+        "stat1Label": "лет стажа",
+        "stat2Value": "500+",
+        "stat2Label": "операций"
+      }
+    ]
+  },
   "faq": {
     "sectionEyebrow": "Вопросы об имплантации",
     "sectionTitle": "Частые вопросы об имплантации зубов",
@@ -271,22 +544,91 @@
       }
     ]
   },
-  "contacts": {
-    "phoneTel": "+74950000000",
-    "phoneDisplay": "+7 495 000-00-00",
-    "phoneFormatted": "+7 (495) 000-00-00",
-    "email": "info@implant-centre.ru",
-    "address": "г. Москва, ул. Тверская, д. 1, ст. м. Тверская / Пушкинская",
-    "addressShort": "Москва, ул. Тверская, 1",
-    "workWeekdays": "Пн–Сб: 9:00–21:00",
-    "workSunday": "Вс: 10:00–19:00",
-    "parking": "Своя парковка для пациентов клиники",
-    "metro": "Тверская (3 мин), Пушкинская (4 мин), Чеховская (5 мин)"
+  "solutions": {
+    "imgBadge": "Цифровое 3D-планирование · КТ Planmeca",
+    "items": [
+      {
+        "num": "01",
+        "title": "Несъёмный протез в день имплантации",
+        "desc": "Временный протез на 4 имплантах фиксируется сразу после операции — вы уходите из клиники с новыми зубами."
+      },
+      {
+        "num": "02",
+        "title": "Имплантация под седацией",
+        "desc": "Местная анестезия и медикаментозный сон. Анестезиолог контролирует состояние пациента на всех этапах операции."
+      },
+      {
+        "num": "03",
+        "title": "Прозрачная цена имплантации",
+        "desc": "Фиксированная стоимость в договоре, понятные сроки лечения и письменные гарантии на импланты и работу врача."
+      }
+    ],
+    "imgCardLabel": "All-on-4",
+    "sectionEyebrow": "Методы имплантации",
+    "imgCardDesc": "Несъёмный протез на 4 имплантах с фиксацией в день операции",
+    "sectionTitleLine1": "All-on-4 — имплантация",
+    "sectionTitleLine2": "при полном отсутствии",
+    "sectionImage": "/images/dental/clinic-interior.jpg",
+    "subtitle": "Метод All-on-4 применяют при полном отсутствии зубов и атрофии костной ткани. В большинстве случаев костная пластика не требуется — четыре импланта Straumann или Nobel Biocare устанавливаются под углом в плотные участки челюсти. Окончательный план лечения врач составляет после КТ.",
+    "sectionTitleAccent": "зубов на челюсти",
+    "ctaText": "Подходит ли мне метод?",
+    "ctaHelper": "Спросите врача"
+  },
+  "hero": {
+    "heroImage": "/images/dental/hero-dental-consultation.jpg",
+    "reviewText": "2 100+ отзывов · Яндекс, ПроДокторов",
+    "titleLine1": "Имплантация зубов",
+    "titleLine2": "в Москве",
+    "titleLine3": "под ключ от 45 000 ₽",
+    "eyebrow": "Имплантация в Москве · приём в день обращения · свободно 4 окна",
+    "primaryCta": "Записаться на консультацию имплантолога",
+    "subtitle": "Имплантация одного зуба, All-on-4 и All-on-6 в Москве. Полный цикл от диагностики и компьютерной томографии до установки постоянных коронок. Системы Straumann и Nobel Biocare. Принимаем сложные случаи после отказов в других клиниках.",
+    "reviewScore": "4.9",
+    "benefits": [
+      "Бесплатная КТ-диагностика и план лечения",
+      "Рассрочка 0% от банков-партнёров до 24 мес.",
+      "Имплантация под седацией — без боли и страха",
+      "Фиксированная цена имплантации в договоре"
+    ],
+    "secondaryCta": "Узнать цену имплантации →"
+  },
+  "reviews": {
+    "videoThumb": "/images/dental/patient-smile-checkup.jpg"
   },
   "footer": {
     "description": "Клиника имплантации зубов в Москве. 17 лет работы, собственная зуботехническая лаборатория.",
     "ctaText": "Записаться →",
     "license": "© 2026 «Имплант.Центр». Лицензия № ЛО-77-01-123456 от 12.03.2023.",
     "disclaimer": "Имеются противопоказания. Необходима консультация специалиста."
+  },
+  "pains": {
+    "sectionEyebrow": "Кому нужна имплантация",
+    "sectionTitle": "Если откладывать лечение зубов,",
+    "sectionTitleAccent": "имплантация становится сложнее и дороже",
+    "items": [
+      {
+        "title": "Не хватает передних зубов",
+        "desc": "Стесняюсь улыбаться, закрываю рот рукой на фотографиях, избегаю встреч и публичных мест."
+      },
+      {
+        "title": "Съёмный протез доставляет дискомфорт",
+        "desc": "Натирает дёсны, выпадает во время еды, мешает чётко говорить. Хочу заменить на несъёмный протез на имплантах."
+      },
+      {
+        "title": "Боюсь имплантации и боли",
+        "desc": "Слышал, что установка имплантов — это долго и больно. Хочу пройти лечение под седацией, без стресса."
+      },
+      {
+        "title": "Атрофия кости — отказали в других клиниках",
+        "desc": "В двух клиниках сказали, что без костной пластики имплантация невозможна. Ищу клинику, которая берётся за сложные случаи."
+      },
+      {
+        "title": "Не понимаю итоговую цену имплантации",
+        "desc": "Везде «от» — реальная стоимость имплантации зуба всплывает только после диагностики и осмотра."
+      }
+    ],
+    "ctaTitle": "Узнаёте себя хотя бы в одном пункте?",
+    "ctaDesc": "Запишитесь на бесплатную консультацию имплантолога с КТ-диагностикой — подберём подходящее решение.",
+    "ctaText": "Записаться →"
   }
 }
