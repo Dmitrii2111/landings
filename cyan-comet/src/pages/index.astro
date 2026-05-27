@@ -5,6 +5,16 @@ import projectsData from '../data/landingProjects.json';
 const projects = projectsData.projects;
 const publishedProjects = projects.filter((p) => p.status !== "wip" && !p.isDisabled);
 
+function toRelativeUrl(url: string | undefined): string {
+  if (!url) return '';
+  if (url.startsWith('/')) return url;
+  try {
+    return new URL(url).pathname;
+  } catch {
+    return url;
+  }
+}
+
 const statusStyle: Record<string, string> = {
   ready: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
   wip: 'bg-amber-50 text-amber-700 border border-amber-200',
@@ -113,7 +123,7 @@ const filters = [
             {project.previewType === 'iframe' ? (
               <div class="pf-iframe-wrap">
                 <iframe
-                  src={project.previewUrl}
+                  src={toRelativeUrl(project.previewUrl)}
                   title={project.title}
                   loading="lazy"
                   scrolling="no"
