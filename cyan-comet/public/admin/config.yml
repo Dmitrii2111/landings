@@ -17,7 +17,7 @@ local_backend: true
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://dmitriyhrulev.ru
 
-media_folder: "public/images/cms"
+media_folder: "cyan-comet/public/images/cms"
 public_folder: "/images/cms"
 
 collections:
@@ -26,7 +26,7 @@ collections:
     files:
       - name: projects
         label: "Карточки проектов"
-        file: "src/data/landingProjects.json"
+        file: "cyan-comet/src/data/landingProjects.json"
         fields:
           - name: projects
             label: "Проекты"
@@ -91,8 +91,8 @@ collections:
     files:
       - name: dental
         label: "Страница /dental"
-        file: "src/data/dentalPage.json"
-        media_folder: "public/images/dental"
+        file: "cyan-comet/src/data/dentalPage.json"
+        media_folder: "cyan-comet/public/images/dental"
         public_folder: "/images/dental"
         fields:
           - name: meta
