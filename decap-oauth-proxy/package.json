@@ -1,0 +1,11 @@
+{
+  "name": "decap-oauth-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/netlify-cms-github-oauth-provider/index.js"
+  },
+  "dependencies": {
+    "netlify-cms-github-oauth-provider": "latest"
+  }
+}
